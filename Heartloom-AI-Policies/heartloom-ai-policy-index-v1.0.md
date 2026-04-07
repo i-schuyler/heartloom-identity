@@ -48,3 +48,4 @@ If any of these exist and diverge from these policies, the vault documents win.
 ## Discoverability notes
 
 - Clipboard-return canon: `github-and-codex-pr-first-policy-v1.0.md` requires clipboard payloads to match any prompt-defined output contract exactly, including the full numbered range generated in that slice (not capped at 5), with plain printed fallback when clipboard tooling is unavailable.
+- Consumer integration canon: `Consumer_Integration_Model_heartloom_identity_v1_0.md` defines near-term consumer snapshot usage, long-term bundle aspirations, local extension/override boundaries, and upstream change proposal path.
