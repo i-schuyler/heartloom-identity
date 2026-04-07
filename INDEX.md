@@ -11,7 +11,7 @@ If you want a short “start here” sequence:
 
 1. **README.md** — what this folder is and what belongs here.
 2. **Change-Control_00_Identity_Canonical_Repo_Authority_Proposal_v1_0.md** — proposed authority model for repo-canonical `00_Identity` split (docs-only; not implemented).
-3. **Install_Contract_heartloom_identity_repo_sync_v1_0.md** — proposed installer contract for future repo-root `install.sh` sync into vault `00_Identity` target.
+3. **Install_Contract_heartloom_identity_repo_sync_v1_0.md** — implemented installer contract for repo-root `install.sh` sync into vault `00_Identity` target.
 4. **Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md** — map of the enforcement-layer policies.
 5. **Heartloom-AI-Policies/authority-boundary-map-v1.0.md** — authority ladder + “you/we” interpretation + cross-project visibility limits.
 6. **Heartloom-AI-Policies/required-reference-docs.md** — always-refer docs (stable base + per-project).
@@ -32,6 +32,7 @@ If you want a short “start here” sequence:
 
 These are Termux helpers that support “ZIP-TENNIS” review and final identity artifacts:
 
+- **Repo → vault installer:** `./install.sh` (`--dry-run` supported)
 - **Stable Base reference pack zip:** `hl-zip-stable-base`
 - **Protocols zip (for review):** `hl-zip-00-identity`
 - **Protocols → PDF builder:** `hl-build-00-identity-protocols-pdf`

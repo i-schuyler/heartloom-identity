@@ -1,6 +1,6 @@
 # Change-Control: 00_Identity Canonical Repo Authority Proposal (v1.0)
 
-Status: **PROPOSED (docs-only; not implemented)**  
+Status: **PROPOSED AUTHORITY MODEL (installer implemented; authority flip not implemented)**  
 Type: Change-Control / authority model proposal  
 Scope: `00_Identity` documentation authority and install flow boundaries
 
@@ -8,7 +8,7 @@ Scope: `00_Identity` documentation authority and install flow boundaries
 
 Document the proposed authority model where this dedicated GitHub repository becomes the canonical authoring source for `00_Identity` **after** a later implementation slice is completed.
 
-This document does **not** implement installer behavior, runtime changes, path changes, or authority flips.
+This document tracks the authority-model proposal. Installer behavior is now implemented separately via `install.sh`, while authority flip remains unimplemented.
 
 ## Current state (implemented today)
 
@@ -16,15 +16,15 @@ This document does **not** implement installer behavior, runtime changes, path c
 - The currently installed/consumed local copy remains in HeartloomVault at:
   - `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`
 - Current canon for in-vault operation and session packs remains the Android vault path/workflow.
-- No installer script in this repo currently owns synchronization into the vault.
+- Installer script exists at repo root (`install.sh`) and applies the documented sync-copy upsert contract into the vault target.
 
 ## Proposed future state (after implementation, not active yet)
 
 - This repository becomes the canonical working authoring source for `00_Identity`.
 - The HeartloomVault path remains the install/consumption target, populated from this repo.
-- A repo-root installer script (future slice) copies/syncs canonical docs from this repo into:
+- Repo-root installer script now copies/syncs canonical docs from this repo into:
   - `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`
-- Session artifacts are regenerated from the implemented canonical flow once that implementation is complete and accepted.
+- Session artifacts and authority transition sequencing remain implementation-phase follow-ons.
 
 ## Authority ladder impact
 
@@ -39,15 +39,15 @@ This document does **not** implement installer behavior, runtime changes, path c
 - Vault `00_Identity` becomes the installed/consumed downstream copy.
 - Any conflicts are resolved by implementation-phase authority docs and installer contract.
 
-## Installer role (future, not implemented here)
+## Installer role (implemented; authority still future)
 
 Planned installer responsibilities:
 
 - Copy/sync canonical docs from repo root into vault install target.
 - Preserve required vault path compatibility.
-- Provide explicit sync semantics and failure handling (defined in later implementation slice).
+- Provide explicit sync semantics and non-prune safety behavior per install contract.
 
-Installer behavior contract reference (proposed, docs-only):
+Installer behavior contract reference:
 
 - `Install_Contract_heartloom_identity_repo_sync_v1_0.md`
 
@@ -63,9 +63,8 @@ Installer behavior contract reference (proposed, docs-only):
 
 ## Session-pack regeneration implications
 
-- This slice changes documentation only; no packaging scripts or runtime commands are modified.
-- Until implementation is complete, continue current session-pack regeneration flow and staging conventions.
-- A later implementation slice must define exact regeneration command updates for the repo-authoritative model.
+- Installer implementation exists; this does not change session-pack regeneration implementation by itself.
+- Continue current session-pack regeneration flow and staging conventions until a dedicated regeneration slice defines updates for repo-authoritative operation.
 
 ## Transition constraints
 
@@ -83,7 +82,6 @@ Installer behavior contract reference (proposed, docs-only):
 
 ## Explicit non-goals for this slice
 
-- No installer implementation.
 - No repo bootstrap scripts.
 - No file moves/renames for implementation purposes.
 - No `termux-utils` changes.
