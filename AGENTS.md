@@ -34,7 +34,9 @@ This repo uses a Codex-prompt-only workflow (no manual command blocks in assista
 6. Push.
 7. Create the PR.
 8. Attempt to enable auto-merge for the PR when supported.
-9. If auto-merge cannot be enabled, report the exact reason (do not guess).
+9. If auto-merge cannot be enabled, verify CI status first:
+   - If CI is red, STOP and report the failure with a fix recommendation.
+   - If CI is green/clean, report the exact auto-merge failure reason (do not guess).
 
 ### Cleanup clarity
 - Local branch cleanup remains local-only; do not delete remote branches directly.
