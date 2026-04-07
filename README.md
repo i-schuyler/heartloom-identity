@@ -43,6 +43,12 @@ Current authority state: repo-canonical authoring transition is completed, while
 - Near-term model: local installed snapshot consumption.
 - Long-term model: versioned release artifact / packaged bundle distribution (proposed, not implemented).
 
+## ChatGPT export artifact
+
+- Canonical export contract: `ChatGPT_Project_00_Identity_Export_Contract_v1_0.md`
+- Export script: `scripts/export-chatgpt-00-identity-zip.sh`
+- Default output path: `exports/chatgpt-00-identity/`
+
 ## CI and auto-merge policy
 
 - Canonical policy doc: `CI_Auto_Merge_Policy_heartloom_identity_v1_0.md`
