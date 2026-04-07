@@ -97,6 +97,12 @@ When bundles become available, consumer repos should:
 - Future released bundles are a distribution model layered on top of canonical semantics defined here.
 - Defining bundle semantics now does not change current installer authority or runtime behavior.
 
+## Manifest and release-prep reference
+
+Canonical future bundle manifest shape and release-prep readiness semantics are defined in:
+
+- `Bundle_Manifest_Release_Prep_Semantics_heartloom_identity_v1_0.md`
+
 ## Non-goals in this slice
 
 - No release automation.
