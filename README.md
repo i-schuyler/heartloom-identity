@@ -40,6 +40,7 @@ Current authority state: repo-canonical authoring transition is completed, while
 - Canonical bundle/versioning semantics doc: `Bundle_Versioning_Semantics_heartloom_identity_v1_0.md`
 - Canonical bundle manifest/release-prep semantics doc: `Bundle_Manifest_Release_Prep_Semantics_heartloom_identity_v1_0.md`
 - Canonical first bundle candidate scope doc: `First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md`
+- Canonical pack architecture doc: `Identity_Pack_Architecture_heartloom_identity_v1_0.md`
 - Near-term model: local installed snapshot consumption.
 - Long-term model: versioned release artifact / packaged bundle distribution (proposed, not implemented).
 
