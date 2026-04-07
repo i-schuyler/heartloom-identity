@@ -1,20 +1,44 @@
 # Authority Transition Gate: Installer Validation (v1.0)
 
-Status: **GATE DEFINITION (installer implemented; authority transition pending)**  
+Status: **GATE SATISFIED (validation complete; authority transition approved)**  
 Type: Validation and transition-approval checklist  
 Scope: Conditions required before practical authority transition from vault-first workflow to repo-canonical `00_Identity`
 
 ## Purpose
 
-Define exact validation and approval criteria that must be satisfied before declaring the authority transition complete.
+Define exact validation and approval criteria required to declare authority transition completion, and record gate outcomes.
 
-This document does **not** perform an authority flip.
+This document now includes a completed validation outcome record for transition approval.
 
 ## State model (must remain explicit)
 
-- **Proposed model:** Repo-canonical `00_Identity` authority model remains proposed in Change-Control.
+- **Authority model:** Repo-canonical `00_Identity` authority is now recorded as complete in Change-Control.
 - **Implemented component:** `install.sh` exists and implements sync-copy upsert without prune.
-- **Transition state:** authority transition is **NOT READY** until this gate is fully satisfied and explicitly approved.
+- **Transition state:** authority transition is **READY / COMPLETED** for current validated state.
+
+## Validation outcome record (current)
+
+Date recorded: `2026-04-07`  
+Outcome: **READY satisfied; authority transition complete**
+
+Evidence used:
+
+- Live install succeeded against `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`.
+- Post-install `git status` remained clean.
+- Installed vault tree showed expected in-scope files present.
+- Spot checks confirmed key files at expected destination paths.
+- Real-environment dry-run output:
+  - `scanned=27`
+  - `created=0`
+  - `updated=0`
+  - `skipped=27`
+  - `mode=sync-copy-upsert-without-prune`
+  - `no-deletes-performed=true`
+
+Still pending (explicit):
+
+- Session-pack regeneration automation is not implemented in this slice.
+- Bundle/release distribution model remains a separate future concern.
 
 ## Preconditions for transition validation
 
@@ -22,7 +46,7 @@ All must be true before validation begins:
 
 - Install contract is the current implemented contract document:
   - `Install_Contract_heartloom_identity_repo_sync_v1_0.md`
-- Authority proposal document is current and still marks authority as pending:
+- Authority change-control document is current and records transition completion:
   - `Change-Control_00_Identity_Canonical_Repo_Authority_Proposal_v1_0.md`
 - Canonical vault target remains unchanged and accessible:
   - `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`
@@ -131,5 +155,12 @@ When READY is reached, record a dated decision entry that includes:
 - declared transition status.
 
 Without this decision record, transition remains **NOT READY**.
+
+Current decision record:
+
+- commit SHA validated: evidence block supplied for current transition-completion slice
+- validation artifacts/notes location: this gate doc and linked change-control record
+- approver identity: repository owner/operator via supplied validated evidence block
+- declared transition status: READY / COMPLETED
 
 Authority_Transition_Gate_Installer_Validation_v1_0.md EOF

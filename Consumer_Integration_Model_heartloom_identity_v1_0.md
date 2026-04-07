@@ -14,7 +14,7 @@ This document governs integration behavior and proposal flow. It does **not** im
 
 - **Implemented now (near-term):** consumer repos consume installed local snapshots of `00_Identity` docs.
 - **Implemented now (source):** this repo is the maintained upstream source for docs and installer behavior.
-- **Still pending:** practical authority transition completion remains gated by:
+- **Implemented now (authority):** practical authority transition completion is recorded via:
   - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
 - **Proposed long-term:** versioned release artifact / packaged policy bundle distribution.
 

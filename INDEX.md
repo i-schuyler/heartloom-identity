@@ -10,9 +10,9 @@ Primary reading order is defined by the manifest:
 If you want a short “start here” sequence:
 
 1. **README.md** — what this folder is and what belongs here.
-2. **Change-Control_00_Identity_Canonical_Repo_Authority_Proposal_v1_0.md** — proposed authority model for repo-canonical `00_Identity` split (docs-only; not implemented).
+2. **Change-Control_00_Identity_Canonical_Repo_Authority_Proposal_v1_0.md** — authority transition completion record for repo-canonical `00_Identity` authoring.
 3. **Install_Contract_heartloom_identity_repo_sync_v1_0.md** — implemented installer contract for repo-root `install.sh` sync into vault `00_Identity` target.
-4. **Authority_Transition_Gate_Installer_Validation_v1_0.md** — canonical NOT READY vs READY validation gate before any practical authority transition.
+4. **Authority_Transition_Gate_Installer_Validation_v1_0.md** — canonical transition gate definition plus recorded READY/completion evidence.
 5. **Consumer_Integration_Model_heartloom_identity_v1_0.md** — canonical cross-repo consumer pattern (near-term snapshots, long-term versioned bundle model, override boundaries, upstream proposal flow).
 6. **Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md** — map of the enforcement-layer policies.
 7. **Heartloom-AI-Policies/authority-boundary-map-v1.0.md** — authority ladder + “you/we” interpretation + cross-project visibility limits.
