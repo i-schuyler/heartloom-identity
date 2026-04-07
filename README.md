@@ -52,7 +52,8 @@ Current authority state: repo-canonical authoring transition is completed, while
 ## Codex global source/install contract
 
 - Canonical contract doc: `Codex_Global_Source_Install_Contract_heartloom_identity_v1_0.md`
-- Contract defines source/target mapping and explicit opt-in install posture for future `~/.codex/` runtime files; implementation remains separate.
+- Global Codex sources live under `tooling/codex-global/`.
+- Explicit opt-in install mode: `./install.sh --codex-global` installs into `~/.codex/`.
 
 ## Codex execution profiles contract
 
