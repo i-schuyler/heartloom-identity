@@ -1,49 +1,55 @@
 # Change-Control: 00_Identity Canonical Repo Authority Proposal (v1.0)
 
-Status: **PROPOSED AUTHORITY MODEL (installer implemented; authority flip not implemented)**  
-Type: Change-Control / authority model proposal  
+Status: **AUTHORITY TRANSITION COMPLETED (installer validated; repo-canonical active)**  
+Type: Change-Control / authority transition record  
 Scope: `00_Identity` documentation authority and install flow boundaries
 
 ## Purpose
 
-Document the proposed authority model where this dedicated GitHub repository becomes the canonical authoring source for `00_Identity` **after** a later implementation slice is completed.
+Record the authority transition outcome where this dedicated GitHub repository is now the canonical authoring source for `00_Identity`.
 
-This document tracks the authority-model proposal. Installer behavior is now implemented separately via `install.sh`, while authority flip remains unimplemented.
+This document now records a completed transition decision based on validated installer evidence and transition-gate satisfaction.
+
+Filename is retained for continuity with prior slices and references.
 
 ## Current state (implemented today)
 
-- This repo is a Git-tracked imported copy of `00_Identity` content (repo root and `Heartloom-AI-Policies/`).
+- This repo is the canonical authoring source for `00_Identity` content (repo root and `Heartloom-AI-Policies/`).
 - The currently installed/consumed local copy remains in HeartloomVault at:
   - `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`
-- Current canon for in-vault operation and session packs remains the Android vault path/workflow.
+- Vault copy is the installer-managed installed/consumed downstream copy.
 - Installer script exists at repo root (`install.sh`) and applies the documented sync-copy upsert contract into the vault target.
 
-## Proposed future state (after implementation, not active yet)
+## Transition completion evidence (validated)
 
-- This repository becomes the canonical working authoring source for `00_Identity`.
-- The HeartloomVault path remains the install/consumption target, populated from this repo.
-- Repo-root installer script now copies/syncs canonical docs from this repo into:
-  - `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`
-- Session artifacts and authority transition sequencing remain implementation-phase follow-ons.
+- Live install succeeded against `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`.
+- Post-install `git status` remained clean.
+- Installed vault tree contained expected in-scope files.
+- Spot checks confirmed key files at expected destination paths.
+- Real-environment dry-run reported:
+  - `scanned=27`
+  - `created=0`
+  - `updated=0`
+  - `skipped=27`
+  - `mode=sync-copy-upsert-without-prune`
+  - `no-deletes-performed=true`
 
 ## Authority ladder impact
 
-### During transition (current)
+### Current authority state
 
-- No authority flip is performed by this docs-only slice.
-- Existing vault/session-pack canon remains authoritative.
-- Transition validation gate document now defines NOT READY vs READY conditions before any practical authority transition:
+- Canonical authoring authority for `00_Identity` is now this GitHub repo.
+- Vault `00_Identity` is the installed/consumed downstream copy.
+- Transition validation gate document records READY satisfaction and completion evidence:
   - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
 
-### After approved implementation (future)
+### Ongoing guardrail
 
-- Canonical authoring authority for `00_Identity` shifts to this GitHub repo.
-- Vault `00_Identity` becomes the installed/consumed downstream copy.
-- Any conflicts are resolved by implementation-phase authority docs and installer contract.
+- Any future authority-state change must be documented via Change-Control and gate revalidation.
 
-## Installer role (implemented; authority still future)
+## Installer role (implemented; authority transition complete)
 
-Planned installer responsibilities:
+Installer responsibilities:
 
 - Copy/sync canonical docs from repo root into vault install target.
 - Preserve required vault path compatibility.
@@ -60,23 +66,22 @@ Installer behavior contract reference:
 
 ## Canon boundaries: in-repo vs in-vault
 
-- **Now (implemented):** vault copy remains operationally authoritative for installed consumption.
-- **Future (proposed):** repo copy becomes canonical authoring source; vault copy is installer-managed output.
+- **Now (implemented):** repo copy is canonical authoring source.
+- **Now (implemented):** vault copy is installer-managed installed/consumed output.
 - Cross-repo consumer integration and local override governance is defined in:
   - `Consumer_Integration_Model_heartloom_identity_v1_0.md`
 
 ## Session-pack regeneration implications
 
 - Installer implementation exists; this does not change session-pack regeneration implementation by itself.
-- Continue current session-pack regeneration flow and staging conventions until a dedicated regeneration slice defines updates for repo-authoritative operation.
-- Authority transition remains pending until gate criteria (including session-pack awareness checks) are satisfied and explicitly approved.
+- Session-pack regeneration automation remains unimplemented and still requires a dedicated later slice.
+- Continue current session-pack regeneration flow and staging conventions until that automation/sequence slice is completed.
 
 ## Transition constraints
 
-- Keep proposal state explicit until implementation is complete.
-- Do not silently reinterpret current canon.
+- Keep completed authority state explicit and avoid silent drift.
 - Do not change canonical Android vault root/path definitions.
-- Do not modify installer/runtime tooling in this slice.
+- Do not imply unrelated automation completion.
 
 ## Migration risks
 
@@ -93,14 +98,16 @@ Installer behavior contract reference:
 - No CI changes.
 - No release automation changes.
 - No vault path changes.
-- No practical authority flip.
+- No session-pack regeneration automation implementation.
 
-## Durable decision record (proposal state)
+## Durable decision record (completion state)
 
 - Clipboard-return rule canonization is now documented in:
   - `Heartloom-AI-Policies/github-and-codex-pr-first-policy-v1.0.md`
 - Policy discoverability is documented in:
   - `Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md`
-- Repo authority split is recorded as proposed Change-Control in this document and remains non-implemented until a later approved implementation slice.
+- Authority transition gate satisfaction and evidence record is documented in:
+  - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
+- Repo-canonical authority transition is now recorded as complete in this document.
 
 Change-Control_00_Identity_Canonical_Repo_Authority_Proposal_v1_0.md EOF

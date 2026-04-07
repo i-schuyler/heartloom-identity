@@ -13,11 +13,12 @@ The dedicated Change-Control docs slice is documented in:
 - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
 - `Consumer_Integration_Model_heartloom_identity_v1_0.md`
 
-Current behavior is unchanged: the vault/session-pack workflow remains authoritative until a later implementation slice completes the proposed authority model.
+Current authority state: repo-canonical authoring transition is completed, while vault remains the installed/consumed downstream copy at `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`.
 
-## Proposal status
+## Current authority status
 
-- Repo-canonical `00_Identity` authority is **proposed**, not implemented.
+- Repo-canonical `00_Identity` authority transition is **completed**.
+- Vault `00_Identity` is the installer-managed installed/consumed downstream copy.
 - Clipboard-return rule canonization is implemented in policy docs only.
 
 ## Installer
@@ -26,11 +27,11 @@ Current behavior is unchanged: the vault/session-pack workflow remains authorita
 - Supported mode: sync-copy upsert without prune (no vault-file deletions).
 - Dry run: `./install.sh --dry-run`
 - Apply install: `./install.sh`
-- Installer implementation does not flip authority; authority change remains governed by Change-Control.
+- Installer execution follows contract semantics; authority-state decisions are governed by Change-Control and gate records.
 
 ## Authority transition gate
 
-- Practical authority transition is pending until validation gate criteria are satisfied.
+- Practical authority transition gate is satisfied and recorded.
 - Canonical gate checklist: `Authority_Transition_Gate_Installer_Validation_v1_0.md`
 
 ## Consumer integration model

@@ -1,6 +1,6 @@
 # Install Contract: heartloom-identity Repo Sync (v1.0)
 
-Status: **IMPLEMENTED CONTRACT (installer available; authority model still proposed)**  
+Status: **IMPLEMENTED CONTRACT (installer available; authority transition completed)**  
 Type: Installer contract for repo-root `install.sh`  
 Target: `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`
 
@@ -10,10 +10,10 @@ Define explicit behavior for repo-root `install.sh` that installs canonical `00_
 
 This document is normative for implementation and verification of installer behavior.
 
-## Current vs proposed state
+## Current state
 
 - **Current (implemented):** Repo-root `install.sh` applies this contract to copy/sync docs into vault target.
-- **Still proposed (future):** Authority flip to repo-canonical authoring remains separately governed by Change-Control and is not completed by installer implementation alone.
+- **Current authority state:** Repo-canonical authoring transition is completed and recorded in Change-Control.
 
 ## Contract scope
 
@@ -93,13 +93,13 @@ Excluded from install scope:
 
 ## Authority transition gate reference
 
-- Installer implementation alone does not complete authority transition.
+- Installer implementation alone does not complete authority transition without validation evidence.
 - Transition readiness is governed by:
   - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
 
 ## Explicit non-goals (implementation boundary)
 
-- No file moves or authority flip.
+- No additional authority-state changes triggered by installer execution alone.
 - No vault path changes.
 - No session-pack regeneration implementation.
 - No CI/release changes.
