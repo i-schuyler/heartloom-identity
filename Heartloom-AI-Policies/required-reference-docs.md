@@ -5,10 +5,10 @@
 
 ## Session Input Artifacts (zips)
 
-These are the default “session packs” and are generally expected to be present in Project Files:
+These are **reference pack artifacts** and are generally expected to be present in Project Files:
 
-- **00_Identity.zip** (e.g., `00_Identity-YYYY-MM-DD.zip`)
-- **Stable_Base.zip** (also referred to as **Canonical Reference.zip**)
+- **00_Identity.zip** (e.g., `00_Identity-YYYY-MM-DD.zip`) — Reference Pack snapshot
+- **Stable_Base.zip** (also referred to as **Canonical Reference.zip**) — Reference Pack snapshot
 
 ### Universal STOP rule (applies to all required artifacts)
 If the assistant references any required artifact (doc/zip) that is not available in the current session inputs, the assistant must **STOP** and request that artifact (no guessing, no proceeding).
@@ -16,7 +16,7 @@ If the assistant references any required artifact (doc/zip) that is not availabl
 ### Ongoing regeneration rule (assistant obligation)
 Whenever the assistant proposes edits to any document covered by this required list (including prompt templates and policies), the assistant must also provide the exact commands to regenerate updated session packs (00_Identity.zip and Stable_Base.zip) and stage them into `40_STAGING/` for upload/review.
 
-## A) Heartloom AI policies (this folder)
+## A) Canonical in-repo policy docs (this folder)
 
 These are always required for ongoing collaboration behavior:
 
@@ -29,9 +29,18 @@ These are always required for ongoing collaboration behavior:
 - global-memories-refactored-set-v2.0.md
 - required-reference-docs.md
 
-## B) Vault-level always-refer documents (when present)
+## A2) Canonical in-repo identity docs (repo root)
 
-These are treated as authoritative inputs when relevant:
+- Heartloom_AI_Operating_Protocol.md (pointer to canonical policy)
+- Heartloom_AI_Memory_Constitution.md
+- Definitions_Glossary_v1_0.md
+- github-governance-policy.md
+- github-repo-intake-checklist.md
+- Repo_Standards_Baseline.md (pointer to canonical policy)
+
+## B) Generated local working artifacts (vault-level, when present)
+
+These are working-pack inputs that may be sensitive or environment-specific. They are **not** committed to this repo.
 
 - /storage/emulated/0/Documents/HeartloomVault/30_REFERENCE/GitHub_SSH_Key_Locations_Map_AUTHORITATIVE.md
 - /storage/emulated/0/Documents/HeartloomVault/30_REFERENCE/vaultmeta/VaultMeta - File Tree.md
@@ -44,7 +53,7 @@ These are treated as authoritative inputs when relevant:
 - /storage/emulated/0/Documents/HeartloomVault/00_Identity/github-repo-intake-checklist.md
 - /storage/emulated/0/Documents/HeartloomVault/00_Identity/Repo_Standards_Baseline.md
 
-## C) Project-level always-refer documents
+## C) Project-level always-refer documents (repo-local when adopted)
 
 For any active repo/project, these are required when doing implementation work:
 
@@ -54,7 +63,7 @@ For any active repo/project, these are required when doing implementation work:
 - Project Drift Ledger (if present / required)
 - Project Assumptions Registry (hardware/security projects)
 
-If any of these are missing, the assistant should hard-pause and request the relevant project files/docs.
+If any of these are missing, the assistant should hard-pause and request the relevant project files/docs, or explicitly note that the project has not adopted them yet.
 
 ## D) Stable Base (cross-project, rarely changes)
 
