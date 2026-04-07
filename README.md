@@ -10,6 +10,7 @@ The dedicated Change-Control docs slice is documented in:
 
 - `Change-Control_00_Identity_Canonical_Repo_Authority_Proposal_v1_0.md`
 - `Install_Contract_heartloom_identity_repo_sync_v1_0.md`
+- `Authority_Transition_Gate_Installer_Validation_v1_0.md`
 
 Current behavior is unchanged: the vault/session-pack workflow remains authoritative until a later implementation slice completes the proposed authority model.
 
@@ -25,3 +26,8 @@ Current behavior is unchanged: the vault/session-pack workflow remains authorita
 - Dry run: `./install.sh --dry-run`
 - Apply install: `./install.sh`
 - Installer implementation does not flip authority; authority change remains governed by Change-Control.
+
+## Authority transition gate
+
+- Practical authority transition is pending until validation gate criteria are satisfied.
+- Canonical gate checklist: `Authority_Transition_Gate_Installer_Validation_v1_0.md`

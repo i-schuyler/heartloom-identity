@@ -91,6 +91,12 @@ Excluded from install scope:
 - This contract does not change current session-pack regeneration implementation.
 - A later implementation slice must define how installer execution and session-pack regeneration sequence together without guessing.
 
+## Authority transition gate reference
+
+- Installer implementation alone does not complete authority transition.
+- Transition readiness is governed by:
+  - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
+
 ## Explicit non-goals (implementation boundary)
 
 - No file moves or authority flip.
