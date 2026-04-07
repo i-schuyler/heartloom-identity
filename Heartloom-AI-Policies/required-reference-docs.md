@@ -40,7 +40,7 @@ These are always required for ongoing collaboration behavior:
 
 ## B) Generated local working artifacts (vault-level, when present)
 
-These are working-pack inputs that may be sensitive or environment-specific. They are **not** committed to this repo.
+These are working-pack inputs that may be sensitive or environment-specific. They are **not** committed to this repo and may include Stable Base / Working Pack outputs.
 
 - /storage/emulated/0/Documents/HeartloomVault/30_REFERENCE/GitHub_SSH_Key_Locations_Map_AUTHORITATIVE.md
 - /storage/emulated/0/Documents/HeartloomVault/30_REFERENCE/vaultmeta/VaultMeta - File Tree.md
