@@ -33,6 +33,7 @@ When implemented in future slices, consumer repos should prefer versioned distri
 - Versioned release artifact or packaged policy bundle published from `heartloom-identity`.
 - Consumer repos pin to explicit bundle version identifiers.
 - Upgrade cadence becomes explicit and reviewable via version bumps.
+- Bundle boundary and version semantics are canonically defined in `Bundle_Versioning_Semantics_heartloom_identity_v1_0.md`.
 
 This long-term distribution model is aspirational here and is not implemented in this slice.
 
@@ -93,14 +94,13 @@ When consumer repos identify needed upstream changes:
 4. Keep local consumer override temporary until upstream decision is merged/rejected.
 5. Reconcile consumer local docs after upstream decision.
 
-## Future version pinning expectations (for bundle model)
+## Bundle/versioning semantics reference
 
-When versioned bundles/artifacts exist, consumer repos are expected to:
+Canonical bundle scope, inclusion/exclusion boundaries, consumer pinning expectations, and upgrade posture are defined in:
 
-- Pin to explicit version identifiers (tag or release version).
-- Record pinned version in consumer repo docs.
-- Update only through explicit review (no silent floating latest).
-- Maintain a short compatibility note when lagging behind latest bundle.
+- `Bundle_Versioning_Semantics_heartloom_identity_v1_0.md`
+
+This integration model remains the authority for cross-repo extension/override governance and upstream proposal flow.
 
 ## Non-goals in this slice
 

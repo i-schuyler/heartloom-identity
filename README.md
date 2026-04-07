@@ -37,5 +37,6 @@ Current authority state: repo-canonical authoring transition is completed, while
 ## Consumer integration model
 
 - Canonical consumer model doc: `Consumer_Integration_Model_heartloom_identity_v1_0.md`
+- Canonical bundle/versioning semantics doc: `Bundle_Versioning_Semantics_heartloom_identity_v1_0.md`
 - Near-term model: local installed snapshot consumption.
 - Long-term model: versioned release artifact / packaged bundle distribution (proposed, not implemented).
