@@ -146,6 +146,7 @@ fi
 zip_name="00_Identity-ChatGPT-${export_date}.zip"
 final_zip_path="${output_dir}/${zip_name}"
 final_provenance_path="${output_dir}/${zip_name%.zip}.provenance.txt"
+pack_manifest_name="ChatGPT_Reference_Pack_Manifest.md"
 
 if [[ ! -f "${manifest_path}" ]]; then
   echo "Manifest not found: ${manifest_path}" >&2
@@ -178,14 +179,46 @@ fi
 
 tmp_zip_path="${tmp_dir}/${zip_name}"
 tmp_provenance_path="${tmp_dir}/${zip_name%.zip}.provenance.txt"
+tmp_pack_manifest_path="${tmp_dir}/${pack_manifest_name}"
+
+commit_sha="$(git rev-parse HEAD)"
+generated_utc="$(now_ts)"
+
+cat > "${tmp_pack_manifest_path}" <<EOF
+# ChatGPT Reference Pack Manifest (generated)
+
+Purpose: Downstream Reference Pack export for ChatGPT project use.
+
+Source repo: heartloom-identity
+Commit SHA: ${commit_sha}
+Exported UTC: ${generated_utc}
+Export contract: ChatGPT_Project_00_Identity_Export_Contract_v1_0.md
+
+Included classes:
+- Core identity + governance docs
+- Selected Heartloom AI policy canon
+- Consumer/bundle semantics docs
+- Export-safe navigation (README/INDEX)
+
+Excluded classes:
+- Working Pack artifacts (logs, staging, local outputs)
+- Sensitive local artifacts (vault metadata, key maps)
+- Installer/maintainer internals and transition records
+- Repo-level navigation not scoped to this Reference Pack
+- Pointer shims replaced by canonical policy docs
+
+Known intentional omissions:
+- Repo README/INDEX
+- Heartloom-AI-Policies/required-reference-docs.md
+- Repo-root pointer shims (Heartloom_AI_Operating_Protocol.md, Repo_Standards_Baseline.md)
+EOF
 
 (
   cd "${repo_root}"
   zip -X -@ "${tmp_zip_path}" < "${manifest_path}"
 )
 
-commit_sha="$(git rev-parse HEAD)"
-generated_utc="$(now_ts)"
+zip -X -j "${tmp_zip_path}" "${tmp_pack_manifest_path}"
 
 cat > "${tmp_provenance_path}" <<EOF
 exported_artifact=${zip_name}
@@ -217,6 +250,7 @@ Exported ChatGPT 00_Identity zip:
 - output_dir: ${output_dir}
 - zip_path: ${final_zip_path}
 - provenance_path: ${final_provenance_path}
+- pack_manifest: ${pack_manifest_name}
 - log_path: ${log_path}
 EOF
 

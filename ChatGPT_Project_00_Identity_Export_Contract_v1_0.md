@@ -1,12 +1,12 @@
 # ChatGPT Project 00_Identity Export Contract (v1.0)
 
 Status: **CANONICAL EXPORT CONTRACT DEFINED (export flow implemented; bundle publishing remains future)**  
-Type: Downstream export artifact contract (ChatGPT-project session-pack)  
-Scope: Defines the exported `00_Identity` zip artifact used by the ChatGPT project
+Type: Downstream export artifact contract (ChatGPT-project Reference Pack)  
+Scope: Defines the exported `00_Identity` Reference Pack zip artifact used by the ChatGPT project
 
 ## Purpose
 
-Define a canonical, repeatable export contract for the ChatGPT-project `00_Identity` zip artifact, sourced from this repo’s canonical `00_Identity` docs.
+Define a canonical, repeatable export contract for the ChatGPT-project `00_Identity` Reference Pack zip artifact, sourced from this repo’s canonical `00_Identity` docs.
 
 This contract defines **what is exported** and **how it is refreshed**, without changing bundle publishing, installer semantics, or repo authority.
 
@@ -43,53 +43,48 @@ This contract covers:
 
 - **Source of truth:** repo-canonical `heartloom-identity` content (this repo).
 - **Installed copy (downstream):** vault `00_Identity` installed via `./install.sh`.
-- **Exported ChatGPT artifact:** a downstream, read-only snapshot zip produced from repo-canonical state.
+- **Exported ChatGPT artifact:** a downstream, read-only Reference Pack zip produced from repo-canonical state.
 - **Future bundles/releases:** separate future distribution model, not implied by this export.
 
 ## Exported artifact purpose
 
-The ChatGPT-project `00_Identity` zip is a **session-pack style** downstream artifact for ChatGPT project use. It provides a stable snapshot of consumer-facing canonical docs without including maintainership-only or installer-internal materials.
+The ChatGPT-project `00_Identity` zip is a **Reference Pack** downstream artifact for ChatGPT project use. It provides a stable snapshot of consumer-facing canonical docs without including maintainership-only or installer-internal materials.
 
 ## Export contents (explicit include list)
 
-The ChatGPT export includes the **v0 bundle candidate scope** defined in:
-
-- `First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md`
+The ChatGPT Reference Pack includes only the docs listed in the export manifest and export-safe navigation.
 
 Included files (explicit):
 
-### A) Bundle contract + consumer integration docs
+### A) Export-safe navigation
+
+- `exports/chatgpt-reference-pack/README.md`
+- `exports/chatgpt-reference-pack/INDEX.md`
+- `ChatGPT_Reference_Pack_Manifest.md` (generated at export time and included at zip root)
+
+### B) Consumer + bundle semantics
 
 - `Consumer_Integration_Model_heartloom_identity_v1_0.md`
 - `Bundle_Versioning_Semantics_heartloom_identity_v1_0.md`
 - `Bundle_Manifest_Release_Prep_Semantics_heartloom_identity_v1_0.md`
 - `First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md`
 
-### B) Consumer discoverability/navigation docs
+### C) Heartloom AI policy canon (selected)
 
-- `README.md`
-- `INDEX.md`
-
-### C) Heartloom AI policy canon needed for downstream use
-
-- `Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md`
-- `Heartloom-AI-Policies/required-reference-docs.md`
-- `Heartloom-AI-Policies/authority-boundary-map-v1.0.md`
 - `Heartloom-AI-Policies/heartloom-ai-operating-protocol-v1.0.md`
 - `Heartloom-AI-Policies/termux-and-shell-policy-v1.0.md`
 - `Heartloom-AI-Policies/github-and-codex-pr-first-policy-v1.0.md`
 - `Heartloom-AI-Policies/repo-standards-baseline-v1.0.md`
 - `Heartloom-AI-Policies/zip-inspection-and-artifact-contract-v1.0.md`
 - `Heartloom-AI-Policies/global-memories-refactored-set-v2.0.md`
+- `Heartloom-AI-Policies/authority-boundary-map-v1.0.md`
 
 ### D) Core identity docs commonly used as downstream authority references
 
-- `Heartloom_AI_Operating_Protocol.md`
 - `Heartloom_AI_Memory_Constitution.md`
 - `Definitions_Glossary_v1_0.md`
 - `github-governance-policy.md`
 - `github-repo-intake-checklist.md`
-- `Repo_Standards_Baseline.md`
 
 If the ChatGPT project requires additional docs, update the explicit include list above in a new slice (no silent expansion).
 
@@ -100,6 +95,10 @@ Excluded by default unless elevated in a future canonical slice:
 - Maintainership/transition/installer internals (`install.sh`, transition records, installer contracts).
 - Maintenance/ops convenience docs not required for downstream consumption.
 - Migration/history records (for example memory migration maps).
+- `Heartloom-AI-Policies/required-reference-docs.md` (references working-pack and local-only artifacts).
+- `Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md` (superseded by export-safe index in this pack).
+- Repo-level navigation not scoped to this Reference Pack (for example repo `README.md` / `INDEX.md`).
+- Pointer shims at repo root (canonical policy versions are included instead).
 - Dotfiles, `.git/`, and non-markdown files unless explicitly required.
 - Future `~/.codex` runtime-source artifacts and other operator tooling.
 
@@ -130,7 +129,7 @@ Every export should record:
 - Export contract version (`v1.0`).
 - Manifest file path used.
 
-The export script writes a sidecar provenance file next to the zip and prints the same details to stdout.
+The export script writes a sidecar provenance file next to the zip and prints the same details to stdout. It also generates a `ChatGPT_Reference_Pack_Manifest.md` file inside the export zip.
 
 ## Relationship to bundle publishing
 
