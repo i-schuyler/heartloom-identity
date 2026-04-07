@@ -1,6 +1,6 @@
 # Codex Global Source + Install Contract: heartloom-identity (v1.0)
 
-Status: **CONTRACT DEFINED (implementation not yet completed)**  
+Status: **IMPLEMENTED CONTRACT (source files and installer mode available)**  
 Type: Canonical source/target/install contract for global Codex runtime files  
 Scope: Source location in this repo, target mapping to `~/.codex/`, install posture, bundle exclusion, and safe stale-branch guidance
 
@@ -8,14 +8,13 @@ Scope: Source location in this repo, target mapping to `~/.codex/`, install post
 
 Define how `heartloom-identity` acts as canonical source-of-truth for user-global Codex runtime files while keeping this contract distinct from vault install behavior and consumer bundle contents.
 
-This document defines contract semantics only. It does **not** create global files, change installer code, or enable automatic `~/.codex` installation.
+This document defines contract semantics and the implemented installer mode for explicit `~/.codex` installation.
 
 ## Implemented vs future state (required clarity)
 
 - **Implemented now:** `heartloom-identity` is canonical for identity/policy docs and current vault installer behavior.
-- **Implemented now:** installer behavior targets vault sync and does not define `~/.codex` mapping.
-- **Defined now for future use:** source path, target mapping, and explicit install posture for global Codex files.
-- **Not implemented yet:** actual global source files and install mechanism for `~/.codex/`.
+- **Implemented now:** global Codex source files live under `tooling/codex-global/`.
+- **Implemented now:** explicit installer mode installs global files into `~/.codex/`.
 
 ## Canonical source location inside this repo
 
@@ -23,7 +22,7 @@ Reserved source area for future global Codex runtime files:
 
 - `tooling/codex-global/`
 
-Expected source files (when implemented in later slices):
+Expected source files:
 
 - `tooling/codex-global/AGENTS.md`
 - `tooling/codex-global/config.toml`
@@ -32,7 +31,7 @@ This source area is intentionally separate from consumer-facing canon docs.
 
 ## Install target mapping under `~/.codex/`
 
-When implemented, mapping should be:
+Mapping:
 
 - `tooling/codex-global/AGENTS.md` -> `~/.codex/AGENTS.md`
 - `tooling/codex-global/config.toml` -> `~/.codex/config.toml`
@@ -42,14 +41,14 @@ If additional global files are added later, each must be explicitly documented w
 ## Install posture (explicit and optional)
 
 - Installation into `~/.codex/` is **explicit/optional**, not implicit.
-- Normal vault install flows should continue working without touching `~/.codex/`.
-- Any future install path for global Codex files must be clearly opt-in (manual command or explicit installer mode), never hidden side-effect.
+- Normal vault install flows continue working without touching `~/.codex/`.
+- Global file installation is opt-in via explicit installer mode (manual command), never a hidden side-effect.
 
 ## Relationship to existing vault install behavior
 
-- Current `./install.sh` behavior remains vault-focused and unchanged by this contract.
+- Current `./install.sh` default behavior remains vault-focused and unchanged.
 - Vault sync semantics and authority behavior are unaffected.
-- `~/.codex` install behavior is a separate future implementation concern.
+- `~/.codex` install behavior is implemented only via explicit installer mode.
 
 ## Relationship to repo-local `AGENTS.md` files
 
@@ -84,10 +83,8 @@ Safety rules:
 - Never assume unmerged branches are safe to delete.
 - Avoid force-deleting (`git branch -D`) unless explicitly reviewed and intentional.
 
-## Non-goals in this slice
+## Non-goals
 
-- No `install.sh` code changes.
-- No creation of actual global source files yet.
 - No authority changes.
 - No bundle tooling changes.
 - No CI changes.

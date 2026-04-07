@@ -18,7 +18,7 @@ If you want a short “start here” sequence:
 7. **Bundle_Manifest_Release_Prep_Semantics_heartloom_identity_v1_0.md** — canonical manifest fields, content enumeration expectations, and release-prep readiness criteria (semantics defined now; publication remains future work).
 8. **First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md** — first concrete v0 bundle candidate include/exclude boundary optimized for downstream consumer use and prompt-template style consumption.
 9. **CI_Auto_Merge_Policy_heartloom_identity_v1_0.md** — canonical required-check baseline, merge readiness criteria, auto-merge posture, and branch cleanup posture (policy defined now; implementation/settings later).
-10. **Codex_Global_Source_Install_Contract_heartloom_identity_v1_0.md** — canonical source path and `~/.codex/` target mapping contract for future global Codex runtime files (explicit install posture; implementation later).
+10. **Codex_Global_Source_Install_Contract_heartloom_identity_v1_0.md** — canonical source path and `~/.codex/` target mapping contract for global Codex runtime files (explicit install posture; implemented via `./install.sh --codex-global`).
 11. **Codex_Execution_Profiles_Contract_heartloom_identity_v1_0.md** — canonical execution profiles for Codex runtime behavior (safe default and GitHub/PR profile) with config vs instruction boundaries.
 12. **Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md** — map of the enforcement-layer policies.
 13. **Heartloom-AI-Policies/authority-boundary-map-v1.0.md** — authority ladder + “you/we” interpretation + cross-project visibility limits.
