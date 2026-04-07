@@ -47,3 +47,8 @@ Current authority state: repo-canonical authoring transition is completed, while
 
 - Canonical policy doc: `CI_Auto_Merge_Policy_heartloom_identity_v1_0.md`
 - Policy is defined now; CI workflows and GitHub settings rollout remain separate implementation/admin steps.
+
+## Codex global source/install contract
+
+- Canonical contract doc: `Codex_Global_Source_Install_Contract_heartloom_identity_v1_0.md`
+- Contract defines source/target mapping and explicit opt-in install posture for future `~/.codex/` runtime files; implementation remains separate.

@@ -106,6 +106,7 @@ The v0 candidate is optimized for:
 
 - `.git/`
 - Dotfiles/local environment files
+- `tooling/codex-global/` and other future `~/.codex` runtime-source files
 - Non-markdown files unless explicitly required in a future slice
 
 **Why excluded:** Not consumer-facing canonical content.
