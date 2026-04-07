@@ -112,6 +112,7 @@ Unless explicitly elevated in future canon, publishable consumer bundle artifact
 - `.git/` internals.
 - Dotfiles/local environment files.
 - `install.sh` and installer implementation mechanics.
+- `tooling/codex-global/` and other future `~/.codex` runtime-source/operator tooling files.
 - Change-control transition/gate validation records.
 - Installer contract internals and maintenance/migration/tooling records.
 - Non-markdown files unless explicitly required for downstream consumption.

@@ -49,6 +49,7 @@ The bundle excludes repository-maintainer/internal materials unless explicitly e
 - `.git/` and other VCS internals.
 - Dotfiles and local environment/config convenience files.
 - `install.sh` and installer execution mechanics.
+- `tooling/codex-global/` and other `~/.codex` runtime-source/operator tooling files.
 - Change-control transition records and gate-validation records.
 - Installer contract docs and maintenance/migration/tooling docs.
 - Non-markdown files unless explicitly required for downstream consumption.
@@ -108,6 +109,14 @@ Canonical future bundle manifest shape and release-prep readiness semantics are 
 Canonical first concrete bundle-candidate include/exclude scope is defined in:
 
 - `First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md`
+
+## Codex-global source/install contract reference
+
+Canonical source/target/install semantics for future global Codex runtime files are defined in:
+
+- `Codex_Global_Source_Install_Contract_heartloom_identity_v1_0.md`
+
+Those files are treated as non-consumer runtime/operator artifacts and are excluded from consumer bundles by default.
 
 ## Non-goals in this slice
 
