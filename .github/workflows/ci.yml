@@ -1,0 +1,57 @@
+name: ci
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Bash syntax check
+        run: bash -n install.sh
+      - name: Markdown link sanity
+        run: |
+          python - <<'PY'
+          import pathlib
+          import re
+          import subprocess
+          import sys
+
+          link_re = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
+          output = subprocess.check_output(
+              ["git", "ls-files", "*.md"],
+              text=True,
+          )
+          md_files = [pathlib.Path(line) for line in output.splitlines() if line.strip()]
+
+          bad = []
+          for md in md_files:
+              text = md.read_text(encoding="utf-8")
+              for match in link_re.finditer(text):
+                  target = match.group(2).strip()
+                  if not target or target.startswith("#"):
+                      continue
+                  if re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", target):
+                      continue
+                  target_path = target.split("#", 1)[0].split("?", 1)[0]
+                  if not target_path or target_path.startswith(("/", "~")):
+                      continue
+                  resolved = (md.parent / target_path).resolve()
+                  if not resolved.exists():
+                      bad.append(f"{md}:{target}")
+
+          if bad:
+              print("Broken relative markdown links:")
+              for item in bad:
+                  print(f"- {item}")
+              sys.exit(1)
+
+          print(f"Checked {len(md_files)} markdown files.")
+          PY

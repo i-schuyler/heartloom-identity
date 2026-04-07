@@ -46,7 +46,8 @@ Current authority state: repo-canonical authoring transition is completed, while
 ## CI and auto-merge policy
 
 - Canonical policy doc: `CI_Auto_Merge_Policy_heartloom_identity_v1_0.md`
-- Policy is defined now; CI workflows and GitHub settings rollout remain separate implementation/admin steps.
+- Lightweight CI workflow is implemented at `.github/workflows/ci.yml`.
+- GitHub settings rollout remains a separate implementation/admin step.
 
 ## Codex global source/install contract
 
