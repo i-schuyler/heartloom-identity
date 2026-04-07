@@ -32,6 +32,8 @@ This document tracks the authority-model proposal. Installer behavior is now imp
 
 - No authority flip is performed by this docs-only slice.
 - Existing vault/session-pack canon remains authoritative.
+- Transition validation gate document now defines NOT READY vs READY conditions before any practical authority transition:
+  - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
 
 ### After approved implementation (future)
 
@@ -65,6 +67,7 @@ Installer behavior contract reference:
 
 - Installer implementation exists; this does not change session-pack regeneration implementation by itself.
 - Continue current session-pack regeneration flow and staging conventions until a dedicated regeneration slice defines updates for repo-authoritative operation.
+- Authority transition remains pending until gate criteria (including session-pack awareness checks) are satisfied and explicitly approved.
 
 ## Transition constraints
 
