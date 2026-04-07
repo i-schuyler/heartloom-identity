@@ -100,6 +100,7 @@ Canonical bundle scope, inclusion/exclusion boundaries, consumer pinning expecta
 
 - `Bundle_Versioning_Semantics_heartloom_identity_v1_0.md`
 - `Bundle_Manifest_Release_Prep_Semantics_heartloom_identity_v1_0.md` (future manifest concept and release-readiness semantics)
+- `First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md` (first concrete v0 bundle candidate include/exclude scope)
 
 This integration model remains the authority for cross-repo extension/override governance and upstream proposal flow.
 
