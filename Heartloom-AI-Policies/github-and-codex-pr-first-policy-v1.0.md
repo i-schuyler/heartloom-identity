@@ -27,6 +27,9 @@ Default slice loop:
 - Applies to every default slice loop unless a higher-authority document explicitly overrides it.
 - The returned summary should be verbatim to preserve implementation context and reduce re-entry drift.
 - This policy does not require any specific clipboard utility; fallback behavior is required when clipboard integration is unavailable.
+- If the user prompt defines a required output contract (for example numbered sections), the clipboard payload must match that contract exactly rather than a generic execution summary.
+- Numbered clipboard contracts are not capped at 5; include however many numbered sections are generated for that slice (for example 1–6 when six sections are required).
+- Clipboard verification step: confirm the copied block begins with the expected first contract heading before ending the slice.
 
 ### Docs Review Gate (required before risky DEV)
 
