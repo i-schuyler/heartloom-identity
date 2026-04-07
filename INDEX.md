@@ -29,6 +29,7 @@ If you want a short “start here” sequence:
 18. **github-governance-policy.md** + **github-repo-intake-checklist.md** — repo governance + intake workflow.
 19. **Codex_CLI_Termux_Setup_v1_0.md** — Codex CLI setup and safe operation.
 20. **House_Defaults_v1_0.md** + **Tools_Shortlist_v1_0.md** + **Definitions_Glossary_v1_0.md** — defaults, tools, shared language.
+21. **Docs_Full_Audit_heartloom_identity_2026-04-07.md** — repo-wide documentation audit report (conflicts, drift risks, discoverability gaps).
 ## Maintenance triggers
 
 - If a key term’s meaning changes (“canonical”, “drift”, “pause point”, “forensic”, “done/DoD”), update **Definitions_Glossary_v1_0.md**.
