@@ -47,7 +47,8 @@ Current authority state: repo-canonical authoring transition is completed, while
 
 - Canonical export contract: `ChatGPT_Project_00_Identity_Export_Contract_v1_0.md`
 - Export script: `scripts/export-chatgpt-00-identity-zip.sh`
-- Default output path: `exports/chatgpt-00-identity/`
+- Default output path: `/storage/emulated/0/Documents/HeartloomVault/40_STAGING/`
+- Default log path: `/storage/emulated/0/Documents/HeartloomVault/30_REFERENCE/termux-outputs/log-dump/<YYYY-MM-DD>/`
 
 ## CI and auto-merge policy
 

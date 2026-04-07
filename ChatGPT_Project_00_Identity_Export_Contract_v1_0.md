@@ -115,9 +115,10 @@ Date is the primary postfix. If a future naming change is needed (for example ad
 
 - **Script:** `scripts/export-chatgpt-00-identity-zip.sh`
 - **Manifest:** `scripts/chatgpt-00-identity-export.manifest`
-- **Output directory (repo-local):** `exports/chatgpt-00-identity/`
+- **Staging directory (vault):** `/storage/emulated/0/Documents/HeartloomVault/40_STAGING/`
+- **Logs directory (vault):** `/storage/emulated/0/Documents/HeartloomVault/30_REFERENCE/termux-outputs/log-dump/<YYYY-MM-DD>/`
 
-Exports are generated in-repo to keep the artifact scoped to this repository and clearly distinct from the vault-installed copy.
+Exports are built in internal storage first, then staged into the vault staging directory to preserve a clear repo-source vs exported-artifact boundary.
 
 ## Provenance expectations
 
