@@ -12,6 +12,7 @@ This repo uses a Codex-prompt-only workflow (no manual command blocks in assista
 - Include an Evidence Block whenever canon, contracts, authority, or workflow behavior is being changed.
 - Include Hard Stop Conditions.
 - Clipboard payload must match the prompt-defined output contract exactly.
+- Use the identity-layer output contract defined in `Identity_Layer_Output_Contract_heartloom_identity_v1_0.md`.
 
 ### PR preflight (do first in future Codex runs)
 - Check for open PRs Codex is responsible for in this repo (do not merge unrelated PRs).

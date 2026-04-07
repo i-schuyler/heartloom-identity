@@ -74,6 +74,7 @@ Current authority state: repo-canonical authoring transition is completed, while
 - This repo uses a Codex-prompt-only flow: assistants should not provide manual branch checkout/push/PR/cleanup command blocks for this repo.
 - Codex should attempt per-PR auto-merge enablement when supported and report the exact reason if it cannot be enabled.
 - Safe stale-branch cleanup is expected at the start of Codex runs (local-only; remote cleanup relies on GitHub settings after merge).
+- Canonical output contract for identity-layer slices: `Identity_Layer_Output_Contract_heartloom_identity_v1_0.md`
 
 ## Codex push/PR smoke test note
 
