@@ -13,20 +13,28 @@ This repo uses a Codex-prompt-only workflow (no manual command blocks in assista
 - Include Hard Stop Conditions.
 - Clipboard payload must match the prompt-defined output contract exactly.
 
-### Safe startup cleanup (do first in future Codex runs)
+### PR preflight (do first in future Codex runs)
+- Check for open PRs Codex is responsible for in this repo (do not merge unrelated PRs).
+- Inspect CI status and mergeability for relevant open PRs.
+- If CI is green and PR is mergeable, merge it.
+- If CI is red, STOP and report the failure with a fix recommendation.
+- If CI is pending, report pending status; proceed only if appropriate.
+
+### Safe startup cleanup (after PR preflight/merge handling)
 - Run `git fetch --prune origin`.
 - Delete only fully merged local branches that are not the current branch.
 - Never delete the current branch or any unmerged branch by default.
 
 ### Required Codex run steps (this repo)
-1. Perform safe stale-branch cleanup (see above).
-2. Create/switch to the next slice branch.
-3. Do the slice work.
-4. Commit.
-5. Push.
-6. Create the PR.
-7. Attempt to enable auto-merge for the PR when supported.
-8. If auto-merge cannot be enabled, report the exact reason (do not guess).
+1. Perform PR preflight (see above).
+2. Perform safe stale-branch cleanup (see above).
+3. Create/switch to the next slice branch.
+4. Do the slice work.
+5. Commit.
+6. Push.
+7. Create the PR.
+8. Attempt to enable auto-merge for the PR when supported.
+9. If auto-merge cannot be enabled, report the exact reason (do not guess).
 
 ### Cleanup clarity
 - Local branch cleanup remains local-only; do not delete remote branches directly.
