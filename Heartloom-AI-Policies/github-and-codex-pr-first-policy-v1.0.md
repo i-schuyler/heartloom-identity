@@ -17,8 +17,16 @@ Default slice loop:
 1. Assistant provides: branch checkout commands + Codex prompt + recommended reasoning level.
 2. User replies with: Codex summary.
 3. Assistant provides: push + **`gh pr create`** commands in one block; post-merge cleanup commands in another.
-4. User confirms “done.”
-5. Repeat.
+4. Before slice exit, assistant returns the full verbatim Codex summary and the user copies it to clipboard.
+5. If clipboard tooling is unavailable, assistant must output a plain printed summary block as fallback and mark that clipboard fallback was used.
+6. User confirms “done.”
+7. Repeat.
+
+### Clipboard-return rule (required)
+
+- Applies to every default slice loop unless a higher-authority document explicitly overrides it.
+- The returned summary should be verbatim to preserve implementation context and reduce re-entry drift.
+- This policy does not require any specific clipboard utility; fallback behavior is required when clipboard integration is unavailable.
 
 ### Docs Review Gate (required before risky DEV)
 

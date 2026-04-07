@@ -6,11 +6,13 @@ Bootstrap working copy for the Heartloom `00_Identity` canon.
 This repository begins as a Git-tracked copy of the current vault `00_Identity` folder.
 
 ## Authority note
-Until the dedicated Change-Control docs slice is completed and merged, the current vault/session-pack workflow remains authoritative.
+The dedicated Change-Control docs slice is documented in:
 
-## Next step
-Run the docs-only Change-Control slice for:
-- canonical source-of-truth model
-- GitHub/Codex clipboard-return rule canonization
-- future installer role
-- future session-pack regeneration obligations
+- `Change-Control_00_Identity_Canonical_Repo_Authority_Proposal_v1_0.md`
+
+Current behavior is unchanged: the vault/session-pack workflow remains authoritative until a later implementation slice completes the proposed authority model.
+
+## Proposal status
+
+- Repo-canonical `00_Identity` authority is **proposed**, not implemented.
+- Clipboard-return rule canonization is implemented in policy docs only.
