@@ -10,18 +10,20 @@ Primary reading order is defined by the manifest:
 If you want a short “start here” sequence:
 
 1. **README.md** — what this folder is and what belongs here.
-2. **Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md** — map of the enforcement-layer policies.
-3. **Heartloom-AI-Policies/authority-boundary-map-v1.0.md** — authority ladder + “you/we” interpretation + cross-project visibility limits.
-4. **Heartloom-AI-Policies/required-reference-docs.md** — always-refer docs (stable base + per-project).
-5. **Heartloom-AI-Policies/heartloom-ai-operating-protocol-v1.0.md** — the canonical operating protocol (pointer files exist elsewhere; this is source-of-truth).
-6. **Heartloom_AI_Memory_Constitution.md** — memory and consent rules (canonical location: Protocols root).
-7. **github-governance-policy.md** + **github-repo-intake-checklist.md** — repo governance + intake workflow.
-8. **Codex_CLI_Termux_Setup_v1_0.md** — Codex CLI setup and safe operation.
-9. **House_Defaults_v1_0.md** + **Tools_Shortlist_v1_0.md** + **Definitions_Glossary_v1_0.md** — defaults, tools, shared language.
+2. **Change-Control_00_Identity_Canonical_Repo_Authority_Proposal_v1_0.md** — proposed authority model for repo-canonical `00_Identity` split (docs-only; not implemented).
+3. **Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md** — map of the enforcement-layer policies.
+4. **Heartloom-AI-Policies/authority-boundary-map-v1.0.md** — authority ladder + “you/we” interpretation + cross-project visibility limits.
+5. **Heartloom-AI-Policies/required-reference-docs.md** — always-refer docs (stable base + per-project).
+6. **Heartloom-AI-Policies/heartloom-ai-operating-protocol-v1.0.md** — the canonical operating protocol (pointer files exist elsewhere; this is source-of-truth).
+7. **Heartloom_AI_Memory_Constitution.md** — memory and consent rules (canonical location: Protocols root).
+8. **github-governance-policy.md** + **github-repo-intake-checklist.md** — repo governance + intake workflow.
+9. **Codex_CLI_Termux_Setup_v1_0.md** — Codex CLI setup and safe operation.
+10. **House_Defaults_v1_0.md** + **Tools_Shortlist_v1_0.md** + **Definitions_Glossary_v1_0.md** — defaults, tools, shared language.
 ## Maintenance triggers
 
 - If a key term’s meaning changes (“canonical”, “drift”, “pause point”, “forensic”, “done/DoD”), update **Definitions_Glossary_v1_0.md**.
 - If a workflow default changes (branch naming, CI baseline, artifact set), update **House_Defaults_v1_0.md**.
+- If canon authority boundaries or install-source rules change, update **Change-Control_00_Identity_Canonical_Repo_Authority_Proposal_v1_0.md** (or its successor) in the same slice.
 - If a new protocol doc is added, link it here in the appropriate place.
 
 ## Run tools (phone-first)

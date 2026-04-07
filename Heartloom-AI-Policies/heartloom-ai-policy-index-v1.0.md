@@ -17,7 +17,7 @@
    Termux behaviors, command formatting, resilience rules, download assumptions, long-output handling.
 
 3. **github-and-codex-pr-first-policy-v1.0.md**  
-   PR-first workflow, Codex boundary, CI-as-truth on phone, `gh api` fallback.
+   PR-first workflow, Codex boundary, CI-as-truth on phone, `gh api` fallback, and required clipboard-return summary rule (with plain printed fallback when clipboard tooling is unavailable).
 
 4. **repo-standards-baseline-v1.0.md**  
    Default repo structure baseline, minimal CI tripwire, naming conventions, packaging discipline.
@@ -44,3 +44,7 @@ If any of these exist and diverge from these policies, the vault documents win.
 - Routine work: rely on `global-memories-refactored-set-v2.0.md`.
 - Implementation detail: open the relevant policy doc and follow it verbatim.
 - Conflicts: apply the Authority Order in the operating protocol.
+
+## Discoverability notes
+
+- Clipboard-return canon: `github-and-codex-pr-first-policy-v1.0.md` defines the default requirement to return the full verbatim Codex summary and copy it to clipboard before slice exit, with plain printed fallback when clipboard tooling is unavailable.
