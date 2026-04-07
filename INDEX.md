@@ -50,7 +50,7 @@ If you want a short “start here” sequence:
 These are Termux helpers that support “ZIP-TENNIS” review and final identity artifacts:
 
 - **Repo → vault installer:** `./install.sh` (`--dry-run` supported)
-- **ChatGPT export zip (repo-local):** `scripts/export-chatgpt-00-identity-zip.sh`
+- **ChatGPT export zip (staged to vault):** `scripts/export-chatgpt-00-identity-zip.sh`
 - **Stable Base reference pack zip:** `hl-zip-stable-base`
 - **Protocols zip (for review):** `hl-zip-00-identity`
 - **Protocols → PDF builder:** `hl-build-00-identity-protocols-pdf`
