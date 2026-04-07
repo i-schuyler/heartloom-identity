@@ -62,6 +62,8 @@ Installer behavior contract reference:
 
 - **Now (implemented):** vault copy remains operationally authoritative for installed consumption.
 - **Future (proposed):** repo copy becomes canonical authoring source; vault copy is installer-managed output.
+- Cross-repo consumer integration and local override governance is defined in:
+  - `Consumer_Integration_Model_heartloom_identity_v1_0.md`
 
 ## Session-pack regeneration implications
 
