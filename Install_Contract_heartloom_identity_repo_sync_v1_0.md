@@ -1,19 +1,19 @@
 # Install Contract: heartloom-identity Repo Sync (v1.0)
 
-Status: **PROPOSED (docs-only; no installer implementation yet)**  
-Type: Installer contract for future `install.sh` at repo root  
+Status: **IMPLEMENTED CONTRACT (installer available; authority model still proposed)**  
+Type: Installer contract for repo-root `install.sh`  
 Target: `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`
 
 ## Purpose
 
-Define explicit behavior for a future repo-root `install.sh` that installs canonical `00_Identity` docs from this repository into the vault target path.
+Define explicit behavior for repo-root `install.sh` that installs canonical `00_Identity` docs from this repository into the vault target path.
 
-This document is normative for implementation planning but does **not** mean the installer exists yet.
+This document is normative for implementation and verification of installer behavior.
 
 ## Current vs proposed state
 
-- **Current (implemented):** No repo installer exists; vault copy remains the installed/consumed copy.
-- **Proposed (future):** A repo-root installer applies this contract to copy/sync docs into vault target.
+- **Current (implemented):** Repo-root `install.sh` applies this contract to copy/sync docs into vault target.
+- **Still proposed (future):** Authority flip to repo-canonical authoring remains separately governed by Change-Control and is not completed by installer implementation alone.
 
 ## Contract scope
 
@@ -73,10 +73,9 @@ Excluded from install scope:
 - Dotfiles are never copied to vault by this contract.
 - Dotfiles already present in vault are left unchanged.
 
-## Dry-run expectation (future requirement)
+## Dry-run behavior (implemented)
 
-- Future installer implementation should support a dry-run mode (for example `--dry-run`) that prints planned creates/updates/skips with no filesystem writes.
-- Exact CLI flags are implementation details for a later slice and are not fixed by this docs-only contract.
+- Installer supports `--dry-run` (and `-n`) and prints planned creates/updates/skips with no filesystem writes.
 
 ## Rollback and safety posture
 
@@ -92,10 +91,8 @@ Excluded from install scope:
 - This contract does not change current session-pack regeneration implementation.
 - A later implementation slice must define how installer execution and session-pack regeneration sequence together without guessing.
 
-## Explicit non-goals (this slice)
+## Explicit non-goals (implementation boundary)
 
-- No `install.sh` implementation.
-- No shell/script creation.
 - No file moves or authority flip.
 - No vault path changes.
 - No session-pack regeneration implementation.

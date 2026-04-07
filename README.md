@@ -17,4 +17,11 @@ Current behavior is unchanged: the vault/session-pack workflow remains authorita
 
 - Repo-canonical `00_Identity` authority is **proposed**, not implemented.
 - Clipboard-return rule canonization is implemented in policy docs only.
-- Installer behavior is contract-defined in docs only; no installer script is implemented yet.
+
+## Installer
+
+- Repo-root installer exists at `./install.sh`.
+- Supported mode: sync-copy upsert without prune (no vault-file deletions).
+- Dry run: `./install.sh --dry-run`
+- Apply install: `./install.sh`
+- Installer implementation does not flip authority; authority change remains governed by Change-Control.
