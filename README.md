@@ -42,3 +42,8 @@ Current authority state: repo-canonical authoring transition is completed, while
 - Canonical first bundle candidate scope doc: `First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md`
 - Near-term model: local installed snapshot consumption.
 - Long-term model: versioned release artifact / packaged bundle distribution (proposed, not implemented).
+
+## CI and auto-merge policy
+
+- Canonical policy doc: `CI_Auto_Merge_Policy_heartloom_identity_v1_0.md`
+- Policy is defined now; CI workflows and GitHub settings rollout remain separate implementation/admin steps.
