@@ -47,6 +47,10 @@ Planned installer responsibilities:
 - Preserve required vault path compatibility.
 - Provide explicit sync semantics and failure handling (defined in later implementation slice).
 
+Installer behavior contract reference (proposed, docs-only):
+
+- `Install_Contract_heartloom_identity_repo_sync_v1_0.md`
+
 ## Vault install target
 
 - Unchanged target path:
