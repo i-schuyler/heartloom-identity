@@ -1,0 +1,11 @@
+# .gitignore
+
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+*.zip
+
+# .gitignore EOF
