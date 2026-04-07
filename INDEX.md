@@ -16,14 +16,15 @@ If you want a short “start here” sequence:
 5. **Consumer_Integration_Model_heartloom_identity_v1_0.md** — canonical cross-repo consumer pattern (near-term snapshots, long-term versioned bundle model, override boundaries, upstream proposal flow).
 6. **Bundle_Versioning_Semantics_heartloom_identity_v1_0.md** — canonical bundle purpose, inclusion/exclusion boundary, version pinning expectations, and upgrade posture (semantics defined now; release tooling later).
 7. **Bundle_Manifest_Release_Prep_Semantics_heartloom_identity_v1_0.md** — canonical manifest fields, content enumeration expectations, and release-prep readiness criteria (semantics defined now; publication remains future work).
-8. **Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md** — map of the enforcement-layer policies.
-9. **Heartloom-AI-Policies/authority-boundary-map-v1.0.md** — authority ladder + “you/we” interpretation + cross-project visibility limits.
-10. **Heartloom-AI-Policies/required-reference-docs.md** — always-refer docs (stable base + per-project).
-11. **Heartloom-AI-Policies/heartloom-ai-operating-protocol-v1.0.md** — the canonical operating protocol (pointer files exist elsewhere; this is source-of-truth).
-12. **Heartloom_AI_Memory_Constitution.md** — memory and consent rules (canonical location: Protocols root).
-13. **github-governance-policy.md** + **github-repo-intake-checklist.md** — repo governance + intake workflow.
-14. **Codex_CLI_Termux_Setup_v1_0.md** — Codex CLI setup and safe operation.
-15. **House_Defaults_v1_0.md** + **Tools_Shortlist_v1_0.md** + **Definitions_Glossary_v1_0.md** — defaults, tools, shared language.
+8. **First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md** — first concrete v0 bundle candidate include/exclude boundary optimized for downstream consumer use and prompt-template style consumption.
+9. **Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md** — map of the enforcement-layer policies.
+10. **Heartloom-AI-Policies/authority-boundary-map-v1.0.md** — authority ladder + “you/we” interpretation + cross-project visibility limits.
+11. **Heartloom-AI-Policies/required-reference-docs.md** — always-refer docs (stable base + per-project).
+12. **Heartloom-AI-Policies/heartloom-ai-operating-protocol-v1.0.md** — the canonical operating protocol (pointer files exist elsewhere; this is source-of-truth).
+13. **Heartloom_AI_Memory_Constitution.md** — memory and consent rules (canonical location: Protocols root).
+14. **github-governance-policy.md** + **github-repo-intake-checklist.md** — repo governance + intake workflow.
+15. **Codex_CLI_Termux_Setup_v1_0.md** — Codex CLI setup and safe operation.
+16. **House_Defaults_v1_0.md** + **Tools_Shortlist_v1_0.md** + **Definitions_Glossary_v1_0.md** — defaults, tools, shared language.
 ## Maintenance triggers
 
 - If a key term’s meaning changes (“canonical”, “drift”, “pause point”, “forensic”, “done/DoD”), update **Definitions_Glossary_v1_0.md**.
@@ -34,6 +35,7 @@ If you want a short “start here” sequence:
 - If consumer integration/override governance rules change, update **Consumer_Integration_Model_heartloom_identity_v1_0.md** (or its successor) in the same slice.
 - If bundle scope/versioning semantics change, update **Bundle_Versioning_Semantics_heartloom_identity_v1_0.md** (or its successor) in the same slice.
 - If bundle manifest or release-prep semantics change, update **Bundle_Manifest_Release_Prep_Semantics_heartloom_identity_v1_0.md** (or its successor) in the same slice.
+- If first bundle candidate scope selection changes, update **First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md** (or its successor) in the same slice.
 - If a new protocol doc is added, link it here in the appropriate place.
 
 ## Run tools (phone-first)

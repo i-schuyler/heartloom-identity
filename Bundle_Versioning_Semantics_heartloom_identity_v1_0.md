@@ -103,6 +103,12 @@ Canonical future bundle manifest shape and release-prep readiness semantics are 
 
 - `Bundle_Manifest_Release_Prep_Semantics_heartloom_identity_v1_0.md`
 
+## First bundle candidate scope reference
+
+Canonical first concrete bundle-candidate include/exclude scope is defined in:
+
+- `First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md`
+
 ## Non-goals in this slice
 
 - No release automation.

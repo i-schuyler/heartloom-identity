@@ -133,6 +133,14 @@ When bundle publishing exists, each bundle version should include a concise cons
 
 This expectation can begin manually and later be automated without changing semantics.
 
+## First bundle candidate scope reference
+
+Canonical first concrete bundle-candidate selection is documented in:
+
+- `First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md`
+
+Release-prep checks should evaluate a candidate bundle against that scope definition before any future publication.
+
 ## Non-goals in this slice
 
 - No release automation.
