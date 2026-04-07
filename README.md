@@ -52,3 +52,8 @@ Current authority state: repo-canonical authoring transition is completed, while
 
 - Canonical contract doc: `Codex_Global_Source_Install_Contract_heartloom_identity_v1_0.md`
 - Contract defines source/target mapping and explicit opt-in install posture for future `~/.codex/` runtime files; implementation remains separate.
+
+## Codex execution profiles contract
+
+- Canonical contract doc: `Codex_Execution_Profiles_Contract_heartloom_identity_v1_0.md`
+- Contract defines safe default and GitHub/PR execution profiles, clarifies config vs instruction layers, and preserves future implementation boundaries.
