@@ -13,9 +13,9 @@ This document defines policy intent only. It does **not** itself enable workflow
 ## Implemented vs future state (required clarity)
 
 - **Implemented now:** docs and `install.sh` exist in repo.
-- **Implemented now:** no CI workflow implementation is present yet in `.github/workflows/`.
+- **Implemented now:** lightweight CI workflow at `.github/workflows/ci.yml`.
 - **Defined now for future use:** required checks, merge readiness criteria, auto-merge posture, and branch cleanup posture.
-- **Not implemented yet:** enforcement wiring in GitHub settings/rulesets and repo workflow files.
+- **Not implemented yet:** enforcement wiring in GitHub settings/rulesets.
 
 ## Required check philosophy
 
@@ -30,7 +30,7 @@ Policy principles:
 
 ## Initial check set (policy baseline)
 
-Future CI implementation should include, at minimum:
+CI implementation should include, at minimum:
 
 1. **Shell syntax validation (required)**
    - Command: `bash -n install.sh`
@@ -77,15 +77,14 @@ Optional checks can inform quality but must be clearly marked optional until exp
 
 ## Repo files vs GitHub settings distinction
 
-- **Repo-file layer:** policy docs and (future) workflow definitions in version control.
+- **Repo-file layer:** policy docs and workflow definitions in version control.
 - **GitHub settings layer:** branch protection/rulesets, required status checks, auto-merge toggle, remote auto-delete toggle.
 
 This policy anchors both layers conceptually but does not claim either layer is fully configured yet.
 
 ## Non-goals in this slice
 
-- No workflow implementation.
-- No `.github/workflows/` files.
+- No GitHub settings/ruleset changes.
 - No installer code changes.
 - No authority changes.
 - No bundle tooling changes.
