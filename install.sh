@@ -5,17 +5,25 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DEST_ROOT="/storage/emulated/0/Documents/HeartloomVault/00_Identity"
+CODEX_GLOBAL_SOURCE="$SCRIPT_DIR/tooling/codex-global"
+CODEX_GLOBAL_DEST="${HOME}/.codex"
 DRY_RUN=0
+MODE="vault"
 
 usage() {
   cat <<'USAGE'
-Usage: ./install.sh [--dry-run|-n] [--help|-h]
+Usage: ./install.sh [--dry-run|-n] [--codex-global] [--help|-h]
 
-Installs in-scope markdown docs from this repo into:
+Default (vault sync): installs in-scope markdown docs from this repo into:
   /storage/emulated/0/Documents/HeartloomVault/00_Identity/
+
+Codex-global mode:
+  ./install.sh --codex-global
+  Installs tooling/codex-global/{AGENTS.md,config.toml} into ~/.codex/
 
 Options:
   --dry-run, -n   Show planned actions only (no filesystem writes)
+  --codex-global  Install source-controlled Codex globals into ~/.codex/
   --help, -h      Show this help
 USAGE
 }
@@ -24,6 +32,9 @@ while [[ $# -gt 0 ]]; do
   case "$1" in
     --dry-run|-n)
       DRY_RUN=1
+      ;;
+    --codex-global)
+      MODE="codex-global"
       ;;
     --help|-h)
       usage
@@ -91,57 +102,112 @@ build_file_list() {
   find "$root_dir" -mindepth 1 -maxdepth "$max_depth" -type f -name '*.md' ! -name '.*' -print0 | sort -z
 }
 
-echo "[INFO] heartloom-identity installer"
-echo "[INFO] Destination root: $DEST_ROOT"
-if [[ "$DRY_RUN" -eq 1 ]]; then
-  echo "[INFO] Dry-run mode enabled (no writes)"
-fi
-
-if [[ ! -d "$DEST_ROOT" ]]; then
-  echo "[WARN] Expected destination path is missing: $DEST_ROOT"
-  if [[ -t 0 ]]; then
-    read -r -p "Create this canonical destination path and continue? [Y/n] " create_reply
-    create_reply="${create_reply:-Y}"
-    if [[ "$create_reply" =~ ^[Nn]$ ]]; then
-      echo "[ABORT] Destination path missing and creation declined."
-      exit 1
-    fi
-  else
-    echo "[INFO] Non-interactive mode: creating canonical destination path and continuing."
+install_codex_global() {
+  echo "[INFO] heartloom-identity installer (codex-global)"
+  echo "[INFO] Source root: $CODEX_GLOBAL_SOURCE"
+  echo "[INFO] Destination root: $CODEX_GLOBAL_DEST"
+  if [[ "$DRY_RUN" -eq 1 ]]; then
+    echo "[INFO] Dry-run mode enabled (no writes)"
   fi
-fi
 
-run_mkdir "$DEST_ROOT"
-run_mkdir "$DEST_ROOT/Heartloom-AI-Policies"
+  if [[ ! -d "$CODEX_GLOBAL_SOURCE" ]]; then
+    echo "[ABORT] Missing source directory: $CODEX_GLOBAL_SOURCE"
+    exit 1
+  fi
 
-CREATED_COUNT=0
-UPDATED_COUNT=0
-SKIPPED_COUNT=0
-SCANNED_COUNT=0
+  run_mkdir "$CODEX_GLOBAL_DEST"
 
-while IFS= read -r -d '' source_file; do
-  file_name="$(basename "$source_file")"
-  destination_file="$DEST_ROOT/$file_name"
+  CREATED_COUNT=0
+  UPDATED_COUNT=0
+  SKIPPED_COUNT=0
+  SCANNED_COUNT=0
+
+  local source_file
+  local destination_file
+
+  source_file="$CODEX_GLOBAL_SOURCE/AGENTS.md"
+  destination_file="$CODEX_GLOBAL_DEST/AGENTS.md"
+  if [[ ! -f "$source_file" ]]; then
+    echo "[ABORT] Missing source file: $source_file"
+    exit 1
+  fi
   SCANNED_COUNT=$((SCANNED_COUNT + 1))
-  copy_or_update "$source_file" "$destination_file" "$file_name"
-done < <(build_file_list "$SCRIPT_DIR" 1)
+  copy_or_update "$source_file" "$destination_file" "AGENTS.md"
 
-if [[ ! -d "$SCRIPT_DIR/Heartloom-AI-Policies" ]]; then
-  echo "[ABORT] Missing source directory: $SCRIPT_DIR/Heartloom-AI-Policies"
-  exit 1
-fi
-
-while IFS= read -r -d '' source_file; do
-  file_name="$(basename "$source_file")"
-  relative_path="Heartloom-AI-Policies/$file_name"
-  destination_file="$DEST_ROOT/$relative_path"
+  source_file="$CODEX_GLOBAL_SOURCE/config.toml"
+  destination_file="$CODEX_GLOBAL_DEST/config.toml"
+  if [[ ! -f "$source_file" ]]; then
+    echo "[ABORT] Missing source file: $source_file"
+    exit 1
+  fi
   SCANNED_COUNT=$((SCANNED_COUNT + 1))
-  copy_or_update "$source_file" "$destination_file" "$relative_path"
-done < <(build_file_list "$SCRIPT_DIR/Heartloom-AI-Policies" 1)
+  copy_or_update "$source_file" "$destination_file" "config.toml"
 
-echo
-echo "[SUMMARY] scanned=$SCANNED_COUNT created=$CREATED_COUNT updated=$UPDATED_COUNT skipped=$SKIPPED_COUNT"
-echo "[SUMMARY] mode=sync-copy-upsert-without-prune"
-echo "[SUMMARY] no-deletes-performed=true"
+  echo
+  echo "[SUMMARY] scanned=$SCANNED_COUNT created=$CREATED_COUNT updated=$UPDATED_COUNT skipped=$SKIPPED_COUNT"
+  echo "[SUMMARY] mode=codex-global-sync-copy-upsert-without-prune"
+  echo "[SUMMARY] no-deletes-performed=true"
+}
+
+install_vault_sync() {
+  echo "[INFO] heartloom-identity installer"
+  echo "[INFO] Destination root: $DEST_ROOT"
+  if [[ "$DRY_RUN" -eq 1 ]]; then
+    echo "[INFO] Dry-run mode enabled (no writes)"
+  fi
+
+  if [[ ! -d "$DEST_ROOT" ]]; then
+    echo "[WARN] Expected destination path is missing: $DEST_ROOT"
+    if [[ -t 0 ]]; then
+      read -r -p "Create this canonical destination path and continue? [Y/n] " create_reply
+      create_reply="${create_reply:-Y}"
+      if [[ "$create_reply" =~ ^[Nn]$ ]]; then
+        echo "[ABORT] Destination path missing and creation declined."
+        exit 1
+      fi
+    else
+      echo "[INFO] Non-interactive mode: creating canonical destination path and continuing."
+    fi
+  fi
+
+  run_mkdir "$DEST_ROOT"
+  run_mkdir "$DEST_ROOT/Heartloom-AI-Policies"
+
+  CREATED_COUNT=0
+  UPDATED_COUNT=0
+  SKIPPED_COUNT=0
+  SCANNED_COUNT=0
+
+  while IFS= read -r -d '' source_file; do
+    file_name="$(basename "$source_file")"
+    destination_file="$DEST_ROOT/$file_name"
+    SCANNED_COUNT=$((SCANNED_COUNT + 1))
+    copy_or_update "$source_file" "$destination_file" "$file_name"
+  done < <(build_file_list "$SCRIPT_DIR" 1)
+
+  if [[ ! -d "$SCRIPT_DIR/Heartloom-AI-Policies" ]]; then
+    echo "[ABORT] Missing source directory: $SCRIPT_DIR/Heartloom-AI-Policies"
+    exit 1
+  fi
+
+  while IFS= read -r -d '' source_file; do
+    file_name="$(basename "$source_file")"
+    relative_path="Heartloom-AI-Policies/$file_name"
+    destination_file="$DEST_ROOT/$relative_path"
+    SCANNED_COUNT=$((SCANNED_COUNT + 1))
+    copy_or_update "$source_file" "$destination_file" "$relative_path"
+  done < <(build_file_list "$SCRIPT_DIR/Heartloom-AI-Policies" 1)
+
+  echo
+  echo "[SUMMARY] scanned=$SCANNED_COUNT created=$CREATED_COUNT updated=$UPDATED_COUNT skipped=$SKIPPED_COUNT"
+  echo "[SUMMARY] mode=sync-copy-upsert-without-prune"
+  echo "[SUMMARY] no-deletes-performed=true"
+}
+
+if [[ "$MODE" == "codex-global" ]]; then
+  install_codex_global
+else
+  install_vault_sync
+fi
 
 # install.sh EOF
