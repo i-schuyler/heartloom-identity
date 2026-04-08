@@ -2,6 +2,32 @@
 
 Bootstrap working copy for the Heartloom `00_Identity` canon.
 
+## Upstream relationship (explicit)
+
+`heartloom-identity` is downstream of [`heartloom-source`](https://github.com/i-schuyler/heartloom-source).
+
+`heartloom-source` is the repository/container of the closest currently available source texts for Heartloom’s deepest meaning, law, and orientation. It is not the source of Heartloom itself.
+
+`heartloom-identity` is the active translation/inheritance layer that converts upstream orientation into repo inheritance, workflow, pack, export, and ecosystem-shaping structures. This repo must not silently redefine source meaning, law, or orientation.
+
+## If you’re new here
+
+- **What this repo is:** The canonical identity-layer repo for Heartloom implementation-facing structure.
+- **What is upstream:** `heartloom-source` (meaning/law/orientation north-star layer).
+- **What is downstream:** consumer/operational repos such as `heartloom-vaultmeta` and `termux-utils`.
+- **Where to go first:** `Source_Alignment_Contract_heartloom_identity_v1_0.md`, `Repo_Ecosystem_Map_heartloom_identity_v1_0.md`, then `INDEX.md`.
+
+## Core upstream references
+
+- [`heartloom-source` README](https://github.com/i-schuyler/heartloom-source/blob/main/README.md)
+- [`Source_to_Identity_Relationship_Contract_v1_0.md`](https://github.com/i-schuyler/heartloom-source/blob/main/Source_to_Identity_Relationship_Contract_v1_0.md)
+- [`Canonical_Law/HEARTLOOM OS — CORE ONTOLOGY v3.0.md`](https://github.com/i-schuyler/heartloom-source/blob/main/Canonical_Law/HEARTLOOM%20OS%20%E2%80%94%20CORE%20ONTOLOGY%20v3.0.md)
+
+## Ecosystem navigation
+
+- Canonical ecosystem map: `Repo_Ecosystem_Map_heartloom_identity_v1_0.md`
+- Canonical source-alignment contract: `Source_Alignment_Contract_heartloom_identity_v1_0.md`
+
 ## Current status
 This repository begins as a Git-tracked copy of the current vault `00_Identity` folder.
 
