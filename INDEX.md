@@ -3,6 +3,13 @@
 
 ## Recommended reading order
 
+If you are new to this repo, read these first:
+
+1. **README.md** — immediate source→identity orientation and where to start.
+2. **Source_Alignment_Contract_heartloom_identity_v1_0.md** — upstream/downstream boundary and anti-drift contract.
+3. **Repo_Ecosystem_Map_heartloom_identity_v1_0.md** — ecosystem layer map across upstream, identity, and downstream repos.
+4. **Change-Control_00_Identity_Canonical_Repo_Authority_Proposal_v1_0.md** — current authority posture and transition record.
+
 Primary reading order is defined by the manifest:
 
 - **`00_Identity_Protocols_Reading_Order_v1_0.md`** — canonical Protocols reading order for the PDF build.

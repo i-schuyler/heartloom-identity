@@ -1,6 +1,6 @@
 # heartloom-identity
 
-Bootstrap working copy for the Heartloom `00_Identity` canon.
+Canonical downstream identity-layer repository for Heartloom repo inheritance, workflow, pack, export, and ecosystem shaping.
 
 ## Upstream relationship (explicit)
 
@@ -12,10 +12,9 @@ Bootstrap working copy for the Heartloom `00_Identity` canon.
 
 ## If you’re new here
 
-- **What this repo is:** The canonical identity-layer repo for Heartloom implementation-facing structure.
-- **What is upstream:** `heartloom-source` (meaning/law/orientation north-star layer).
-- **What is downstream:** consumer/operational repos such as `heartloom-vaultmeta` and `termux-utils`.
-- **Where to go first:** `Source_Alignment_Contract_heartloom_identity_v1_0.md`, `Repo_Ecosystem_Map_heartloom_identity_v1_0.md`, then `INDEX.md`.
+- If you want Heartloom’s upstream meaning, law, and orientation, start with `heartloom-source`.
+- If you want identity-layer translation and operational structure (inheritance/workflow/packs/exports/ecosystem), continue here in `heartloom-identity`.
+- Start in this order: `Source_Alignment_Contract_heartloom_identity_v1_0.md` → `Repo_Ecosystem_Map_heartloom_identity_v1_0.md` → `INDEX.md`.
 
 ## Core upstream references
 
@@ -28,8 +27,8 @@ Bootstrap working copy for the Heartloom `00_Identity` canon.
 - Canonical ecosystem map: `Repo_Ecosystem_Map_heartloom_identity_v1_0.md`
 - Canonical source-alignment contract: `Source_Alignment_Contract_heartloom_identity_v1_0.md`
 
-## Current status
-This repository begins as a Git-tracked copy of the current vault `00_Identity` folder.
+## Historical bootstrap context
+This repository began as a Git-tracked copy of the vault `00_Identity` folder and now operates as the canonical identity-layer translation/inheritance repo.
 
 ## Authority note
 The dedicated Change-Control docs slice is documented in:
