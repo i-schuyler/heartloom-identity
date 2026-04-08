@@ -33,6 +33,7 @@ If you want a short “start here” sequence:
 22. **Identity_Pack_Architecture_heartloom_identity_v1_0.md** — Reference Pack vs Working Pack architecture and artifact boundary definitions.
 23. **exports/chatgpt-reference-pack/README.md** — export-safe navigation for the ChatGPT Reference Pack.
 24. **Identity_Layer_Output_Contract_heartloom_identity_v1_0.md** — canonical identity-layer output contract and workflow learnings.
+25. **Stable_Base_Working_Pack_Contract_heartloom_identity_v1_0.md** — Working Pack / Stable Base contract (local/generated/sensitive artifact boundaries).
 ## Maintenance triggers
 
 - If a key term’s meaning changes (“canonical”, “drift”, “pause point”, “forensic”, “done/DoD”), update **Definitions_Glossary_v1_0.md**.
