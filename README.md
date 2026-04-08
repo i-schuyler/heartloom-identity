@@ -27,6 +27,7 @@ Canonical downstream identity-layer repository for Heartloom repo inheritance, w
 - Canonical ecosystem map: `Repo_Ecosystem_Map_heartloom_identity_v1_0.md`
 - Canonical source-alignment contract: `Source_Alignment_Contract_heartloom_identity_v1_0.md`
 - Canonical alignment review checklist: `Alignment_Review_Checklist_heartloom_identity_v1_0.md`
+- Canonical distinctions library: `Distinctions_Library_heartloom_identity_v1_0.md`
 
 ## Historical bootstrap context
 This repository began as a Git-tracked copy of the vault `00_Identity` folder and now operates as the canonical identity-layer translation/inheritance repo.
