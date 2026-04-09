@@ -43,6 +43,7 @@ The dedicated Change-Control docs slice is documented in:
 - Repo-canonical `Heartloom Identity` authority transition is **completed**.
 - Vault `Heartloom-Identity` is the installer-managed installed/consumed downstream copy.
 - Rename phase 1 is implemented; legacy `00_Identity` remains only as a temporary technical compatibility alias.
+- Current migration validation/audit record: `Heartloom_Identity_Migration_Validation_v1_0.md`.
 
 ## Installer
 

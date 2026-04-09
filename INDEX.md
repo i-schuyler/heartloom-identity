@@ -49,6 +49,7 @@ If you want a short “start here” sequence:
 28. **Identity_Layer_Output_Contract_heartloom_identity_v1_0.md** — canonical identity-layer output contract and workflow learnings.
 29. **Stable_Base_Working_Pack_Contract_heartloom_identity_v1_0.md** — Working Pack / Stable Base contract (local/generated/sensitive artifact boundaries).
 30. **Change_Control_Heartloom_Identity_Rename_v1_0.md** — canonical `00_Identity` to `Heartloom Identity` rename/path compatibility decision record (phase 1 implemented).
+31. **Heartloom_Identity_Migration_Validation_v1_0.md** — validation evidence for canonical rename coherence and remaining compatibility alias debt classification.
 
 ## Maintenance triggers
 
@@ -60,6 +61,7 @@ If you want a short “start here” sequence:
 - If ecosystem-layer repo mapping or newcomer navigation boundaries change, update **Repo_Ecosystem_Map_heartloom_identity_v1_0.md** (or its successor) in the same slice.
 - If canon authority boundaries or install-source rules change, update **Change_Control_Heartloom_Identity_Canonical_Repo_Authority_v1_0.md** (or its successor) in the same slice.
 - If canonical identity naming/path compatibility rules change for `00_Identity` ↔ `Heartloom Identity`, update **Change_Control_Heartloom_Identity_Rename_v1_0.md** (or its successor) in the same slice.
+- If compatibility alias debt posture changes (retained vs retired), update **Heartloom_Identity_Migration_Validation_v1_0.md** (or its successor) in the same slice.
 - If installer source/destination mapping or overwrite/delete semantics change, update **Install_Contract_heartloom_identity_repo_sync_v1_0.md** (or its successor) in the same slice.
 - If authority transition readiness criteria change, update **Authority_Transition_Gate_Installer_Validation_v1_0.md** (or its successor) in the same slice.
 - If consumer integration/override governance rules change, update **Consumer_Integration_Model_heartloom_identity_v1_0.md** (or its successor) in the same slice.
