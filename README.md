@@ -12,9 +12,12 @@ Canonical downstream identity-layer repository for Heartloom repo inheritance, w
 
 ## If you’re new here
 
+- **Primary newcomer entrypoint:** this `README.md` is the canonical human starting surface for `heartloom-identity`.
 - If you want Heartloom’s upstream meaning, law, and orientation, start with `heartloom-source`.
 - If you want identity-layer translation and operational structure (inheritance/workflow/packs/exports/ecosystem), continue here in `heartloom-identity`.
-- Start in this order: [`Contracts/Source_Alignment_Contract_v1_0.md`](Contracts/Source_Alignment_Contract_v1_0.md) → [`Maps/Repo_Ecosystem_Map_v1_0.md`](Maps/Repo_Ecosystem_Map_v1_0.md) → [`INDEX.md`](INDEX.md).
+- Canonical newcomer path in this repo: [`Contracts/Source_Alignment_Contract_v1_0.md`](Contracts/Source_Alignment_Contract_v1_0.md) → [`Maps/Repo_Ecosystem_Map_v1_0.md`](Maps/Repo_Ecosystem_Map_v1_0.md) → [`INDEX.md`](INDEX.md).
+- Full navigation hub after this entrypoint: [`INDEX.md`](INDEX.md).
+- Supporting guided ordered route (not the primary newcomer authority): [`Maps/Heartloom_Identity_Protocols_Reading_Order_v1_0.md`](Maps/Heartloom_Identity_Protocols_Reading_Order_v1_0.md).
 
 ## Core upstream references
 
