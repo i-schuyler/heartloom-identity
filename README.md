@@ -31,6 +31,7 @@ Canonical downstream identity-layer repository for Heartloom repo inheritance, w
 - Canonical source-alignment contract: [`Contracts/Source_Alignment_Contract_v1_0.md`](Contracts/Source_Alignment_Contract_v1_0.md)
 - Canonical alignment review checklist: [`Checklists/Alignment_Review_Checklist_v1_0.md`](Checklists/Alignment_Review_Checklist_v1_0.md)
 - Canonical distinctions library: [`Reference/Distinctions_Library_v1_0.md`](Reference/Distinctions_Library_v1_0.md)
+- Upstream architecture source-input bridge: [`Reference/Reference_Architectures_Source_Inputs_v1_0.md`](Reference/Reference_Architectures_Source_Inputs_v1_0.md)
 - Latest full docs audit: [`Reference/Docs_Full_Audit_2026-04-08.md`](Reference/Docs_Full_Audit_2026-04-08.md)
 
 ## Documentation layout
