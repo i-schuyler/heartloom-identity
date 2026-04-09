@@ -51,6 +51,7 @@ For a guided ordered reading route after newcomer orientation, use:
 29. **[Contracts/Stable_Base_Working_Pack_Contract_v1_0.md](Contracts/Stable_Base_Working_Pack_Contract_v1_0.md)** — Working Pack / Stable Base contract (local/generated/sensitive artifact boundaries).
 30. **[Change_Control/Change_Control_Rename_v1_0.md](Change_Control/Change_Control_Rename_v1_0.md)** — canonical legacy-to-`Heartloom Identity` rename/path compatibility decision record (phase 1 implemented).
 31. **[Change_Control/Heartloom_Identity_Migration_Validation_v1_0.md](Change_Control/Heartloom_Identity_Migration_Validation_v1_0.md)** — validation evidence for canonical rename coherence and remaining compatibility alias debt classification.
+32. **[Reference/Reference_Architectures_Source_Inputs_v1_0.md](Reference/Reference_Architectures_Source_Inputs_v1_0.md)** — light bridge to upstream `heartloom-source/Reference_Architectures` inputs for deeper architecture context without relocation.
 
 ## Maintenance triggers
 
