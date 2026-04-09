@@ -5,24 +5,17 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DEST_ROOT="/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity"
-LEGACY_DEST_ROOT="/storage/emulated/0/Documents/HeartloomVault/00_Identity"
 CODEX_GLOBAL_SOURCE="$SCRIPT_DIR/tooling/codex-global"
 CODEX_GLOBAL_DEST="${HOME}/.codex"
 DRY_RUN=0
 MODE="vault"
-LEGACY_ALIAS_MODE="auto"
 
 usage() {
   cat <<'USAGE'
-Usage: ./install.sh [--dry-run|-n] [--codex-global] [--legacy-alias] [--no-legacy-alias] [--help|-h]
+Usage: ./install.sh [--dry-run|-n] [--codex-global] [--help|-h]
 
 Default (vault sync): installs in-scope markdown docs from this repo into:
   /storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/
-
-Temporary compatibility behavior (phase 1 rename):
-  - auto mode (default): if legacy /00_Identity/ exists, sync to it as alias
-  - --legacy-alias: always sync/create legacy /00_Identity/ alias path
-  - --no-legacy-alias: disable legacy alias sync
 
 Codex-global mode:
   ./install.sh --codex-global
@@ -31,8 +24,6 @@ Codex-global mode:
 Options:
   --dry-run, -n   Show planned actions only (no filesystem writes)
   --codex-global  Install source-controlled Codex globals into ~/.codex/
-  --legacy-alias  Force sync/create legacy /00_Identity/ compatibility alias
-  --no-legacy-alias  Disable legacy /00_Identity/ compatibility alias sync
   --help, -h      Show this help
 USAGE
 }
@@ -44,12 +35,6 @@ while [[ $# -gt 0 ]]; do
       ;;
     --codex-global)
       MODE="codex-global"
-      ;;
-    --legacy-alias)
-      LEGACY_ALIAS_MODE="always"
-      ;;
-    --no-legacy-alias)
-      LEGACY_ALIAS_MODE="off"
       ;;
     --help|-h)
       usage
@@ -224,28 +209,6 @@ install_vault_sync() {
   fi
 
   sync_markdown_docs_to_root "$DEST_ROOT" "canonical"
-
-  local sync_legacy_alias=0
-  case "$LEGACY_ALIAS_MODE" in
-    always)
-      sync_legacy_alias=1
-      ;;
-    auto)
-      if [[ -d "$LEGACY_DEST_ROOT" ]]; then
-        sync_legacy_alias=1
-      fi
-      ;;
-    off)
-      sync_legacy_alias=0
-      ;;
-  esac
-
-  if [[ "$sync_legacy_alias" -eq 1 ]]; then
-    echo "[INFO] Temporary compatibility alias sync enabled: $LEGACY_DEST_ROOT"
-    sync_markdown_docs_to_root "$LEGACY_DEST_ROOT" "legacy-00_Identity-alias"
-  else
-    echo "[INFO] Temporary compatibility alias sync skipped: $LEGACY_DEST_ROOT"
-  fi
 }
 
 if [[ "$MODE" == "codex-global" ]]; then

@@ -1,6 +1,6 @@
 # Heartloom Identity Migration Validation (v1.0)
 
-Status: **VALIDATION COMPLETE (phase 1 coherent; alias debt classified)**  
+Status: **VALIDATION COMPLETE (phase 1 coherent; alias debt classified; active installer/export alias bridges retired in follow-up slice)**  
 Type: Post-migration validation and compatibility-alias audit  
 Scope: Validate canonical `Heartloom Identity` / `Heartloom-Identity` usage and classify remaining `00_Identity` / `00-identity` references
 
@@ -45,7 +45,14 @@ Scope: Validate canonical `Heartloom Identity` / `Heartloom-Identity` usage and 
 - Export canonical script and compatibility alias wrapper both operate as expected in help mode.
 - Remaining alias references are bounded and classifiable; no broad unexpected spread was found.
 
-## Remaining alias references and classification
+## Follow-up outcome note
+
+- The recommended dependency-first retirement follow-up has been executed in a later slice:
+  - installer `00_Identity` alias sync/options retired
+  - deprecated export wrapper `scripts/export-chatgpt-00-identity-zip.sh` removed
+- This document remains the pre-retirement validation baseline and classification evidence.
+
+## Remaining alias references and classification (baseline snapshot)
 
 Legend:
 - **historical record, okay to keep temporarily**
@@ -59,12 +66,15 @@ Legend:
 | `Change_Control_Heartloom_Identity_Canonical_Repo_Authority_v1_0.md:21,45,70` | historical record, okay to keep temporarily | Authority record explicitly documents temporary alias boundary. | No (documentation only). | Alias retirement change-control closes compatibility window and updates authority map. |
 | `README.md:45` | historical record, okay to keep temporarily | Current status statement that phase 1 still includes temporary alias. | No (documentation only). | Alias retirement is completed and README status is updated in same slice. |
 | `INDEX.md:51,62` | historical record, okay to keep temporarily | Navigation/maintenance pointers to rename change-control record. | No (documentation only). | Rename change-control is superseded and index pointers are migrated. |
-| `install.sh:8,23,24,34,35,245` | temporary technical compatibility, still needed | Live installer compatibility behavior for legacy vault path and toggles. | Yes (decision path in `--dry-run`; full alias branch in `--dry-run --legacy-alias`). | Legacy alias support is intentionally removed from installer contract and script in retirement slice. |
-| `Install_Contract_heartloom_identity_repo_sync_v1_0.md:11,36,42,67` | temporary technical compatibility, still needed | Normative contract for current installer alias behavior. | Indirectly yes (validated against script behavior). | Installer alias behavior is removed and contract revision is published in same slice. |
-| `scripts/export-chatgpt-00-identity-zip.sh:6` | temporary technical compatibility, still needed | Deprecated command wrapper preserves old entrypoint and forwards to canonical script. | Yes (`--help` call exercised wrapper path). | Downstream callers are migrated and deprecation window formally closed. |
+| `install.sh:8,23,24,34,35,245` | historical record, okay to keep temporarily (baseline entry) | Captures pre-retirement installer compatibility behavior from the validation slice. | Yes (decision path in `--dry-run`; full alias branch in `--dry-run --legacy-alias`). | Already removed in follow-up partial alias-retirement slice. |
+| `Install_Contract_heartloom_identity_repo_sync_v1_0.md:11,36,42,67` | historical record, okay to keep temporarily (baseline entry) | Captures pre-retirement contract semantics from the validation slice. | Indirectly yes (validated against script behavior). | Already superseded by follow-up contract updates in partial alias-retirement slice. |
+| `scripts/export-chatgpt-00-identity-zip.sh:6` | historical record, okay to keep temporarily (baseline entry) | Captures pre-retirement deprecated wrapper behavior from the validation slice. | Yes (`--help` call exercised wrapper path). | Already removed in follow-up partial alias-retirement slice. |
 | `INDEX.md:81,82` | temporary technical compatibility, still needed | Documents temporary command aliases used in phone-first tooling context. | No (aliases are external commands, not repo scripts). | External command aliases are removed/renamed and INDEX is updated in same change window. |
 | `Identity_Maintenance_Triggers_v1_0.md:46` | temporary technical compatibility, still needed | Maintenance trigger tracks temporary command aliases for regeneration workflow. | No (documentation trigger only). | Trigger set is updated after alias command retirement in external tooling. |
 | `Heartloom-AI-Policies/required-reference-docs.md:80,82` | temporary technical compatibility, still needed | Stable Base required-artifact filenames still include temporary alias naming. | No (repo-local policy reference only). | Stable Base filenames are renamed and required-reference list is revised together. |
+
+Post-retirement supersession note:
+- Baseline technical dependencies listed for `install.sh`, `Install_Contract_heartloom_identity_repo_sync_v1_0.md`, and `scripts/export-chatgpt-00-identity-zip.sh` were retired in the follow-up partial alias-retirement slice.
 
 ## Ready to retire now vs blocked
 
@@ -75,9 +85,9 @@ Legend:
   - external Termux command/file alias ecosystem references (`hl-zip-00-identity`, `hl-build-00-identity-protocols-pdf` and matching run-instruction filenames)
 - **Historical references that should remain until later:** rename/authority change-control records and their index pointers.
 
-## Recommendation for next slice
+## Recommendation for next slice (historical)
 
-Recommendation: **partial alias retirement next**.
+Recommendation at validation time: **partial alias retirement next** (now completed in follow-up slice).
 
 Rationale:
 - Safe now: retire alias references that are documentation/history pointers only when they are superseded in the same authoritative change-control update.

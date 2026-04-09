@@ -1,6 +1,6 @@
 # Change Control: Heartloom Identity Rename (v1.0)
 
-Status: **CANONICAL CHANGE-CONTROL ACTIVE (phase 1 implemented; compatibility deprecation pending)**  
+Status: **CANONICAL CHANGE-CONTROL ACTIVE (phase 1 + partial alias retirement implemented; historical/external cleanup pending)**  
 Type: Rename/path compatibility and downstream change-control contract  
 Scope: Canonical transition from legacy `00_Identity` naming to `Heartloom Identity` naming across docs, install/export contracts, and downstream references
 
@@ -31,7 +31,7 @@ This change-control defines:
 - Canonical display naming is now `Heartloom Identity` across user-facing docs/contracts.
 - Canonical vault/install path token is now `Heartloom-Identity`.
 - Export contract/script/manifest naming now uses `Heartloom Identity` / `Heartloom-Identity` conventions.
-- Legacy `00_Identity` is retained only for temporary technical compatibility where required.
+- Active installer/export `00_Identity` compatibility bridges are retired; remaining references are historical/change-control or external compatibility notes pending later cleanup.
 
 ## Canonical naming contract (defined)
 
@@ -62,15 +62,15 @@ This change-control defines:
 
 ### Legacy compatibility alias
 
-- Legacy path remains a temporary compatibility alias during migration:
+- Legacy path was used as a temporary compatibility alias during migration:
   - `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`
-- Compatibility alias must remain supported for at least one explicit migration cycle after implementation.
+- Compatibility alias support remained for one explicit migration cycle after implementation and was then retired from active installer/export behavior.
 - Legacy path must not be silently deleted or pruned during rename rollout.
 
 ### Compatibility posture
 
-- Rename implementation must include an explicit transitional compatibility mode (for example alias/sync strategy) documented in install and export contracts.
-- Decommissioning legacy `00_Identity` compatibility requires a later explicit change-control slice after downstream verification.
+- Rename implementation included an explicit transitional compatibility mode in installer/export behavior for phase 1.
+- Decommissioning legacy `00_Identity` installer/export compatibility is now implemented; remaining references are limited to historical/change-control and external-compatibility contexts.
 
 ## Downstream update implications (phase 1 status + follow-up)
 
@@ -82,12 +82,10 @@ Phase 1 implemented these updates:
 
 Follow-up slices still must address:
 
-- `Install_Contract_heartloom_identity_repo_sync_v1_0.md` (or successor): destination roots and path mapping semantics.
-- `install.sh`: destination path constant, help text, summary language, and any compatibility handling behavior.
 - `Change_Control_Heartloom_Identity_Canonical_Repo_Authority_v1_0.md` (or successor): authority-language references to legacy naming.
 - `ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0.md` (or successor): artifact naming, scope language, and path references.
 - `scripts/export-chatgpt-heartloom-identity-zip.sh` + `scripts/chatgpt-heartloom-identity-export.manifest`: script naming/metadata and artifact filename references.
-- `README.md`, `INDEX.md`, and policy docs under `Heartloom-AI-Policies/` that hardcode legacy `00_Identity` paths/names.
+- `README.md`, `INDEX.md`, and policy docs under `Heartloom-AI-Policies/` that still contain historical or external compatibility references to legacy naming.
 - Export-safe docs and existing provenance/readme outputs under `exports/` where legacy naming is represented as canonical.
 
 ## Implementation plan for follow-up slices
@@ -121,8 +119,9 @@ Follow-up slices still must address:
 ## State transition map
 
 - **Before:** `00_Identity` was canonical label and canonical vault path token.
-- **After phase 1 (current):** `Heartloom Identity` is canonical label; `Heartloom-Identity` is canonical vault path token; `00_Identity` remains temporary compatibility alias.
-- **After later deprecation slice:** legacy compatibility alias may be retired only with explicit approval and verified downstream readiness.
+- **After phase 1:** `Heartloom Identity` is canonical label; `Heartloom-Identity` is canonical vault path token; `00_Identity` remains temporary compatibility alias.
+- **After partial alias retirement (current):** active installer/export `00_Identity` compatibility behavior is retired; remaining references are historical/change-control or external compatibility notes.
+- **After later cleanup slice:** residual historical/external compatibility references may be removed once external artifacts are migrated and change-control cleanup is approved.
 
 ## Hard Stop Conditions
 

@@ -77,9 +77,9 @@ These are the “always-refer” docs that apply to every project/session.
 - `30_REFERENCE/vaultmeta/VaultMeta - File Tree.md`
 - `30_REFERENCE/vaultmeta/VaultMeta - Directory Blocks.md`
 - `30_REFERENCE/70_Termux/TERMUX_PROJECTS_README.md`
-- `30_REFERENCE/70_Termux/hl-zip-00-identity_README.md` (temporary compatibility filename)
+- `30_REFERENCE/70_Termux/hl-zip-00-identity_README.md` (external temporary compatibility filename)
 - `30_REFERENCE/70_Termux/hl-zip-stable-base_run-instructions.md`
-- `30_REFERENCE/70_Termux/hl-build-00-identity-protocols-pdf_run-instructions.md` (temporary compatibility filename)
+- `30_REFERENCE/70_Termux/hl-build-00-identity-protocols-pdf_run-instructions.md` (external temporary compatibility filename)
 
 Optional (still stable, but not always necessary every session):
 - `Heartloom-Identity/Repo_Standards_Baseline.md`
