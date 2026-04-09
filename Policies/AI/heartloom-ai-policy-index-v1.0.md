@@ -44,6 +44,7 @@ If any of these exist and diverge from these policies, the vault documents win.
 - Routine work: rely on `global-memories-refactored-set-v2.0.md`.
 - Implementation detail: open the relevant policy doc and follow it verbatim.
 - Conflicts: apply the Authority Order in the operating protocol.
+- Repo-local specialization: when a repository has a local `AGENTS.md`/canonical workflow contract, treat it as the practical repo execution surface and apply it as a specialization of these defaults.
 
 ## Discoverability notes
 
