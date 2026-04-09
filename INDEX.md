@@ -25,7 +25,7 @@ If you want a short “start here” sequence:
 4. **Alignment_Review_Checklist_heartloom_identity_v1_0.md** — canonical repeatable anti-drift checklist for source-alignment reviews.
 5. **Distinctions_Library_heartloom_identity_v1_0.md** — canonical distinctions vocabulary for source-alignment review, routing, and anti-drift naming.
 6. **Change_Control_Heartloom_Identity_Canonical_Repo_Authority_v1_0.md** — authority transition completion record for repo-canonical `Heartloom Identity` authoring.
-7. **Install_Contract_heartloom_identity_repo_sync_v1_0.md** — implemented installer contract for repo-root `install.sh` sync into vault `Heartloom-Identity` target with temporary legacy alias compatibility.
+7. **Install_Contract_heartloom_identity_repo_sync_v1_0.md** — implemented installer contract for repo-root `install.sh` sync into vault `Heartloom-Identity` target (legacy alias sync retired).
 8. **Authority_Transition_Gate_Installer_Validation_v1_0.md** — canonical transition gate definition plus recorded READY/completion evidence.
 9. **Consumer_Integration_Model_heartloom_identity_v1_0.md** — canonical cross-repo consumer pattern (near-term snapshots, long-term versioned bundle model, override boundaries, upstream proposal flow).
 10. **Bundle_Versioning_Semantics_heartloom_identity_v1_0.md** — canonical bundle purpose, inclusion/exclusion boundary, version pinning expectations, and upgrade posture (semantics defined now; release tooling later).
@@ -80,8 +80,8 @@ These are Termux helpers that support “ZIP-TENNIS” review and final identity
 - **Repo → vault installer:** `./install.sh` (`--dry-run` supported)
 - **ChatGPT export zip (staged to vault):** `scripts/export-chatgpt-heartloom-identity-zip.sh`
 - **Stable Base reference pack zip:** `hl-zip-stable-base`
-- **Protocols zip (temporary compatibility command alias):** `hl-zip-00-identity`
-- **Protocols → PDF builder (temporary compatibility command alias):** `hl-build-00-identity-protocols-pdf`
+- **Protocols zip (external temporary compatibility command alias):** `hl-zip-00-identity`
+- **Protocols → PDF builder (external temporary compatibility command alias):** `hl-build-00-identity-protocols-pdf`
 
 Outputs are staged to:
 

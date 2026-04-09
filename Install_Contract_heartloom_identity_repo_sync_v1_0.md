@@ -8,7 +8,7 @@ Target: `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/`
 
 Define explicit behavior for repo-root `install.sh` that installs canonical `Heartloom Identity` docs from this repository into the vault target path.
 
-Phase 1 also defines a short-lived technical compatibility alias for legacy consumers at `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`.
+Phase 1 included a short-lived technical compatibility alias for legacy consumers at `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`; active installer alias sync was retired in the partial alias-retirement slice.
 
 This document is normative for implementation and verification of installer behavior.
 
@@ -31,15 +31,10 @@ Only these source roots are in install scope:
 - `./*.md` in repo maps to `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/*.md`
 - `./Heartloom-AI-Policies/*.md` maps to `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/Heartloom-AI-Policies/*.md`
 
-Legacy compatibility alias mapping (temporary):
-
-- When legacy alias sync is active, the same in-scope files are also synced to `/storage/emulated/0/Documents/HeartloomVault/00_Identity/` using the same path-preserving rules.
-
 ### Path mapping rule
 
 - Mapping is path-preserving within those roots.
 - Canonical sync writes are constrained to `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/`.
-- Temporary alias sync writes (when enabled) are constrained to `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`.
 - No file may be installed outside those bounded roots.
 
 ## Install semantics
@@ -62,12 +57,11 @@ Legacy compatibility alias mapping (temporary):
 - Installer must create required destination directories when absent.
 - Creation is limited to paths under `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/`.
 
-### Legacy alias sync posture (temporary)
+### Legacy alias retirement posture
 
-- Default mode is `auto`: sync legacy alias only when `/storage/emulated/0/Documents/HeartloomVault/00_Identity/` already exists.
-- `--legacy-alias` forces legacy alias sync and creates the alias path if needed.
-- `--no-legacy-alias` disables legacy alias sync.
-- Legacy alias sync is transitional compatibility only and must be removed in a later deprecation slice.
+- Installer legacy alias sync to `/storage/emulated/0/Documents/HeartloomVault/00_Identity/` is retired.
+- `install.sh` no longer exposes `--legacy-alias` or `--no-legacy-alias` options.
+- Legacy path references remain change-control/history-only in this repo until a later cleanup slice.
 
 ## Exclusions
 
@@ -115,7 +109,7 @@ Excluded from install scope:
 ## Explicit non-goals (implementation boundary)
 
 - No additional authority-state changes triggered by installer execution alone.
-- No additional vault path changes beyond canonical `Heartloom-Identity` + temporary legacy alias support.
+- No additional vault path changes beyond canonical `Heartloom-Identity`.
 - No session-pack regeneration implementation.
 - No CI/release changes.
 
