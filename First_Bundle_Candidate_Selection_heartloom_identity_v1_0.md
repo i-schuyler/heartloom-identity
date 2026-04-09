@@ -28,7 +28,7 @@ This is a scope-definition label, not an already-published artifact.
 The v0 candidate is optimized for:
 
 - Consumer repositories that need canonical policy/identity references with explicit pinning behavior.
-- Prompt-template style consumption where `00_Identity` is treated as highest-authority reference material.
+- Prompt-template style consumption where `Heartloom Identity` is treated as highest-authority reference material.
 - Session-pack workflows where required reference docs are expected as active inputs.
 - Human-reviewed upgrades where scope changes are visible and intentional.
 
@@ -79,7 +79,7 @@ The v0 candidate is optimized for:
 
 ### A) Maintainership/transition/installer-internal artifacts
 
-- `Change-Control_00_Identity_Canonical_Repo_Authority_Proposal_v1_0.md`
+- `Change_Control_Heartloom_Identity_Canonical_Repo_Authority_v1_0.md`
 - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
 - `Install_Contract_heartloom_identity_repo_sync_v1_0.md`
 - `install.sh`
@@ -92,7 +92,7 @@ The v0 candidate is optimized for:
 - `Codex_CLI_Termux_Setup_v1_0.md`
 - `House_Defaults_v1_0.md`
 - `Tools_Shortlist_v1_0.md`
-- `00_Identity_Protocols_Reading_Order_v1_0.md`
+- `Heartloom_Identity_Protocols_Reading_Order_v1_0.md`
 
 **Why excluded:** Helpful for maintainers/operators, but not required for a conservative first consumer bundle boundary.
 

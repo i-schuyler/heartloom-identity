@@ -6,7 +6,7 @@
 ## Canonical storage location
 
 - Vault: `/storage/emulated/0/Documents/HeartloomVault/`
-- Folder: `00_Identity/Heartloom-AI-Policies/`
+- Folder: `Heartloom-Identity/Heartloom-AI-Policies/`
 
 ## Policy documents in this pack
 
@@ -31,7 +31,7 @@
 
 These are “always-refer” documents (when present) that should be treated as authoritative inputs:
 
-- `00_Identity/Heartloom_AI_Operating_Protocol.md` (if it exists as the living, human-edited canonical manual)
+- `Heartloom-Identity/Heartloom_AI_Operating_Protocol.md` (if it exists as the living, human-edited canonical manual)
 - `30_REFERENCE/Repo_Standards_Baseline.md` (if you maintain a vault-level baseline there)
 - `VaultMeta - File Tree.md` (authoritative vault layout)
 - `VaultMeta - Directory Blocks.md` (authoritative semantic folder map)

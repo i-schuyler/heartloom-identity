@@ -4,18 +4,25 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DEST_ROOT="/storage/emulated/0/Documents/HeartloomVault/00_Identity"
+DEST_ROOT="/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity"
+LEGACY_DEST_ROOT="/storage/emulated/0/Documents/HeartloomVault/00_Identity"
 CODEX_GLOBAL_SOURCE="$SCRIPT_DIR/tooling/codex-global"
 CODEX_GLOBAL_DEST="${HOME}/.codex"
 DRY_RUN=0
 MODE="vault"
+LEGACY_ALIAS_MODE="auto"
 
 usage() {
   cat <<'USAGE'
-Usage: ./install.sh [--dry-run|-n] [--codex-global] [--help|-h]
+Usage: ./install.sh [--dry-run|-n] [--codex-global] [--legacy-alias] [--no-legacy-alias] [--help|-h]
 
 Default (vault sync): installs in-scope markdown docs from this repo into:
-  /storage/emulated/0/Documents/HeartloomVault/00_Identity/
+  /storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/
+
+Temporary compatibility behavior (phase 1 rename):
+  - auto mode (default): if legacy /00_Identity/ exists, sync to it as alias
+  - --legacy-alias: always sync/create legacy /00_Identity/ alias path
+  - --no-legacy-alias: disable legacy alias sync
 
 Codex-global mode:
   ./install.sh --codex-global
@@ -24,6 +31,8 @@ Codex-global mode:
 Options:
   --dry-run, -n   Show planned actions only (no filesystem writes)
   --codex-global  Install source-controlled Codex globals into ~/.codex/
+  --legacy-alias  Force sync/create legacy /00_Identity/ compatibility alias
+  --no-legacy-alias  Disable legacy /00_Identity/ compatibility alias sync
   --help, -h      Show this help
 USAGE
 }
@@ -35,6 +44,12 @@ while [[ $# -gt 0 ]]; do
       ;;
     --codex-global)
       MODE="codex-global"
+      ;;
+    --legacy-alias)
+      LEGACY_ALIAS_MODE="always"
+      ;;
+    --no-legacy-alias)
+      LEGACY_ALIAS_MODE="off"
       ;;
     --help|-h)
       usage
@@ -149,6 +164,44 @@ install_codex_global() {
   echo "[SUMMARY] no-deletes-performed=true"
 }
 
+sync_markdown_docs_to_root() {
+  local destination_root="$1"
+  local summary_label="$2"
+
+  run_mkdir "$destination_root"
+  run_mkdir "$destination_root/Heartloom-AI-Policies"
+
+  CREATED_COUNT=0
+  UPDATED_COUNT=0
+  SKIPPED_COUNT=0
+  SCANNED_COUNT=0
+
+  while IFS= read -r -d '' source_file; do
+    file_name="$(basename "$source_file")"
+    destination_file="$destination_root/$file_name"
+    SCANNED_COUNT=$((SCANNED_COUNT + 1))
+    copy_or_update "$source_file" "$destination_file" "$file_name"
+  done < <(build_file_list "$SCRIPT_DIR" 1)
+
+  if [[ ! -d "$SCRIPT_DIR/Heartloom-AI-Policies" ]]; then
+    echo "[ABORT] Missing source directory: $SCRIPT_DIR/Heartloom-AI-Policies"
+    exit 1
+  fi
+
+  while IFS= read -r -d '' source_file; do
+    file_name="$(basename "$source_file")"
+    relative_path="Heartloom-AI-Policies/$file_name"
+    destination_file="$destination_root/$relative_path"
+    SCANNED_COUNT=$((SCANNED_COUNT + 1))
+    copy_or_update "$source_file" "$destination_file" "$relative_path"
+  done < <(build_file_list "$SCRIPT_DIR/Heartloom-AI-Policies" 1)
+
+  echo
+  echo "[SUMMARY][$summary_label] scanned=$SCANNED_COUNT created=$CREATED_COUNT updated=$UPDATED_COUNT skipped=$SKIPPED_COUNT"
+  echo "[SUMMARY][$summary_label] mode=sync-copy-upsert-without-prune"
+  echo "[SUMMARY][$summary_label] no-deletes-performed=true"
+}
+
 install_vault_sync() {
   echo "[INFO] heartloom-identity installer"
   echo "[INFO] Destination root: $DEST_ROOT"
@@ -170,38 +223,29 @@ install_vault_sync() {
     fi
   fi
 
-  run_mkdir "$DEST_ROOT"
-  run_mkdir "$DEST_ROOT/Heartloom-AI-Policies"
+  sync_markdown_docs_to_root "$DEST_ROOT" "canonical"
 
-  CREATED_COUNT=0
-  UPDATED_COUNT=0
-  SKIPPED_COUNT=0
-  SCANNED_COUNT=0
+  local sync_legacy_alias=0
+  case "$LEGACY_ALIAS_MODE" in
+    always)
+      sync_legacy_alias=1
+      ;;
+    auto)
+      if [[ -d "$LEGACY_DEST_ROOT" ]]; then
+        sync_legacy_alias=1
+      fi
+      ;;
+    off)
+      sync_legacy_alias=0
+      ;;
+  esac
 
-  while IFS= read -r -d '' source_file; do
-    file_name="$(basename "$source_file")"
-    destination_file="$DEST_ROOT/$file_name"
-    SCANNED_COUNT=$((SCANNED_COUNT + 1))
-    copy_or_update "$source_file" "$destination_file" "$file_name"
-  done < <(build_file_list "$SCRIPT_DIR" 1)
-
-  if [[ ! -d "$SCRIPT_DIR/Heartloom-AI-Policies" ]]; then
-    echo "[ABORT] Missing source directory: $SCRIPT_DIR/Heartloom-AI-Policies"
-    exit 1
+  if [[ "$sync_legacy_alias" -eq 1 ]]; then
+    echo "[INFO] Temporary compatibility alias sync enabled: $LEGACY_DEST_ROOT"
+    sync_markdown_docs_to_root "$LEGACY_DEST_ROOT" "legacy-00_Identity-alias"
+  else
+    echo "[INFO] Temporary compatibility alias sync skipped: $LEGACY_DEST_ROOT"
   fi
-
-  while IFS= read -r -d '' source_file; do
-    file_name="$(basename "$source_file")"
-    relative_path="Heartloom-AI-Policies/$file_name"
-    destination_file="$DEST_ROOT/$relative_path"
-    SCANNED_COUNT=$((SCANNED_COUNT + 1))
-    copy_or_update "$source_file" "$destination_file" "$relative_path"
-  done < <(build_file_list "$SCRIPT_DIR/Heartloom-AI-Policies" 1)
-
-  echo
-  echo "[SUMMARY] scanned=$SCANNED_COUNT created=$CREATED_COUNT updated=$UPDATED_COUNT skipped=$SKIPPED_COUNT"
-  echo "[SUMMARY] mode=sync-copy-upsert-without-prune"
-  echo "[SUMMARY] no-deletes-performed=true"
 }
 
 if [[ "$MODE" == "codex-global" ]]; then

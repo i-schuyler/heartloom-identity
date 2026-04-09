@@ -8,7 +8,7 @@ This baseline defines a default repo structure and lightweight quality tripwires
 
 Naming convention (scoped)
 • GitHub repos + repo-matching folder titles: prefer hyphens (CLI/web friendly).
-• Vault / 00_Identity docs: prefer stability over renaming; underscores are acceptable/preferred where already in use.
+• Vault / Heartloom Identity docs: prefer stability over renaming; underscores are acceptable/preferred where already in use.
 • Em dash —: use in human-facing titles/headings, not filenames.
 
 ## Baseline repo structure
@@ -64,7 +64,7 @@ Optional: `examples/`, `ci/`, `third_party/` (vendored deps + licenses), `assets
 
 ## Appendix A — Legacy repo standards baseline merged (verbatim snapshot)
 
-> Source: `00_Identity/Repo_Standards_Baseline.md` (pre-merge). Included to ensure no loss.
+> Source: `Heartloom-Identity/Repo_Standards_Baseline.md` (pre-merge). Included to ensure no loss.
 
 # Repo Standards Baseline
 *Vault-level reference for repository structure, documentation canon, and artifact discipline.*

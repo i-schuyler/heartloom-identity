@@ -27,7 +27,7 @@ If a request depends on an archive/repo artifact (zip, repo export, canonical re
 ## Session packs and update workflow
 
 When policies/prompt templates change:
-- provide commands to regenerate the affected session packs (00_Identity.zip and Stable_Base.zip)
+- provide commands to regenerate the affected session packs (Heartloom-Identity.zip and Stable_Base.zip)
 - stage outputs into `40_STAGING/` for easy upload/review
 - include the usual Artifact Contract elements (tree incl dotfiles, exclusions, re-entry hint)
 

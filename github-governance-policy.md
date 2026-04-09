@@ -1,5 +1,5 @@
 # GitHub Governance Policy (Ecosystem-Wide)
-Location: `00_Identity/`
+Location: `Heartloom-Identity/`
 
 ## Purpose
 This policy defines a single baseline governance standard for all repositories under the i-schuyler GitHub ecosystem. It also defines a per-project “Safety Appendix” pattern for safety-critical work (e.g., EV control, access control/security firmware).

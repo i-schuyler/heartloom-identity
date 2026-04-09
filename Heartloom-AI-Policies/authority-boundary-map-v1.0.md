@@ -1,7 +1,7 @@
 # authority-boundary-map-v1.0.md
 Version: v1.0  
 Status: APPROVED
-Scope: HeartloomVault — 00_Identity authority + session intake boundaries
+Scope: HeartloomVault — Heartloom Identity authority + session intake boundaries
 
 ---
 
@@ -44,7 +44,7 @@ If ambiguity is low-risk and reversible:
 When sources conflict, resolve by this order (highest wins).  
 **User instructions in the current session do not override items (1–3).**
 
-1) **00_Identity** (highest authority)  
+1) **Heartloom Identity** (highest authority)  
 2) **Project canonical docs index** (e.g., `docs/Canonical_Documentation_Index_v1_0.md`) + docs it references  
 3) **Repo/code reality** (existing structure/contracts + implemented behavior; used to avoid hallucinating, but does **not** override 1–2)
 4) **User instructions in the current session** (unless they conflict with 1–3)  
@@ -62,8 +62,8 @@ If the user’s instruction conflicts with items (1–3), the Assistant must:
 
 Unless a higher-authority doc specifies otherwise, the Assistant must begin by consulting, in this order:
 
-1) **00_Identity required-reference-docs** (read or STOP)  
-2) **00_Identity policy index** (so the Assistant knows what “canon” exists)  
+1) **Heartloom Identity required-reference-docs** (read or STOP)  
+2) **Heartloom Identity policy index** (so the Assistant knows what “canon” exists)  
 3) **Project Instructions** (this project’s rules)  
 4) **Project Files** that define structure (e.g., file tree, directory blocks, canonical indexes)  
 5) **User’s current session anchor + constraints**  
@@ -102,7 +102,7 @@ Recommendation:
 
 ### 4.3 Practical implementation (recommended)
 
-- `00_Identity/Heartloom-AI-Policies/required-reference-docs.md` lists:
+- `Heartloom-Identity/Heartloom-AI-Policies/required-reference-docs.md` lists:
   - **Always-refer** stable docs (base pack)
   - **Often-refer** project-local docs (overlay), with placeholders like:
     - “Project Files: File Tree”
@@ -119,7 +119,7 @@ The Assistant can only use:
 The Assistant cannot automatically browse, enumerate, or inspect “Project Files” that exist in other ChatGPT Projects unless you attach them to the current session (or paste their content).
 
 Cross-project reuse pattern:
-- keep the stable base in `00_Identity`,
+- keep the stable base in `Heartloom Identity`,
 - attach (or zip/export) a project’s “Index / File Tree / Directory Blocks” into the current session when needed.
 
 ---
@@ -136,9 +136,9 @@ If a future policy requires enforcing hyphens within Identity, it must be a deli
 
 ---
 
-## 7) 00_Identity contents + zip inclusion policy
+## 7) Heartloom Identity contents + zip inclusion policy
 
-### 7.1 Expected future contents of 00_Identity
+### 7.1 Expected future contents of Heartloom Identity
 
 Possible future additions:
 - “Session anchor” seeds, shared checklists, stable reference maps, and canonical indexes.

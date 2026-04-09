@@ -33,7 +33,7 @@ Working Pack is **not** a publishable artifact and should never be committed who
 
 ### Canonical repo source (authoritative)
 
-- Markdown docs in this repo are the canonical authoring source for `00_Identity`.
+- Markdown docs in this repo are the canonical authoring source for `Heartloom Identity`.
 - Changes here are the authoritative upstream baseline for exports and consumers.
 
 ### Generated local artifacts (not committed)
@@ -57,7 +57,7 @@ These are required only when relevant and must remain local.
 
 ### Exported artifacts (downstream)
 
-Exports (for example the ChatGPT `00_Identity` zip) are **downstream snapshots** built from canonical source docs. They are **not** canonical sources themselves.
+Exports (for example the ChatGPT `Heartloom Identity` zip) are **downstream snapshots** built from canonical source docs. They are **not** canonical sources themselves.
 
 ## Pack boundary expectations
 

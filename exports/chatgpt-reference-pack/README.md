@@ -1,4 +1,4 @@
-# ChatGPT Reference Pack (00_Identity)
+# ChatGPT Reference Pack (Heartloom Identity)
 
 This is a **downstream Reference Pack** export from `heartloom-identity`. It is a clean, consumer-facing snapshot for ChatGPT project use.
 

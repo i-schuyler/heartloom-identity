@@ -2,7 +2,7 @@
 
 Status: **GATE SATISFIED (validation complete; authority transition approved)**  
 Type: Validation and transition-approval checklist  
-Scope: Conditions required before practical authority transition from vault-first workflow to repo-canonical `00_Identity`
+Scope: Conditions required before practical authority transition from vault-first workflow to repo-canonical `Heartloom Identity`
 
 ## Purpose
 
@@ -12,7 +12,7 @@ This document now includes a completed validation outcome record for transition 
 
 ## State model (must remain explicit)
 
-- **Authority model:** Repo-canonical `00_Identity` authority is now recorded as complete in Change-Control.
+- **Authority model:** Repo-canonical `Heartloom Identity` authority is now recorded as complete in Change-Control.
 - **Implemented component:** `install.sh` exists and implements sync-copy upsert without prune.
 - **Transition state:** authority transition is **READY / COMPLETED** for current validated state.
 
@@ -23,7 +23,7 @@ Outcome: **READY satisfied; authority transition complete**
 
 Evidence used:
 
-- Live install succeeded against `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`.
+- Live install succeeded against `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/`.
 - Post-install `git status` remained clean.
 - Installed vault tree showed expected in-scope files present.
 - Spot checks confirmed key files at expected destination paths.
@@ -47,9 +47,9 @@ All must be true before validation begins:
 - Install contract is the current implemented contract document:
   - `Install_Contract_heartloom_identity_repo_sync_v1_0.md`
 - Authority change-control document is current and records transition completion:
-  - `Change-Control_00_Identity_Canonical_Repo_Authority_Proposal_v1_0.md`
+  - `Change_Control_Heartloom_Identity_Canonical_Repo_Authority_v1_0.md`
 - Canonical vault target remains unchanged and accessible:
-  - `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`
+  - `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/`
 - Validation run context records commit SHA of installer being validated.
 - Operator has a rollback plan prepared before live install validation (see rollback section).
 

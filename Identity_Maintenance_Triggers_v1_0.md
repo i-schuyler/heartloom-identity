@@ -9,29 +9,29 @@ This checklist defines “when you must update which Identity docs/tools” to p
 
 ### 1) Canonical paths change (vault, staging, logs, drop-folders)
 Update:
-- `00_Identity/INDEX.md` (navigation + canonical paths)
-- `00_Identity/Heartloom-AI-Policies/termux-and-shell-policy-v1.0.md`
+- `Heartloom-Identity/INDEX.md` (navigation + canonical paths)
+- `Heartloom-Identity/Heartloom-AI-Policies/termux-and-shell-policy-v1.0.md`
 - Any Termux scripts that embed paths (`~/bin/hl-*`)
 - Stable Base pack (if it includes the affected reference)
 
 ### 2) New “always-refer” doc is created
 Update:
-- `00_Identity/Heartloom-AI-Policies/required-reference-docs.md`
+- `Heartloom-Identity/Heartloom-AI-Policies/required-reference-docs.md`
 - Stable Base pack list (if it’s a stable cross-project reference)
 
 ### 3) New policy doc (v1.x) is added under Heartloom-AI-Policies
 Update:
-- `00_Identity/Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md`
-- `00_Identity/INDEX.md` if it changes “Start here” ordering
+- `Heartloom-Identity/Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md`
+- `Heartloom-Identity/INDEX.md` if it changes “Start here” ordering
 
 ### 4) Prompt template semantics change (“you/we”, hard stops, artifact contract)
 Update:
-- `00_Identity/PROMPT - Template.md`
-- `00_Identity/Heartloom-AI-Policies/authority-boundary-map-v1.0.md` (if semantics are global)
+- `Heartloom-Identity/PROMPT - Template.md`
+- `Heartloom-Identity/Heartloom-AI-Policies/authority-boundary-map-v1.0.md` (if semantics are global)
 
 ### 5) GitHub/Codex workflow changes (PR-first, CI loop, branch policy)
 Update:
-- `00_Identity/Heartloom-AI-Policies/github-and-codex-pr-first-policy-v1.0.md`
+- `Heartloom-Identity/Heartloom-AI-Policies/github-and-codex-pr-first-policy-v1.0.md`
 - Any “repo intake” or “governance” docs that restate the workflow
 
 ### 6) Termux automation script added/changed
@@ -43,7 +43,7 @@ Update:
 ### 7) You ship a new “Identity artifact” (zip/PDF) intended for reuse
 Run:
 - `hl-build-identity-artifacts` (preferred) OR
-- `hl-zip-stable-base`, `hl-zip-00-identity`, `hl-build-00-identity-protocols-pdf`
+- `hl-zip-stable-base`, `hl-zip-00-identity`, `hl-build-00-identity-protocols-pdf` (temporary compatibility command aliases)
 
 Then:
 - verify outputs in `40_STAGING/`

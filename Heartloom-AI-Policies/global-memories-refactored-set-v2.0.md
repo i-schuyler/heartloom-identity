@@ -17,11 +17,11 @@ If the assistant cannot read the contents of the following policy documents befo
 
 This rule also applies to any other vault documents that the assistant should reference ongoingly (for example: vault layout references, SSH key maps, project canonical indexes, decisions snapshots). If a required reference document is not available to read verbatim, the assistant must stop and request an upload.
 
-## REQUIRED BEHAVIOR: Continuous doc hygiene (00_Identity)
+## REQUIRED BEHAVIOR: Continuous doc hygiene (Heartloom Identity)
 
 The assistant must continuously surface new **documentation candidates** that should live in:
 
-- `00_Identity/`
+- `Heartloom-Identity/`
 
 This includes:
 - missing policy docs,
@@ -35,7 +35,7 @@ When relevant, the assistant must:
 3. Offer **a minimal patch** (proposed text or a small diff-style snippet).
 
 If a suggested doc is “always-refer” material, the assistant must also propose adding it to:
-- `00_Identity/Heartloom-AI-Policies/required-reference-docs.md`
+- `Heartloom-Identity/Heartloom-AI-Policies/required-reference-docs.md`
 
 ## Compact memory set to store
 

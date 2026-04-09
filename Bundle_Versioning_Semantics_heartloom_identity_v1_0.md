@@ -12,7 +12,7 @@ This document defines expected behavior now so downstream repos can align early.
 
 ## Implemented vs future state (required clarity)
 
-- **Implemented now:** consumer repos commonly consume installer-managed local snapshots of `00_Identity` docs.
+- **Implemented now:** consumer repos commonly consume installer-managed local snapshots of `Heartloom Identity` docs.
 - **Implemented now:** this repo is the maintained upstream canonical source for shared identity/policy docs.
 - **Defined now for future use:** bundle scope and versioning semantics in this document.
 - **Not implemented yet:** official release artifact publishing, bundle generation tooling, and installer-based bundle installation.
@@ -38,7 +38,7 @@ Bundle goals:
 A document is bundle-eligible when it is all of the following:
 
 - Consumer-facing canonical guidance (not maintainership-only process).
-- Required to interpret or apply shared `00_Identity` canon in downstream repos.
+- Required to interpret or apply shared `Heartloom Identity` canon in downstream repos.
 - Stable enough to be version-pinned and reviewed as part of upgrade decisions.
 - Markdown canonical docs (`.md`) unless an explicit future exception is ratified.
 
