@@ -8,7 +8,7 @@ Target: `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/`
 
 Define explicit behavior for repo-root `install.sh` that installs canonical `Heartloom Identity` docs from this repository into the vault target path.
 
-Phase 1 included a short-lived technical compatibility alias for legacy consumers at `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`; active installer alias sync was retired in the partial alias-retirement slice.
+Phase 1 included a short-lived technical compatibility alias path for legacy consumers; active installer alias sync was retired in the partial alias-retirement slice.
 
 This document is normative for implementation and verification of installer behavior.
 
@@ -59,7 +59,7 @@ Only these source roots are in install scope:
 
 ### Legacy alias retirement posture
 
-- Installer legacy alias sync to `/storage/emulated/0/Documents/HeartloomVault/00_Identity/` is retired.
+- Installer legacy alias sync path is retired.
 - `install.sh` no longer exposes `--legacy-alias` or `--no-legacy-alias` options.
 - Legacy path references remain change-control/history-only in this repo until a later cleanup slice.
 

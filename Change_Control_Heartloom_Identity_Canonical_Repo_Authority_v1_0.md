@@ -2,7 +2,7 @@
 
 Status: **AUTHORITY TRANSITION COMPLETED (installer validated; repo-canonical active)**  
 Type: Change-Control / authority transition record  
-Scope: `Heartloom Identity` documentation authority and install flow boundaries, including temporary legacy alias posture
+Scope: `Heartloom Identity` documentation authority and install flow boundaries, including historical legacy-alias posture
 
 ## Purpose
 
@@ -17,8 +17,7 @@ Filename is retained for continuity with prior slices and references.
 - This repo is the canonical authoring source for `Heartloom Identity` content (repo root and `Heartloom-AI-Policies/`).
 - The currently installed/consumed local copy remains in HeartloomVault at:
   - `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/`
-- Temporary legacy compatibility alias remains available for migration:
-  - `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`
+- Historical legacy compatibility alias path remains recorded for migration traceability.
 - Vault copy is the installer-managed installed/consumed downstream copy.
 - Installer script exists at repo root (`install.sh`) and applies the documented sync-copy upsert contract into the vault target.
 
@@ -42,7 +41,7 @@ Filename is retained for continuity with prior slices and references.
 
 - Canonical authoring authority for `Heartloom Identity` is this GitHub repo.
 - Vault `Heartloom-Identity` is the installed/consumed downstream copy.
-- Legacy `00_Identity` exists only as temporary technical compatibility alias.
+- Legacy alias exists only as historical technical compatibility record.
 - Transition validation gate document records READY satisfaction and completion evidence:
   - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
 
@@ -66,8 +65,7 @@ Installer behavior contract reference:
 
 - Canonical target path:
   - `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/`
-- Temporary compatibility alias path:
-  - `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`
+- Historical compatibility alias path is retained in rename change-control history.
 
 ## Canon boundaries: in-repo vs in-vault
 
