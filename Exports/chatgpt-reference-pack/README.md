@@ -7,6 +7,7 @@ This is a **downstream Reference Pack** export from `heartloom-identity`. It is 
 ## What this pack includes
 
 - Core identity and governance docs needed for ChatGPT sessions.
+- Identity alignment + navigation docs for source-boundary and anti-drift review.
 - Selected Heartloom AI policy canon for collaboration behavior.
 - Consumer/bundle semantics docs for downstream reference.
 - A generated pack manifest for scope and omissions.

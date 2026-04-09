@@ -7,6 +7,14 @@ This index lists only the documents included in this Reference Pack export.
 - `ChatGPT_Reference_Pack_Manifest.md` (generated at export time)
 - [`READING_ORDER.md`](READING_ORDER.md)
 
+## Identity alignment + navigation
+
+- [`../../Contracts/Source_Alignment_Contract_v1_0.md`](../../Contracts/Source_Alignment_Contract_v1_0.md)
+- [`../../Maps/Repo_Ecosystem_Map_v1_0.md`](../../Maps/Repo_Ecosystem_Map_v1_0.md)
+- [`../../Checklists/Alignment_Review_Checklist_v1_0.md`](../../Checklists/Alignment_Review_Checklist_v1_0.md)
+- [`../../Reference/Distinctions_Library_v1_0.md`](../../Reference/Distinctions_Library_v1_0.md)
+- [`../../Reference/Reference_Architectures_Source_Inputs_v1_0.md`](../../Reference/Reference_Architectures_Source_Inputs_v1_0.md)
+
 ## Core identity + governance
 
 - [`../../Policies/Heartloom_AI_Memory_Constitution.md`](../../Policies/Heartloom_AI_Memory_Constitution.md)

@@ -1,6 +1,11 @@
 Exports/chatgpt-reference-pack/README.md
 Exports/chatgpt-reference-pack/INDEX.md
 Exports/chatgpt-reference-pack/READING_ORDER.md
+Contracts/Source_Alignment_Contract_v1_0.md
+Maps/Repo_Ecosystem_Map_v1_0.md
+Checklists/Alignment_Review_Checklist_v1_0.md
+Reference/Distinctions_Library_v1_0.md
+Reference/Reference_Architectures_Source_Inputs_v1_0.md
 Reference/Consumer_Integration_Model_v1_0.md
 Reference/Bundle_Versioning_Semantics_v1_0.md
 Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md
