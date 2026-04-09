@@ -33,6 +33,7 @@ Canonical downstream identity-layer repository for Heartloom repo inheritance, w
 The dedicated Change-Control docs slice is documented in:
 
 - `Change-Control_00_Identity_Canonical_Repo_Authority_Proposal_v1_0.md`
+- `Change_Control_Heartloom_Identity_Rename_v1_0.md`
 - `Install_Contract_heartloom_identity_repo_sync_v1_0.md`
 - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
 - `Consumer_Integration_Model_heartloom_identity_v1_0.md`
@@ -41,6 +42,7 @@ The dedicated Change-Control docs slice is documented in:
 
 - Repo-canonical `00_Identity` authority transition is **completed**.
 - Vault `00_Identity` is the installer-managed installed/consumed downstream copy.
+- Canonical rename change-control from `00_Identity` to `Heartloom Identity` is defined; implementation remains pending.
 
 ## Installer
 
