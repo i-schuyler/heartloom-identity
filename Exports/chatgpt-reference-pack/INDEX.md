@@ -6,6 +6,7 @@ This index lists only the documents included in this Reference Pack export.
 
 - `ChatGPT_Reference_Pack_Manifest.md` (generated at export time)
 - [`READING_ORDER.md`](READING_ORDER.md)
+- [`COMPANION_INDEX.json`](COMPANION_INDEX.json)
 
 ## Identity alignment + navigation
 

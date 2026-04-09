@@ -1,0 +1,223 @@
+{
+  "pack": "ChatGPT Reference Pack (Heartloom Identity)",
+  "schema_version": "1.0",
+  "intent": "Lightweight machine-readable companion metadata for routing and anti-drift support across chats.",
+  "entries": [
+    {
+      "path": "Exports/chatgpt-reference-pack/README.md",
+      "title": "ChatGPT Reference Pack README",
+      "purpose": "Sets first-contact framing, pack purpose, and upstream routing posture.",
+      "canonical_role": "entry_navigation",
+      "likely_use_moments": ["session_start", "governance_alignment", "deeper_source_routing"],
+      "upstream_downstream_status": "points_upstream_to_source"
+    },
+    {
+      "path": "Exports/chatgpt-reference-pack/INDEX.md",
+      "title": "ChatGPT Reference Pack Index",
+      "purpose": "Provides export-safe navigation to all included documents.",
+      "canonical_role": "map",
+      "likely_use_moments": ["session_start", "repo_orientation", "anti_drift_review"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Exports/chatgpt-reference-pack/READING_ORDER.md",
+      "title": "ChatGPT Reference Pack Reading Order",
+      "purpose": "Offers a practical sequence for orienting and using the pack.",
+      "canonical_role": "checklist",
+      "likely_use_moments": ["session_start", "repo_orientation", "governance_alignment"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Exports/chatgpt-reference-pack/COMPANION_INDEX.json",
+      "title": "Companion Index",
+      "purpose": "Supplies lightweight machine-readable file purpose and routing metadata.",
+      "canonical_role": "reference",
+      "likely_use_moments": ["session_start", "anti_drift_review", "repo_intake"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "ChatGPT_Reference_Pack_Manifest.md",
+      "title": "Generated Pack Manifest",
+      "purpose": "Captures generated export metadata, class coverage, and known omissions.",
+      "canonical_role": "generated_manifest",
+      "likely_use_moments": ["bundle_or_export_work", "anti_drift_review"],
+      "upstream_downstream_status": "generated_export_artifact"
+    },
+    {
+      "path": "Contracts/Source_Alignment_Contract_v1_0.md",
+      "title": "Source Alignment Contract",
+      "purpose": "Defines source-of-truth boundaries and alignment expectations.",
+      "canonical_role": "contract",
+      "likely_use_moments": ["governance_alignment", "anti_drift_review", "deeper_source_routing"],
+      "upstream_downstream_status": "points_upstream_to_source"
+    },
+    {
+      "path": "Maps/Repo_Ecosystem_Map_v1_0.md",
+      "title": "Repo Ecosystem Map",
+      "purpose": "Maps major repositories and how they relate.",
+      "canonical_role": "map",
+      "likely_use_moments": ["repo_orientation", "deeper_source_routing", "repo_intake"],
+      "upstream_downstream_status": "points_upstream_to_source"
+    },
+    {
+      "path": "Checklists/Alignment_Review_Checklist_v1_0.md",
+      "title": "Alignment Review Checklist",
+      "purpose": "Guides structured anti-drift and alignment checks.",
+      "canonical_role": "checklist",
+      "likely_use_moments": ["anti_drift_review", "governance_alignment"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Reference/Distinctions_Library_v1_0.md",
+      "title": "Distinctions Library",
+      "purpose": "Provides key conceptual distinctions used for correct routing and interpretation.",
+      "canonical_role": "reference",
+      "likely_use_moments": ["governance_alignment", "anti_drift_review", "deeper_source_routing"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Reference/Reference_Architectures_Source_Inputs_v1_0.md",
+      "title": "Reference Architectures Source Inputs",
+      "purpose": "Bridges architecture references to canonical source inputs.",
+      "canonical_role": "bridge",
+      "likely_use_moments": ["deeper_source_routing", "repo_orientation"],
+      "upstream_downstream_status": "points_upstream_to_source"
+    },
+    {
+      "path": "Reference/Consumer_Integration_Model_v1_0.md",
+      "title": "Consumer Integration Model",
+      "purpose": "Explains how downstream consumers integrate identity artifacts.",
+      "canonical_role": "reference",
+      "likely_use_moments": ["repo_intake", "bundle_or_export_work"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Reference/Bundle_Versioning_Semantics_v1_0.md",
+      "title": "Bundle Versioning Semantics",
+      "purpose": "Defines bundle versioning meaning and usage boundaries.",
+      "canonical_role": "policy",
+      "likely_use_moments": ["bundle_or_export_work", "governance_alignment"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md",
+      "title": "Bundle Manifest Release Prep Semantics",
+      "purpose": "Specifies release-prep semantics for bundle manifests.",
+      "canonical_role": "policy",
+      "likely_use_moments": ["bundle_or_export_work", "governance_alignment"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Reference/First_Bundle_Candidate_Selection_v1_0.md",
+      "title": "First Bundle Candidate Selection",
+      "purpose": "Documents first-bundle candidate selection logic.",
+      "canonical_role": "reference",
+      "likely_use_moments": ["bundle_or_export_work", "governance_alignment"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Policies/AI/heartloom-ai-policy-index-v1.0.md",
+      "title": "Heartloom AI Policy Index",
+      "purpose": "Serves as the navigational index for AI policy canon.",
+      "canonical_role": "entry_navigation",
+      "likely_use_moments": ["governance_alignment", "repo_orientation", "anti_drift_review"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Policies/AI/required-reference-docs.md",
+      "title": "Required Reference Docs",
+      "purpose": "Lists required reference materials for aligned operation.",
+      "canonical_role": "checklist",
+      "likely_use_moments": ["session_start", "governance_alignment", "anti_drift_review"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Policies/AI/heartloom-ai-operating-protocol-v1.0.md",
+      "title": "Heartloom AI Operating Protocol",
+      "purpose": "Defines operating behavior and guardrails for AI collaboration.",
+      "canonical_role": "policy",
+      "likely_use_moments": ["session_start", "governance_alignment", "anti_drift_review"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Policies/AI/termux-and-shell-policy-v1.0.md",
+      "title": "Termux and Shell Policy",
+      "purpose": "Sets shell and terminal behavior expectations.",
+      "canonical_role": "policy",
+      "likely_use_moments": ["repo_intake", "bundle_or_export_work", "governance_alignment"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Policies/AI/github-and-codex-pr-first-policy-v1.0.md",
+      "title": "GitHub and Codex PR-First Policy",
+      "purpose": "Defines PR-first workflow behavior for changes.",
+      "canonical_role": "policy",
+      "likely_use_moments": ["repo_intake", "governance_alignment", "bundle_or_export_work"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Policies/AI/repo-standards-baseline-v1.0.md",
+      "title": "Repo Standards Baseline",
+      "purpose": "Provides baseline quality and structure standards.",
+      "canonical_role": "policy",
+      "likely_use_moments": ["repo_intake", "governance_alignment", "anti_drift_review"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Policies/AI/zip-inspection-and-artifact-contract-v1.0.md",
+      "title": "Zip Inspection and Artifact Contract",
+      "purpose": "Specifies expected zip artifact checks and contract posture.",
+      "canonical_role": "contract",
+      "likely_use_moments": ["bundle_or_export_work", "anti_drift_review"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Policies/AI/global-memories-refactored-set-v2.0.md",
+      "title": "Global Memories Refactored Set",
+      "purpose": "Provides stable memory directives for consistent behavior.",
+      "canonical_role": "policy",
+      "likely_use_moments": ["session_start", "governance_alignment", "anti_drift_review"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Policies/AI/authority-boundary-map-v1.0.md",
+      "title": "Authority Boundary Map",
+      "purpose": "Maps authority boundaries and escalation routing.",
+      "canonical_role": "map",
+      "likely_use_moments": ["governance_alignment", "deeper_source_routing", "anti_drift_review"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Policies/Heartloom_AI_Memory_Constitution.md",
+      "title": "Heartloom AI Memory Constitution",
+      "purpose": "Defines foundational memory and governance principles.",
+      "canonical_role": "policy",
+      "likely_use_moments": ["session_start", "governance_alignment", "anti_drift_review"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Reference/Definitions_Glossary_v1_0.md",
+      "title": "Definitions Glossary",
+      "purpose": "Normalizes key terms for consistent interpretation.",
+      "canonical_role": "reference",
+      "likely_use_moments": ["repo_orientation", "governance_alignment", "anti_drift_review"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Policies/github-governance-policy.md",
+      "title": "GitHub Governance Policy",
+      "purpose": "Defines governance rules for GitHub operations.",
+      "canonical_role": "policy",
+      "likely_use_moments": ["repo_intake", "governance_alignment", "bundle_or_export_work"],
+      "upstream_downstream_status": "identity_pack_current"
+    },
+    {
+      "path": "Checklists/github-repo-intake-checklist.md",
+      "title": "GitHub Repo Intake Checklist",
+      "purpose": "Supports fast, aligned intake of repository context.",
+      "canonical_role": "checklist",
+      "likely_use_moments": ["repo_intake", "session_start", "anti_drift_review"],
+      "upstream_downstream_status": "identity_pack_current"
+    }
+  ]
+}
