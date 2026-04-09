@@ -57,4 +57,4 @@ Then:
 
 ---
 
-Identity_Maintenance_Triggers_v1_0.md EOF
+Checklists/Identity_Maintenance_Triggers_v1_0.md EOF

@@ -91,4 +91,4 @@ Safety rules:
 - No session-pack automation.
 - No repo restructuring beyond docs.
 
-Codex_Global_Source_Install_Contract_heartloom_identity_v1_0.md EOF
+Contracts/Codex_Global_Source_Install_Contract_v1_0.md EOF

@@ -91,4 +91,4 @@ This slice documents the dependency direction without implementing adoption.
 - No downstream repo adoption.
 - No installer or CI changes.
 
-Stable_Base_Working_Pack_Contract_heartloom_identity_v1_0.md EOF
+Contracts/Stable_Base_Working_Pack_Contract_v1_0.md EOF

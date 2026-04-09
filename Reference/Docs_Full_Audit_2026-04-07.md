@@ -74,4 +74,4 @@ Overall documentation is coherent and well-structured, with strong canonical bou
 - Consumer integration and bundle semantics docs are internally consistent and correctly labeled as future-facing where appropriate.
 - ChatGPT export contract, script, and staging behavior are aligned across docs and scripts.
 
-Docs_Full_Audit_heartloom_identity_2026-04-07.md EOF
+Reference/Docs_Full_Audit_2026-04-07.md EOF

@@ -64,10 +64,10 @@ Included files (explicit):
 
 ### B) Consumer + bundle semantics
 
-- `Consumer_Integration_Model_heartloom_identity_v1_0.md`
-- `Bundle_Versioning_Semantics_heartloom_identity_v1_0.md`
-- `Bundle_Manifest_Release_Prep_Semantics_heartloom_identity_v1_0.md`
-- `First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md`
+- `Reference/Consumer_Integration_Model_v1_0.md`
+- `Reference/Bundle_Versioning_Semantics_v1_0.md`
+- `Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md`
+- `Reference/First_Bundle_Candidate_Selection_v1_0.md`
 
 ### C) Heartloom AI policy canon (selected)
 
@@ -81,10 +81,10 @@ Included files (explicit):
 
 ### D) Core identity docs commonly used as downstream authority references
 
-- `Heartloom_AI_Memory_Constitution.md`
-- `Definitions_Glossary_v1_0.md`
-- `github-governance-policy.md`
-- `github-repo-intake-checklist.md`
+- `Policies/Heartloom_AI_Memory_Constitution.md`
+- `Reference/Definitions_Glossary_v1_0.md`
+- `Policies/github-governance-policy.md`
+- `Checklists/github-repo-intake-checklist.md`
 
 If the ChatGPT project requires additional docs, update the explicit include list above in a new slice (no silent expansion).
 
@@ -135,8 +135,8 @@ The export script writes a sidecar provenance file next to the zip and prints th
 
 This export is **not** the same as a future published bundle/release. It is a downstream snapshot for the ChatGPT project only. Bundle publishing remains defined by:
 
-- `Bundle_Versioning_Semantics_heartloom_identity_v1_0.md`
-- `Bundle_Manifest_Release_Prep_Semantics_heartloom_identity_v1_0.md`
+- `Reference/Bundle_Versioning_Semantics_v1_0.md`
+- `Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md`
 
 ## Hard Stop Conditions
 
@@ -147,4 +147,4 @@ This export is **not** the same as a future published bundle/release. It is a do
 - STOP instead of touching termux-utils in this slice.
 - STOP if the export path cannot be chosen without conflicting with existing installer/export conventions.
 
-ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0.md EOF
+Exports/ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0.md EOF

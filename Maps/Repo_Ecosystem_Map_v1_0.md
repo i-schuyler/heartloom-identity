@@ -55,4 +55,4 @@ Non-repo ecosystem elements flowing from identity layer:
 - If you need inheritance/workflow/pack/export/ecosystem shaping, start in `heartloom-identity`.
 - If you need consumer/operational implementation, navigate to downstream repos.
 
-Repo_Ecosystem_Map_heartloom_identity_v1_0.md EOF
+Maps/Repo_Ecosystem_Map_v1_0.md EOF

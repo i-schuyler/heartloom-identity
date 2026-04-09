@@ -30,7 +30,7 @@ Scope: Validate canonical `Heartloom Identity` / `Heartloom-Identity` usage and 
 - `install.sh --dry-run --legacy-alias` passed and exercised legacy alias sync path in dry-run mode.
 - `scripts/export-chatgpt-heartloom-identity-zip.sh --help` passed and presents canonical export behavior.
 - Deprecated export wrapper `--help` passed and routed to canonical script at validation time.
-- Search counts (excluding `Heartloom_Identity_Migration_Validation_v1_0.md`):
+- Search counts (excluding `Change_Control/Heartloom_Identity_Migration_Validation_v1_0.md`):
   - legacy alias token (underscore form): 32 hits
   - legacy alias token (hyphen form): 6 hits
   - `Heartloom Identity`: 47 hits
@@ -62,15 +62,15 @@ Legend:
 
 | References | Classification | Why it remains | Exercised in this validation | Removable when |
 |---|---|---|---|---|
-| `Change_Control_Heartloom_Identity_Rename_v1_0.md:5,9,18,24,34,42,46,48,66,73,90,99,116,123,124,129` | historical record, okay to keep temporarily | Canonical rename/change-control history and deprecation policy source. | No (documentation only). | Superseded by explicit alias-retirement change-control revision and archived policy transition. |
-| `Change_Control_Heartloom_Identity_Canonical_Repo_Authority_v1_0.md:21,45,70` | historical record, okay to keep temporarily | Authority record explicitly documents temporary alias boundary. | No (documentation only). | Alias retirement change-control closes compatibility window and updates authority map. |
+| `Change_Control/Change_Control_Rename_v1_0.md:5,9,18,24,34,42,46,48,66,73,90,99,116,123,124,129` | historical record, okay to keep temporarily | Canonical rename/change-control history and deprecation policy source. | No (documentation only). | Superseded by explicit alias-retirement change-control revision and archived policy transition. |
+| `Change_Control/Change_Control_Canonical_Repo_Authority_v1_0.md:21,45,70` | historical record, okay to keep temporarily | Authority record explicitly documents temporary alias boundary. | No (documentation only). | Alias retirement change-control closes compatibility window and updates authority map. |
 | `README.md:45` | historical record, okay to keep temporarily | Current status statement that phase 1 still includes temporary alias. | No (documentation only). | Alias retirement is completed and README status is updated in same slice. |
 | `INDEX.md:51,62` | historical record, okay to keep temporarily | Navigation/maintenance pointers to rename change-control record. | No (documentation only). | Rename change-control is superseded and index pointers are migrated. |
 | `install.sh:8,23,24,34,35,245` | historical record, okay to keep temporarily (baseline entry) | Captures pre-retirement installer compatibility behavior from the validation slice. | Yes (decision path in `--dry-run`; full alias branch in `--dry-run --legacy-alias`). | Already removed in follow-up partial alias-retirement slice. |
-| `Install_Contract_heartloom_identity_repo_sync_v1_0.md:11,36,42,67` | historical record, okay to keep temporarily (baseline entry) | Captures pre-retirement contract semantics from the validation slice. | Indirectly yes (validated against script behavior). | Already superseded by follow-up contract updates in partial alias-retirement slice. |
+| `Contracts/Install_Contract_Repo_Sync_v1_0.md:11,36,42,67` | historical record, okay to keep temporarily (baseline entry) | Captures pre-retirement contract semantics from the validation slice. | Indirectly yes (validated against script behavior). | Already superseded by follow-up contract updates in partial alias-retirement slice. |
 | deprecated export wrapper script (baseline entry) | historical record, okay to keep temporarily (baseline entry) | Captures pre-retirement deprecated wrapper behavior from the validation slice. | Yes (`--help` call exercised wrapper path). | Already removed in follow-up partial alias-retirement slice. |
 | external legacy command aliases (INDEX baseline entry) | temporary technical compatibility, still needed | Documents temporary command aliases used in phone-first tooling context. | No (aliases are external commands, not repo scripts). | External command aliases are removed/renamed and INDEX is updated in same change window. |
-| `Identity_Maintenance_Triggers_v1_0.md:46` | temporary technical compatibility, still needed | Maintenance trigger tracks temporary command aliases for regeneration workflow. | No (documentation trigger only). | Trigger set is updated after alias command retirement in external tooling. |
+| `Checklists/Identity_Maintenance_Triggers_v1_0.md:46` | temporary technical compatibility, still needed | Maintenance trigger tracks temporary command aliases for regeneration workflow. | No (documentation trigger only). | Trigger set is updated after alias command retirement in external tooling. |
 | `Heartloom-AI-Policies/required-reference-docs.md:80,82` | temporary technical compatibility, still needed | Stable Base required-artifact references included temporary alias naming at validation time. | No (repo-local policy reference only). | Stable Base list is revised to canonical-only references. |
 
 Post-retirement supersession note:
@@ -106,4 +106,4 @@ Suggested next-slice order:
 
 ---
 
-Heartloom_Identity_Migration_Validation_v1_0.md EOF
+Change_Control/Heartloom_Identity_Migration_Validation_v1_0.md EOF

@@ -8,10 +8,10 @@ This index lists only the documents included in this Reference Pack export.
 
 ## Core identity + governance
 
-- `Heartloom_AI_Memory_Constitution.md`
-- `Definitions_Glossary_v1_0.md`
-- `github-governance-policy.md`
-- `github-repo-intake-checklist.md`
+- `Policies/Heartloom_AI_Memory_Constitution.md`
+- `Reference/Definitions_Glossary_v1_0.md`
+- `Policies/github-governance-policy.md`
+- `Checklists/github-repo-intake-checklist.md`
 
 ## Heartloom AI policy canon (selected)
 
@@ -25,9 +25,9 @@ This index lists only the documents included in this Reference Pack export.
 
 ## Consumer + bundle semantics
 
-- `Consumer_Integration_Model_heartloom_identity_v1_0.md`
-- `Bundle_Versioning_Semantics_heartloom_identity_v1_0.md`
-- `Bundle_Manifest_Release_Prep_Semantics_heartloom_identity_v1_0.md`
-- `First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md`
+- `Reference/Consumer_Integration_Model_v1_0.md`
+- `Reference/Bundle_Versioning_Semantics_v1_0.md`
+- `Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md`
+- `Reference/First_Bundle_Candidate_Selection_v1_0.md`
 
 exports/chatgpt-reference-pack/INDEX.md EOF

@@ -104,7 +104,7 @@ Excluded from install scope:
 
 - Installer implementation alone does not complete authority transition without validation evidence.
 - Transition readiness is governed by:
-  - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
+  - `Checklists/Authority_Transition_Gate_Installer_Validation_v1_0.md`
 
 ## Explicit non-goals (implementation boundary)
 
@@ -113,4 +113,4 @@ Excluded from install scope:
 - No session-pack regeneration implementation.
 - No CI/release changes.
 
-Install_Contract_heartloom_identity_repo_sync_v1_0.md EOF
+Contracts/Install_Contract_Repo_Sync_v1_0.md EOF

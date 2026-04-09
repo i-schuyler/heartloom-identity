@@ -91,4 +91,4 @@ This policy anchors both layers conceptually but does not claim either layer is 
 - No session-pack automation.
 - No repo restructuring.
 
-CI_Auto_Merge_Policy_heartloom_identity_v1_0.md EOF
+Policies/CI_Auto_Merge_Policy_v1_0.md EOF

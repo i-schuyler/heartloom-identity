@@ -65,4 +65,4 @@ For non-canonical downstream repos, a minimal contract is acceptable:
 
 - In this environment, `/approvals` set to full access suppresses the edit-review prompt more effectively than repo config alone. This is not a universal guarantee.
 
-Identity_Layer_Output_Contract_heartloom_identity_v1_0.md EOF
+Contracts/Identity_Layer_Output_Contract_v1_0.md EOF

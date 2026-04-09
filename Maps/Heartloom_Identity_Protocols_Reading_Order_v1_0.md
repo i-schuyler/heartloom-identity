@@ -15,19 +15,19 @@ This manifest defines the intended **reading order** for the final Protocols-onl
 
 ## B) Core operating protocol (how we work)
 
-3. `Heartloom-Identity/Heartloom_AI_Operating_Protocol.md`
-4. `Heartloom-Identity/Definitions_Glossary_v1_0.md`
-5. `Heartloom-Identity/House_Defaults_v1_0.md`
-6. `Heartloom-Identity/Tools_Shortlist_v1_0.md`
+3. `Heartloom-Identity/Policies/Heartloom_AI_Operating_Protocol.md`
+4. `Heartloom-Identity/Reference/Definitions_Glossary_v1_0.md`
+5. `Heartloom-Identity/Reference/House_Defaults_v1_0.md`
+6. `Heartloom-Identity/Reference/Tools_Shortlist_v1_0.md`
 
 ---
 
 ## C) Governance + repo intake (cross-project)
 
-7. `Heartloom-Identity/github-governance-policy.md`
-8. `Heartloom-Identity/github-repo-intake-checklist.md`
-9. `Heartloom-Identity/Repo_Standards_Baseline.md`
-10. `Heartloom-Identity/Codex_CLI_Termux_Setup_v1_0.md`
+7. `Heartloom-Identity/Policies/github-governance-policy.md`
+8. `Heartloom-Identity/Checklists/github-repo-intake-checklist.md`
+9. `Heartloom-Identity/Policies/Repo_Standards_Baseline.md`
+10. `Heartloom-Identity/Reference/Codex_CLI_Termux_Setup_v1_0.md`
 
 ---
 
@@ -41,7 +41,7 @@ This manifest defines the intended **reading order** for the final Protocols-onl
 16. `Heartloom-Identity/Heartloom-AI-Policies/github-and-codex-pr-first-policy-v1.0.md`
 17. `Heartloom-Identity/Heartloom-AI-Policies/zip-inspection-and-artifact-contract-v1.0.md`
 18. `Heartloom-Identity/Heartloom-AI-Policies/repo-standards-baseline-v1.0.md`
-19. `Heartloom-Identity/Heartloom_AI_Memory_Constitution.md`
+19. `Heartloom-Identity/Policies/Heartloom_AI_Memory_Constitution.md`
 20. `Heartloom-Identity/Heartloom-AI-Policies/global-memories-refactored-set-v2.0.md`
 21. `Heartloom-Identity/Heartloom-AI-Policies/memory-migration-map-2026-02-02-to-v1.0.md`
 
@@ -55,4 +55,4 @@ This manifest defines the intended **reading order** for the final Protocols-onl
 
 ---
 
-Heartloom_Identity_Protocols_Reading_Order_v1_0.md EOF
+Maps/Heartloom_Identity_Protocols_Reading_Order_v1_0.md EOF

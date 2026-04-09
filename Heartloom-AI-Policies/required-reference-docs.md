@@ -29,14 +29,14 @@ These are always required for ongoing collaboration behavior:
 - global-memories-refactored-set-v2.0.md
 - required-reference-docs.md
 
-## A2) Canonical in-repo identity docs (repo root)
+## A2) Canonical in-repo identity docs
 
-- Heartloom_AI_Operating_Protocol.md (pointer to canonical policy)
-- Heartloom_AI_Memory_Constitution.md
-- Definitions_Glossary_v1_0.md
-- github-governance-policy.md
-- github-repo-intake-checklist.md
-- Repo_Standards_Baseline.md (pointer to canonical policy)
+- Policies/Heartloom_AI_Operating_Protocol.md (pointer to canonical policy)
+- Policies/Heartloom_AI_Memory_Constitution.md
+- Reference/Definitions_Glossary_v1_0.md
+- Policies/github-governance-policy.md
+- Checklists/github-repo-intake-checklist.md
+- Policies/Repo_Standards_Baseline.md (pointer to canonical policy)
 
 ## B) Generated local working artifacts (vault-level, when present)
 
@@ -46,12 +46,12 @@ These are working-pack inputs that may be sensitive or environment-specific. The
 - /storage/emulated/0/Documents/HeartloomVault/30_REFERENCE/vaultmeta/VaultMeta - File Tree.md
 - /storage/emulated/0/Documents/HeartloomVault/30_REFERENCE/vaultmeta/VaultMeta - Directory Blocks.md
 - /storage/emulated/0/Documents/HeartloomVault/30_REFERENCE/70_Termux/TERMUX_PROJECTS_README.md
-- /storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/Heartloom_AI_Operating_Protocol.md
-- /storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/Heartloom_AI_Memory_Constitution.md
-- /storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/Definitions_Glossary_v1_0.md
-- /storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/github-governance-policy.md
-- /storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/github-repo-intake-checklist.md
-- /storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/Repo_Standards_Baseline.md
+- /storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/Policies/Heartloom_AI_Operating_Protocol.md
+- /storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/Policies/Heartloom_AI_Memory_Constitution.md
+- /storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/Reference/Definitions_Glossary_v1_0.md
+- /storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/Policies/github-governance-policy.md
+- /storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/Checklists/github-repo-intake-checklist.md
+- /storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/Policies/Repo_Standards_Baseline.md
 
 ## C) Project-level always-refer documents (repo-local when adopted)
 
@@ -80,5 +80,5 @@ These are the “always-refer” docs that apply to every project/session.
 - `30_REFERENCE/70_Termux/hl-zip-stable-base_run-instructions.md`
 
 Optional (still stable, but not always necessary every session):
-- `Heartloom-Identity/Repo_Standards_Baseline.md`
-- `Heartloom-Identity/Definitions_Glossary_v1_0.md`
+- `Heartloom-Identity/Policies/Repo_Standards_Baseline.md`
+- `Heartloom-Identity/Reference/Definitions_Glossary_v1_0.md`

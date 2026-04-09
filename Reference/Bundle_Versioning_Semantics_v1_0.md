@@ -62,8 +62,8 @@ Include documents that define downstream consumption behavior and canonical inte
 
 - `README.md` (consumer-facing orientation).
 - `INDEX.md` (consumer discovery/navigation).
-- `Consumer_Integration_Model_heartloom_identity_v1_0.md` (integration/override governance).
-- `Bundle_Versioning_Semantics_heartloom_identity_v1_0.md` (this bundle/versioning contract).
+- `Reference/Consumer_Integration_Model_v1_0.md` (integration/override governance).
+- `Reference/Bundle_Versioning_Semantics_v1_0.md` (this bundle/versioning contract).
 - `Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md` (policy entrypoint).
 - `Heartloom-AI-Policies/required-reference-docs.md` (required reference baseline).
 
@@ -102,19 +102,19 @@ When bundles become available, consumer repos should:
 
 Canonical future bundle manifest shape and release-prep readiness semantics are defined in:
 
-- `Bundle_Manifest_Release_Prep_Semantics_heartloom_identity_v1_0.md`
+- `Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md`
 
 ## First bundle candidate scope reference
 
 Canonical first concrete bundle-candidate include/exclude scope is defined in:
 
-- `First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md`
+- `Reference/First_Bundle_Candidate_Selection_v1_0.md`
 
 ## Codex-global source/install contract reference
 
 Canonical source/target/install semantics for future global Codex runtime files are defined in:
 
-- `Codex_Global_Source_Install_Contract_heartloom_identity_v1_0.md`
+- `Contracts/Codex_Global_Source_Install_Contract_v1_0.md`
 
 Those files are treated as non-consumer runtime/operator artifacts and are excluded from consumer bundles by default.
 
@@ -128,4 +128,4 @@ Those files are treated as non-consumer runtime/operator artifacts and are exclu
 - No session-pack automation.
 - No repo restructuring.
 
-Bundle_Versioning_Semantics_heartloom_identity_v1_0.md EOF
+Reference/Bundle_Versioning_Semantics_v1_0.md EOF

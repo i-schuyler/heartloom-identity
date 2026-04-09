@@ -64,7 +64,7 @@ Optional: `examples/`, `ci/`, `third_party/` (vendored deps + licenses), `assets
 
 ## Appendix A — Legacy repo standards baseline merged (verbatim snapshot)
 
-> Source: `Heartloom-Identity/Repo_Standards_Baseline.md` (pre-merge). Included to ensure no loss.
+> Source: `Heartloom-Identity/Policies/Repo_Standards_Baseline.md` (pre-merge). Included to ensure no loss.
 
 # Repo Standards Baseline
 *Vault-level reference for repository structure, documentation canon, and artifact discipline.*
@@ -221,7 +221,7 @@ Lists authoritative integration points (status builder, config store, logger, st
 ## Suggested vault locations
 
 Vault-level repo standards reference:
-- /storage/emulated/0/Documents/HeartloomVault/30_REFERENCE/Repo_Standards_Baseline.md
+- /storage/emulated/0/Documents/HeartloomVault/30_REFERENCE/Policies/Repo_Standards_Baseline.md
 
 Canonical Termux outputs:
 - /storage/emulated/0/Documents/HeartloomVault/30_REFERENCE/termux-outputs/

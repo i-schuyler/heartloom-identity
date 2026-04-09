@@ -127,4 +127,4 @@ Final cleanup slice outcome:
 - STOP instead of implementing rename behavior beyond approved phase scope.
 - STOP if a red open workflow PR requires fixing before rename-planning progress.
 
-Change_Control_Heartloom_Identity_Rename_v1_0.md EOF
+Change_Control/Change_Control_Rename_v1_0.md EOF
