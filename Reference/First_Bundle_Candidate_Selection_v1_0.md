@@ -36,10 +36,10 @@ The v0 candidate is optimized for:
 
 ### A) Bundle contract + consumer integration docs
 
-- `Consumer_Integration_Model_heartloom_identity_v1_0.md`
-- `Bundle_Versioning_Semantics_heartloom_identity_v1_0.md`
-- `Bundle_Manifest_Release_Prep_Semantics_heartloom_identity_v1_0.md`
-- `First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md`
+- `Reference/Consumer_Integration_Model_v1_0.md`
+- `Reference/Bundle_Versioning_Semantics_v1_0.md`
+- `Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md`
+- `Reference/First_Bundle_Candidate_Selection_v1_0.md`
 
 **Why included:** These documents define consumer behavior, pinning posture, manifest expectations, release-readiness semantics, and this concrete candidate boundary.
 
@@ -66,12 +66,12 @@ The v0 candidate is optimized for:
 
 ### D) Core identity docs commonly used as downstream authority references
 
-- `Heartloom_AI_Operating_Protocol.md`
-- `Heartloom_AI_Memory_Constitution.md`
-- `Definitions_Glossary_v1_0.md`
-- `github-governance-policy.md`
-- `github-repo-intake-checklist.md`
-- `Repo_Standards_Baseline.md`
+- `Policies/Heartloom_AI_Operating_Protocol.md`
+- `Policies/Heartloom_AI_Memory_Constitution.md`
+- `Reference/Definitions_Glossary_v1_0.md`
+- `Policies/github-governance-policy.md`
+- `Checklists/github-repo-intake-checklist.md`
+- `Policies/Repo_Standards_Baseline.md`
 
 **Why included:** These are frequently treated as foundational identity/operational references by downstream consumers and session-pack style usage.
 
@@ -79,20 +79,20 @@ The v0 candidate is optimized for:
 
 ### A) Maintainership/transition/installer-internal artifacts
 
-- `Change_Control_Heartloom_Identity_Canonical_Repo_Authority_v1_0.md`
-- `Authority_Transition_Gate_Installer_Validation_v1_0.md`
-- `Install_Contract_heartloom_identity_repo_sync_v1_0.md`
+- `Change_Control/Change_Control_Canonical_Repo_Authority_v1_0.md`
+- `Checklists/Authority_Transition_Gate_Installer_Validation_v1_0.md`
+- `Contracts/Install_Contract_Repo_Sync_v1_0.md`
 - `install.sh`
 
 **Why excluded:** These are maintainership/transition/installer internals and are not required by default for downstream canonical consumption.
 
 ### B) Maintenance/tooling/ops convenience docs not needed for baseline canon following
 
-- `Identity_Maintenance_Triggers_v1_0.md`
-- `Codex_CLI_Termux_Setup_v1_0.md`
-- `House_Defaults_v1_0.md`
-- `Tools_Shortlist_v1_0.md`
-- `Heartloom_Identity_Protocols_Reading_Order_v1_0.md`
+- `Checklists/Identity_Maintenance_Triggers_v1_0.md`
+- `Reference/Codex_CLI_Termux_Setup_v1_0.md`
+- `Reference/House_Defaults_v1_0.md`
+- `Reference/Tools_Shortlist_v1_0.md`
+- `Maps/Heartloom_Identity_Protocols_Reading_Order_v1_0.md`
 
 **Why excluded:** Helpful for maintainers/operators, but not required for a conservative first consumer bundle boundary.
 
@@ -129,9 +129,9 @@ This recommendation is docs-only and does not create variant files in this slice
 
 This v0 candidate follows:
 
-- `Bundle_Versioning_Semantics_heartloom_identity_v1_0.md` (subset boundary + inclusion/exclusion philosophy + pinning posture)
-- `Bundle_Manifest_Release_Prep_Semantics_heartloom_identity_v1_0.md` (manifest fields + release-readiness criteria)
-- `Consumer_Integration_Model_heartloom_identity_v1_0.md` (downstream use + override governance)
+- `Reference/Bundle_Versioning_Semantics_v1_0.md` (subset boundary + inclusion/exclusion philosophy + pinning posture)
+- `Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md` (manifest fields + release-readiness criteria)
+- `Reference/Consumer_Integration_Model_v1_0.md` (downstream use + override governance)
 
 This candidate scope definition does not imply publication is already implemented or active.
 
@@ -146,4 +146,4 @@ This candidate scope definition does not imply publication is already implemente
 - No repo restructuring.
 - No consumer tooling implementation.
 
-First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md EOF
+Reference/First_Bundle_Candidate_Selection_v1_0.md EOF

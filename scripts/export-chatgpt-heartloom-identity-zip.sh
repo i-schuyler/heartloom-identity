@@ -192,7 +192,7 @@ Purpose: Downstream Reference Pack export for ChatGPT project use.
 Source repo: heartloom-identity
 Commit SHA: ${commit_sha}
 Exported UTC: ${generated_utc}
-Export contract: ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0.md
+Export contract: Exports/ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0.md
 
 Included classes:
 - Core identity + governance docs
@@ -210,7 +210,7 @@ Excluded classes:
 Known intentional omissions:
 - Repo README/INDEX
 - Heartloom-AI-Policies/required-reference-docs.md
-- Repo-root pointer shims (Heartloom_AI_Operating_Protocol.md, Repo_Standards_Baseline.md)
+- Legacy pointer shims (Policies/Heartloom_AI_Operating_Protocol.md, Policies/Repo_Standards_Baseline.md)
 EOF
 
 (
@@ -225,7 +225,7 @@ exported_artifact=${zip_name}
 source_repo=heartloom-identity
 commit_sha=${commit_sha}
 exported_utc=${generated_utc}
-export_contract=ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0.md
+export_contract=Exports/ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0.md
 manifest=scripts/chatgpt-heartloom-identity-export.manifest
 EOF
 

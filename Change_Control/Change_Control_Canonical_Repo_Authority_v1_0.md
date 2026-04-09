@@ -43,7 +43,7 @@ Filename is retained for continuity with prior slices and references.
 - Vault `Heartloom-Identity` is the installed/consumed downstream copy.
 - Legacy alias exists only as historical technical compatibility record.
 - Transition validation gate document records READY satisfaction and completion evidence:
-  - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
+  - `Checklists/Authority_Transition_Gate_Installer_Validation_v1_0.md`
 
 ### Ongoing guardrail
 
@@ -59,7 +59,7 @@ Installer responsibilities:
 
 Installer behavior contract reference:
 
-- `Install_Contract_heartloom_identity_repo_sync_v1_0.md`
+- `Contracts/Install_Contract_Repo_Sync_v1_0.md`
 
 ## Vault install target
 
@@ -72,7 +72,7 @@ Installer behavior contract reference:
 - **Now (implemented):** repo copy is canonical authoring source.
 - **Now (implemented):** vault copy is installer-managed installed/consumed output.
 - Cross-repo consumer integration and local override governance is defined in:
-  - `Consumer_Integration_Model_heartloom_identity_v1_0.md`
+  - `Reference/Consumer_Integration_Model_v1_0.md`
 
 ## Session-pack regeneration implications
 
@@ -110,7 +110,7 @@ Installer behavior contract reference:
 - Policy discoverability is documented in:
   - `Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md`
 - Authority transition gate satisfaction and evidence record is documented in:
-  - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
+  - `Checklists/Authority_Transition_Gate_Installer_Validation_v1_0.md`
 - Repo-canonical authority transition is now recorded as complete in this document.
 
-Change_Control_Heartloom_Identity_Canonical_Repo_Authority_v1_0.md EOF
+Change_Control/Change_Control_Canonical_Repo_Authority_v1_0.md EOF

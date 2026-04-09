@@ -12,7 +12,7 @@ This document defines contract semantics only. It does **not** implement release
 
 ## Implemented vs future state (required clarity)
 
-- **Implemented now:** bundle boundary/versioning semantics are defined in `Bundle_Versioning_Semantics_heartloom_identity_v1_0.md`.
+- **Implemented now:** bundle boundary/versioning semantics are defined in `Reference/Bundle_Versioning_Semantics_v1_0.md`.
 - **Implemented now:** near-term downstream consumption still uses installer-managed local snapshots.
 - **Defined now for future use:** manifest structure and release-prep readiness semantics in this document.
 - **Not implemented yet:** official published bundles, manifest generation tooling, and release pipelines.
@@ -54,9 +54,9 @@ release_date: YYYY-MM-DD
 included_paths_or_categories:
   - README.md
   - INDEX.md
-  - Consumer_Integration_Model_heartloom_identity_v1_0.md
-  - Bundle_Versioning_Semantics_heartloom_identity_v1_0.md
-  - Bundle_Manifest_Release_Prep_Semantics_heartloom_identity_v1_0.md
+  - Reference/Consumer_Integration_Model_v1_0.md
+  - Reference/Bundle_Versioning_Semantics_v1_0.md
+  - Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md
   - Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md
   - Heartloom-AI-Policies/required-reference-docs.md
 exclusions:
@@ -94,7 +94,7 @@ A future bundle is considered **ready to publish** only when all checklist areas
    - Canonical docs referenced by the bundle are internally consistent.
    - No contradictory state claims across `README.md`, `INDEX.md`, consumer integration, and bundle semantics docs.
 2. **Inclusion/exclusion review**
-   - Included docs match `Bundle_Versioning_Semantics_heartloom_identity_v1_0.md` inclusion rules.
+   - Included docs match `Reference/Bundle_Versioning_Semantics_v1_0.md` inclusion rules.
    - Excluded content avoids internal/maintainer artifacts by default.
 3. **Consumer-facing clarity**
    - Manifest fields are complete and human-readable.
@@ -138,7 +138,7 @@ This expectation can begin manually and later be automated without changing sema
 
 Canonical first concrete bundle-candidate selection is documented in:
 
-- `First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md`
+- `Reference/First_Bundle_Candidate_Selection_v1_0.md`
 
 Release-prep checks should evaluate a candidate bundle against that scope definition before any future publication.
 
@@ -153,4 +153,4 @@ Release-prep checks should evaluate a candidate bundle against that scope defini
 - No repo restructuring.
 - No consumer tooling implementation.
 
-Bundle_Manifest_Release_Prep_Semantics_heartloom_identity_v1_0.md EOF
+Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md EOF

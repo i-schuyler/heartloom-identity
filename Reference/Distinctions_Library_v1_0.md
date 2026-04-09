@@ -74,7 +74,7 @@ Define a small, repeatable distinctions vocabulary so humans and future agents c
 
 ## How to use this library
 
-Use alongside `Alignment_Review_Checklist_heartloom_identity_v1_0.md`:
+Use alongside `Checklists/Alignment_Review_Checklist_v1_0.md`:
 
 1. Name which distinction(s) are in play for a slice.
 2. Confirm placement (upstream / here / downstream).
@@ -86,4 +86,4 @@ Use alongside `Alignment_Review_Checklist_heartloom_identity_v1_0.md`:
 - No source mirroring.
 - No installer/pack/export implementation changes.
 
-Distinctions_Library_heartloom_identity_v1_0.md EOF
+Reference/Distinctions_Library_v1_0.md EOF

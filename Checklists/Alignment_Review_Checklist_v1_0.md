@@ -104,4 +104,4 @@ When proceeding in identity, record:
 - Stop if alignment cannot be determined from available references.
 - Stop instead of adding CI enforcement logic in this checklist slice.
 
-Alignment_Review_Checklist_heartloom_identity_v1_0.md EOF
+Checklists/Alignment_Review_Checklist_v1_0.md EOF

@@ -130,4 +130,4 @@ Put changes in downstream repos when they alter:
 - Stop if wording allows silent redefinition of source meaning.
 - Stop if translation cannot be bounded without source-content duplication.
 
-Source_Alignment_Contract_heartloom_identity_v1_0.md EOF
+Contracts/Source_Alignment_Contract_v1_0.md EOF

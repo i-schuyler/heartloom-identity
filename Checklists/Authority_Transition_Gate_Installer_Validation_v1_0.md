@@ -45,9 +45,9 @@ Still pending (explicit):
 All must be true before validation begins:
 
 - Install contract is the current implemented contract document:
-  - `Install_Contract_heartloom_identity_repo_sync_v1_0.md`
+  - `Contracts/Install_Contract_Repo_Sync_v1_0.md`
 - Authority change-control document is current and records transition completion:
-  - `Change_Control_Heartloom_Identity_Canonical_Repo_Authority_v1_0.md`
+  - `Change_Control/Change_Control_Canonical_Repo_Authority_v1_0.md`
 - Canonical vault target remains unchanged and accessible:
   - `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/`
 - Validation run context records commit SHA of installer being validated.
@@ -163,4 +163,4 @@ Current decision record:
 - approver identity: repository owner/operator via supplied validated evidence block
 - declared transition status: READY / COMPLETED
 
-Authority_Transition_Gate_Installer_Validation_v1_0.md EOF
+Checklists/Authority_Transition_Gate_Installer_Validation_v1_0.md EOF

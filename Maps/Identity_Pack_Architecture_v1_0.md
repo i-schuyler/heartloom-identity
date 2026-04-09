@@ -75,8 +75,8 @@ Exports (for example the ChatGPT `Heartloom Identity` zip) are **downstream snap
 
 Legacy pointer shims currently present at repo root:
 
-- `Heartloom_AI_Operating_Protocol.md`
-- `Repo_Standards_Baseline.md`
+- `Policies/Heartloom_AI_Operating_Protocol.md`
+- `Policies/Repo_Standards_Baseline.md`
 
 These remain as compatibility pointers to their canonical policy versions. They are **not** part of Reference Pack content and should be treated as legacy bridges until a future deprecation/retirement slice confirms safe removal.
 
@@ -87,4 +87,4 @@ These remain as compatibility pointers to their canonical policy versions. They 
 - No installer changes.
 - No downstream repo changes.
 
-Identity_Pack_Architecture_heartloom_identity_v1_0.md EOF
+Maps/Identity_Pack_Architecture_v1_0.md EOF

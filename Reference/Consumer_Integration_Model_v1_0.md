@@ -15,7 +15,7 @@ This document governs integration behavior and proposal flow. It does **not** im
 - **Implemented now (near-term):** consumer repos consume installed local snapshots of `Heartloom Identity` docs.
 - **Implemented now (source):** this repo is the maintained upstream source for docs and installer behavior.
 - **Implemented now (authority):** practical authority transition completion is recorded via:
-  - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
+  - `Checklists/Authority_Transition_Gate_Installer_Validation_v1_0.md`
 - **Proposed long-term:** versioned release artifact / packaged policy bundle distribution.
 
 ## Recommended near-term consumer pattern (active)
@@ -33,7 +33,7 @@ When implemented in future slices, consumer repos should prefer versioned distri
 - Versioned release artifact or packaged policy bundle published from `heartloom-identity`.
 - Consumer repos pin to explicit bundle version identifiers.
 - Upgrade cadence becomes explicit and reviewable via version bumps.
-- Bundle boundary and version semantics are canonically defined in `Bundle_Versioning_Semantics_heartloom_identity_v1_0.md`.
+- Bundle boundary and version semantics are canonically defined in `Reference/Bundle_Versioning_Semantics_v1_0.md`.
 
 This long-term distribution model is aspirational here and is not implemented in this slice.
 
@@ -98,9 +98,9 @@ When consumer repos identify needed upstream changes:
 
 Canonical bundle scope, inclusion/exclusion boundaries, consumer pinning expectations, and upgrade posture are defined in:
 
-- `Bundle_Versioning_Semantics_heartloom_identity_v1_0.md`
-- `Bundle_Manifest_Release_Prep_Semantics_heartloom_identity_v1_0.md` (future manifest concept and release-readiness semantics)
-- `First_Bundle_Candidate_Selection_heartloom_identity_v1_0.md` (first concrete v0 bundle candidate include/exclude scope)
+- `Reference/Bundle_Versioning_Semantics_v1_0.md`
+- `Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md` (future manifest concept and release-readiness semantics)
+- `Reference/First_Bundle_Candidate_Selection_v1_0.md` (first concrete v0 bundle candidate include/exclude scope)
 
 This integration model remains the authority for cross-repo extension/override governance and upstream proposal flow.
 
@@ -115,4 +115,4 @@ This integration model remains the authority for cross-repo extension/override g
 - No cross-repo runtime tooling implementation.
 - No repo restructuring.
 
-Consumer_Integration_Model_heartloom_identity_v1_0.md EOF
+Reference/Consumer_Integration_Model_v1_0.md EOF
