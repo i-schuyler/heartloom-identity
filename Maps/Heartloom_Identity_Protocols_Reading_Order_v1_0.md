@@ -4,9 +4,15 @@ Bundle target: `Heartloom-Identity` only
 
 This manifest defines the intended **reading order** for the final Protocols-only PDF/EPUB build.
 
+Hierarchy note:
+
+- Primary newcomer entrypoint remains [`README.md`](../README.md).
+- Full repo navigation hub remains [`INDEX.md`](../INDEX.md).
+- This document is a **supporting guided ordered route** and Protocols build-order manifest.
+
 ---
 
-## A) Start here (orientation)
+## A) Orientation handoff (from newcomer path)
 
 1. [`README.md`](../README.md)
 2. [`INDEX.md`](../INDEX.md)
@@ -50,6 +56,7 @@ This manifest defines the intended **reading order** for the final Protocols-onl
 ## E) Notes
 
 - This is a **reading order** only. It does not imply consolidation, deletion, or renames.
+- This document is not a competing newcomer “start here” authority; it supports guided progression after `README`/`INDEX` orientation.
 - If a document is missing at build time, the build script should STOP and log which path is missing.
 - If later you decide to merge duplicates (e.g., repo standards baseline appears in both Protocols root and Policies), update this manifest as part of that Change-Control.
 

@@ -1,23 +1,24 @@
 # Protocols Index
-*Canonical navigation for HeartloomVault’s meta-layer.*
+*Canonical full navigation hub for `heartloom-identity`.*
 
-## Recommended reading order
+## Navigation hierarchy
 
-If you are new to this repo, read these first:
+- **Primary newcomer entrypoint:** [`README.md`](README.md)
+- **Secondary navigation hub:** this `INDEX.md` (full repo navigation/directory)
+- **Supporting ordered route:** [`Maps/Heartloom_Identity_Protocols_Reading_Order_v1_0.md`](Maps/Heartloom_Identity_Protocols_Reading_Order_v1_0.md) for guided progression and Protocols build order; not the primary newcomer authority
 
-1. **[README.md](README.md)** — immediate source→identity orientation and where to start.
+## Canonical newcomer quick path (from README)
+
+1. **[README.md](README.md)** — primary newcomer entrypoint and source→identity orientation.
 2. **[Contracts/Source_Alignment_Contract_v1_0.md](Contracts/Source_Alignment_Contract_v1_0.md)** — upstream/downstream boundary and anti-drift contract.
 3. **[Maps/Repo_Ecosystem_Map_v1_0.md](Maps/Repo_Ecosystem_Map_v1_0.md)** — ecosystem layer map across upstream, identity, and downstream repos.
-4. **[Checklists/Alignment_Review_Checklist_v1_0.md](Checklists/Alignment_Review_Checklist_v1_0.md)** — repeatable anti-drift review flow for humans and future agents.
-5. **[Reference/Distinctions_Library_v1_0.md](Reference/Distinctions_Library_v1_0.md)** — small reusable vocabulary for repeatable source-alignment review and routing.
-6. **[Change_Control/Change_Control_Canonical_Repo_Authority_v1_0.md](Change_Control/Change_Control_Canonical_Repo_Authority_v1_0.md)** — current authority posture and transition record.
-7. **[Change_Control/Change_Control_Rename_v1_0.md](Change_Control/Change_Control_Rename_v1_0.md)** — canonical rename/path compatibility change-control before implementation.
+4. **[INDEX.md](INDEX.md)** — full navigation hub for deeper canon traversal.
 
-Primary reading order is defined by the manifest:
+For a guided ordered reading route after newcomer orientation, use:
 
-- **[`Maps/Heartloom_Identity_Protocols_Reading_Order_v1_0.md`](Maps/Heartloom_Identity_Protocols_Reading_Order_v1_0.md)** — canonical Protocols reading order for the PDF build.
+- **[`Maps/Heartloom_Identity_Protocols_Reading_Order_v1_0.md`](Maps/Heartloom_Identity_Protocols_Reading_Order_v1_0.md)** — supporting guided route and Protocols build order.
 
-If you want a short “start here” sequence:
+## Full navigation hub
 
 1. **[README.md](README.md)** — what this folder is, what is upstream/downstream, and where to start.
 2. **[Contracts/Source_Alignment_Contract_v1_0.md](Contracts/Source_Alignment_Contract_v1_0.md)** — canonical source-alignment and bounded-translation contract between upstream source and identity-layer implementation shaping.
