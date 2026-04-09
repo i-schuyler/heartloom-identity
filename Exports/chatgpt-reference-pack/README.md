@@ -13,13 +13,12 @@ This is a **downstream Reference Pack** export from `heartloom-identity`. It is 
 
 ## Start here
 
-- `INDEX.md` — export-safe navigation for included docs only.
-- `ChatGPT_Reference_Pack_Manifest.md` — pack purpose, source, export date, included/excluded classes, and known omissions.
+- [`INDEX.md`](INDEX.md) — export-safe navigation for included docs only.
+- [`READING_ORDER.md`](READING_ORDER.md) — pack-contained click-through reading flow.
+- `ChatGPT_Reference_Pack_Manifest.md` (generated at export time) — pack purpose, source, export date, included/excluded classes, and known omissions.
 
 ## Notes on pointer/bridge docs
 
 Repo-root pointer shims are **not** included in this pack. Canonical policy versions are included instead.
-
-The full policy index and required-reference list are intentionally excluded to keep the pack export-safe and focused.
 
 Exports/chatgpt-reference-pack/README.md EOF

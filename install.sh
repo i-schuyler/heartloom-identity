@@ -8,20 +8,39 @@ DEST_ROOT="/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity"
 CODEX_GLOBAL_SOURCE="$SCRIPT_DIR/Tooling/codex-global"
 CODEX_GLOBAL_DEST="${HOME}/.codex"
 DRY_RUN=0
-MODE="vault"
+MODE="none"
+
+set_mode() {
+  local requested_mode="$1"
+  if [[ "$MODE" != "none" && "$MODE" != "$requested_mode" ]]; then
+    echo "Cannot combine modes: '$MODE' and '$requested_mode'" >&2
+    usage
+    exit 1
+  fi
+  MODE="$requested_mode"
+}
 
 usage() {
   cat <<'USAGE'
-Usage: ./install.sh [--dry-run|-n] [--codex-global] [--help|-h]
+Usage: ./install.sh [--vault-sync] [--codex-global] [--dry-run|-n] [--help|-h]
 
-Default (vault sync): installs in-scope markdown docs from this repo into:
+Default behavior:
+  No vault sync is performed unless --vault-sync is provided.
+
+Vault sync mode (explicit opt-in):
+  ./install.sh --vault-sync
+  Installs in-scope markdown docs from this repo into:
   /storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/
 
 Codex-global mode:
   ./install.sh --codex-global
   Installs Tooling/codex-global/{AGENTS.md,config.toml} into ~/.codex/
 
+Preferred ChatGPT export path:
+  Scripts/export-chatgpt-heartloom-identity-zip.sh
+
 Options:
+  --vault-sync    Explicitly enable repo-to-vault markdown sync
   --dry-run, -n   Show planned actions only (no filesystem writes)
   --codex-global  Install source-controlled Codex globals into ~/.codex/
   --help, -h      Show this help
@@ -30,11 +49,14 @@ USAGE
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
+    --vault-sync)
+      set_mode "vault"
+      ;;
     --dry-run|-n)
       DRY_RUN=1
       ;;
     --codex-global)
-      MODE="codex-global"
+      set_mode "codex-global"
       ;;
     --help|-h)
       usage
@@ -188,7 +210,7 @@ sync_markdown_docs_to_root() {
 }
 
 install_vault_sync() {
-  echo "[INFO] heartloom-identity installer"
+  echo "[INFO] heartloom-identity installer (vault-sync opt-in mode)"
   echo "[INFO] Destination root: $DEST_ROOT"
   if [[ "$DRY_RUN" -eq 1 ]]; then
     echo "[INFO] Dry-run mode enabled (no writes)"
@@ -211,10 +233,18 @@ install_vault_sync() {
   sync_markdown_docs_to_root "$DEST_ROOT" "canonical"
 }
 
-if [[ "$MODE" == "codex-global" ]]; then
-  install_codex_global
-else
-  install_vault_sync
-fi
+case "$MODE" in
+  codex-global)
+    install_codex_global
+    ;;
+  vault)
+    install_vault_sync
+    ;;
+  none)
+    echo "[INFO] No install mode selected; default is no vault sync."
+    echo "[INFO] For staged ChatGPT export, run: Scripts/export-chatgpt-heartloom-identity-zip.sh"
+    usage
+    ;;
+esac
 
 # install.sh EOF

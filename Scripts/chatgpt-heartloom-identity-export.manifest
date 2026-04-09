@@ -1,9 +1,12 @@
 Exports/chatgpt-reference-pack/README.md
 Exports/chatgpt-reference-pack/INDEX.md
+Exports/chatgpt-reference-pack/READING_ORDER.md
 Reference/Consumer_Integration_Model_v1_0.md
 Reference/Bundle_Versioning_Semantics_v1_0.md
 Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md
 Reference/First_Bundle_Candidate_Selection_v1_0.md
+Policies/AI/heartloom-ai-policy-index-v1.0.md
+Policies/AI/required-reference-docs.md
 Policies/AI/heartloom-ai-operating-protocol-v1.0.md
 Policies/AI/termux-and-shell-policy-v1.0.md
 Policies/AI/github-and-codex-pr-first-policy-v1.0.md

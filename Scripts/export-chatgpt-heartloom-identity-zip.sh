@@ -196,9 +196,10 @@ Export contract: Exports/ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0
 
 Included classes:
 - Core identity + governance docs
+- Pack-contained navigation docs (README/INDEX/READING_ORDER)
 - Selected Heartloom AI policy canon
 - Consumer/bundle semantics docs
-- Export-safe navigation (README/INDEX)
+- Export-safe navigation metadata manifest
 
 Excluded classes:
 - Working Pack artifacts (logs, staging, local outputs)
@@ -209,7 +210,6 @@ Excluded classes:
 
 Known intentional omissions:
 - Repo README/INDEX
-- Policies/AI/required-reference-docs.md
 - Legacy pointer shims (Policies/Heartloom_AI_Operating_Protocol.md, Policies/Repo_Standards_Baseline.md)
 EOF
 
