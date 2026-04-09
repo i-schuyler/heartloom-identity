@@ -119,7 +119,3 @@ The dedicated Change-Control docs slice is documented in:
 - Codex should attempt per-PR auto-merge enablement when supported and report the exact reason if it cannot be enabled.
 - Safe stale-branch cleanup is expected at the start of Codex runs (local-only; remote cleanup relies on GitHub settings after merge).
 - Canonical output contract for identity-layer slices: [`Contracts/Identity_Layer_Output_Contract_v1_0.md`](Contracts/Identity_Layer_Output_Contract_v1_0.md)
-
-## Codex push/PR smoke test note
-
-- Tiny docs-only change to verify Codex push and PR creation behavior.
