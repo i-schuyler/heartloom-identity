@@ -53,16 +53,18 @@ The dedicated Change-Control docs slice is documented in:
 ## Current authority status
 
 - Repo-canonical `Heartloom Identity` authority transition is **completed**.
-- Vault `Heartloom-Identity` is the installer-managed installed/consumed downstream copy.
+- Vault `Heartloom-Identity` can be an installer-managed downstream copy when explicitly requested.
 - Active installer/export legacy compatibility bridges are retired; only minimal historical rename record remains.
 - Current migration validation/audit record: [`Change_Control/Heartloom_Identity_Migration_Validation_v1_0.md`](Change_Control/Heartloom_Identity_Migration_Validation_v1_0.md).
 
 ## Installer
 
 - Repo-root installer exists at `./install.sh`.
-- Supported mode: sync-copy upsert without prune (no vault-file deletions).
-- Dry run: `./install.sh --dry-run`
-- Apply install: `./install.sh`
+- Default behavior: no repo-to-vault sync unless explicitly opted in.
+- Vault sync (explicit opt-in): `./install.sh --vault-sync`
+- Dry run (explicit opt-in): `./install.sh --vault-sync --dry-run`
+- Codex global config install (explicit opt-in): `./install.sh --codex-global`
+- Preferred downstream path for ChatGPT use: staged zip export via [`Scripts/export-chatgpt-heartloom-identity-zip.sh`](Scripts/export-chatgpt-heartloom-identity-zip.sh).
 - Installer execution follows contract semantics; authority-state decisions are governed by Change-Control and gate records.
 
 ## Authority transition gate
@@ -86,6 +88,7 @@ The dedicated Change-Control docs slice is documented in:
 - Canonical export contract: [`Exports/ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0.md`](Exports/ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0.md)
 - Export script: [`Scripts/export-chatgpt-heartloom-identity-zip.sh`](Scripts/export-chatgpt-heartloom-identity-zip.sh)
 - Export-safe navigation: [`Exports/chatgpt-reference-pack/README.md`](Exports/chatgpt-reference-pack/README.md)
+- Export reading flow: [`Exports/chatgpt-reference-pack/READING_ORDER.md`](Exports/chatgpt-reference-pack/READING_ORDER.md)
 - Default output path: `/storage/emulated/0/Documents/HeartloomVault/40_STAGING/`
 - Default log path: `/storage/emulated/0/Documents/HeartloomVault/30_REFERENCE/termux-outputs/log-dump/<YYYY-MM-DD>/`
 

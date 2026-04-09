@@ -8,7 +8,7 @@ Scope: Defines the exported `Heartloom-Identity` Reference Pack zip artifact use
 
 Define a canonical, repeatable export contract for the ChatGPT-project `Heartloom-Identity` Reference Pack zip artifact, sourced from this repo’s canonical `Heartloom Identity` docs.
 
-This contract defines **what is exported** and **how it is refreshed**, without changing bundle publishing, installer semantics, or repo authority.
+This contract defines **what is exported** and **how it is refreshed**, without changing bundle publishing, repo authority, or downstream-repo behavior.
 
 ## Scope (explicit)
 
@@ -42,7 +42,7 @@ This contract covers:
 ## Source of truth and authority
 
 - **Source of truth:** repo-canonical `heartloom-identity` content (this repo).
-- **Installed copy (downstream):** vault `Heartloom-Identity` installed via `./install.sh`.
+- **Installed copy (downstream, optional):** vault `Heartloom-Identity` installed via `./install.sh --vault-sync`.
 - **Exported ChatGPT artifact:** a downstream, read-only Reference Pack zip produced from repo-canonical state.
 - **Future bundles/releases:** separate future distribution model, not implied by this export.
 
@@ -60,6 +60,7 @@ Included files (explicit):
 
 - `Exports/chatgpt-reference-pack/README.md`
 - `Exports/chatgpt-reference-pack/INDEX.md`
+- `Exports/chatgpt-reference-pack/READING_ORDER.md`
 - `ChatGPT_Reference_Pack_Manifest.md` (generated at export time and included at zip root)
 
 ### B) Consumer + bundle semantics
@@ -71,6 +72,8 @@ Included files (explicit):
 
 ### C) Heartloom AI policy canon (selected)
 
+- `Policies/AI/heartloom-ai-policy-index-v1.0.md`
+- `Policies/AI/required-reference-docs.md`
 - `Policies/AI/heartloom-ai-operating-protocol-v1.0.md`
 - `Policies/AI/termux-and-shell-policy-v1.0.md`
 - `Policies/AI/github-and-codex-pr-first-policy-v1.0.md`
@@ -95,8 +98,6 @@ Excluded by default unless elevated in a future canonical slice:
 - Maintainership/transition/installer internals (`install.sh`, transition records, installer contracts).
 - Maintenance/ops convenience docs not required for downstream consumption.
 - Migration/history records (for example memory migration maps).
-- `Policies/AI/required-reference-docs.md` (references working-pack and local-only artifacts).
-- `Policies/AI/heartloom-ai-policy-index-v1.0.md` (superseded by export-safe index in this pack).
 - Repo-level navigation not scoped to this Reference Pack (for example repo `README.md` / `INDEX.md`).
 - Pointer shims at repo root (canonical policy versions are included instead).
 - Dotfiles, `.git/`, and non-markdown files unless explicitly required.

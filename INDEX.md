@@ -25,7 +25,7 @@ If you want a short “start here” sequence:
 4. **[Checklists/Alignment_Review_Checklist_v1_0.md](Checklists/Alignment_Review_Checklist_v1_0.md)** — canonical repeatable anti-drift checklist for source-alignment reviews.
 5. **[Reference/Distinctions_Library_v1_0.md](Reference/Distinctions_Library_v1_0.md)** — canonical distinctions vocabulary for source-alignment review, routing, and anti-drift naming.
 6. **[Change_Control/Change_Control_Canonical_Repo_Authority_v1_0.md](Change_Control/Change_Control_Canonical_Repo_Authority_v1_0.md)** — authority transition completion record for repo-canonical `Heartloom Identity` authoring.
-7. **[Contracts/Install_Contract_Repo_Sync_v1_0.md](Contracts/Install_Contract_Repo_Sync_v1_0.md)** — implemented installer contract for repo-root `install.sh` sync into vault `Heartloom-Identity` target (legacy alias sync retired).
+7. **[Contracts/Install_Contract_Repo_Sync_v1_0.md](Contracts/Install_Contract_Repo_Sync_v1_0.md)** — explicit opt-in installer contract for repo-root `install.sh --vault-sync` into vault `Heartloom-Identity` target (legacy alias sync retired).
 8. **[Checklists/Authority_Transition_Gate_Installer_Validation_v1_0.md](Checklists/Authority_Transition_Gate_Installer_Validation_v1_0.md)** — canonical transition gate definition plus recorded READY/completion evidence.
 9. **[Reference/Consumer_Integration_Model_v1_0.md](Reference/Consumer_Integration_Model_v1_0.md)** — canonical cross-repo consumer pattern (near-term snapshots, long-term versioned bundle model, override boundaries, upstream proposal flow).
 10. **[Reference/Bundle_Versioning_Semantics_v1_0.md](Reference/Bundle_Versioning_Semantics_v1_0.md)** — canonical bundle purpose, inclusion/exclusion boundary, version pinning expectations, and upgrade posture (semantics defined now; release tooling later).
@@ -45,7 +45,7 @@ If you want a short “start here” sequence:
 24. **[Reference/House_Defaults_v1_0.md](Reference/House_Defaults_v1_0.md)** + **[Reference/Tools_Shortlist_v1_0.md](Reference/Tools_Shortlist_v1_0.md)** + **[Reference/Definitions_Glossary_v1_0.md](Reference/Definitions_Glossary_v1_0.md)** — defaults, tools, shared language.
 25. **[Reference/Docs_Full_Audit_2026-04-07.md](Reference/Docs_Full_Audit_2026-04-07.md)** — repo-wide documentation audit report (conflicts, drift risks, discoverability gaps).
 26. **[Maps/Identity_Pack_Architecture_v1_0.md](Maps/Identity_Pack_Architecture_v1_0.md)** — Reference Pack vs Working Pack architecture and artifact boundary definitions.
-27. **[Exports/chatgpt-reference-pack/README.md](Exports/chatgpt-reference-pack/README.md)** — export-safe navigation for the ChatGPT Reference Pack.
+27. **[Exports/chatgpt-reference-pack/README.md](Exports/chatgpt-reference-pack/README.md)** + **[Exports/chatgpt-reference-pack/READING_ORDER.md](Exports/chatgpt-reference-pack/READING_ORDER.md)** — export-safe navigation + reading flow for the ChatGPT Reference Pack.
 28. **[Contracts/Identity_Layer_Output_Contract_v1_0.md](Contracts/Identity_Layer_Output_Contract_v1_0.md)** — canonical identity-layer output contract and workflow learnings.
 29. **[Contracts/Stable_Base_Working_Pack_Contract_v1_0.md](Contracts/Stable_Base_Working_Pack_Contract_v1_0.md)** — Working Pack / Stable Base contract (local/generated/sensitive artifact boundaries).
 30. **[Change_Control/Change_Control_Rename_v1_0.md](Change_Control/Change_Control_Rename_v1_0.md)** — canonical legacy-to-`Heartloom Identity` rename/path compatibility decision record (phase 1 implemented).
@@ -77,7 +77,7 @@ If you want a short “start here” sequence:
 
 These are Termux helpers that support “ZIP-TENNIS” review and final identity artifacts:
 
-- **Repo → vault installer:** `./install.sh` (`--dry-run` supported)
+- **Repo → vault installer (opt-in only):** `./install.sh --vault-sync` (`--dry-run` supported)
 - **ChatGPT export zip (staged to vault):** `Scripts/export-chatgpt-heartloom-identity-zip.sh`
 - **Stable Base reference pack zip:** `hl-zip-stable-base`
 

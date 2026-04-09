@@ -1,12 +1,14 @@
 # Install Contract: heartloom-identity Repo Sync (v1.0)
 
-Status: **IMPLEMENTED CONTRACT (installer available; authority transition completed)**  
+Status: **IMPLEMENTED OPT-IN CONTRACT (vault sync non-default; authority transition completed)**  
 Type: Installer contract for repo-root `install.sh`  
 Target: `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/`
 
 ## Purpose
 
-Define explicit behavior for repo-root `install.sh` that installs canonical `Heartloom Identity` docs from this repository into the vault target path.
+Define explicit behavior for repo-root `install.sh` when vault sync is explicitly requested via `--vault-sync`.
+
+Default installer posture is no repo-to-vault sync unless the operator opts in.
 
 Phase 1 included a short-lived technical compatibility alias path for legacy consumers; active installer alias sync was retired in the partial alias-retirement slice.
 
@@ -14,7 +16,8 @@ This document is normative for implementation and verification of installer beha
 
 ## Current state
 
-- **Current (implemented):** Repo-root `install.sh` applies this contract to copy/sync docs into vault target.
+- **Current (implemented):** Repo-root `install.sh` applies this contract to copy/sync docs into vault target only when `--vault-sync` is provided.
+- **Current default:** `./install.sh` performs no vault sync and prints guidance.
 - **Current authority state:** Repo-canonical authoring transition is completed and recorded in Change-Control.
 
 ## Contract scope
@@ -38,6 +41,11 @@ Only these source roots are in install scope:
 - No file may be installed outside those bounded roots.
 
 ## Install semantics
+
+### Explicit opt-in requirement
+
+- Vault sync behavior is non-default and requires `--vault-sync`.
+- This preserves GitHub repo canonical authority while keeping vault sync available as an operator-selected path.
 
 ### Mode definition
 
@@ -85,6 +93,7 @@ Excluded from install scope:
 ## Dry-run behavior (implemented)
 
 - Installer supports `--dry-run` (and `-n`) and prints planned creates/updates/skips with no filesystem writes.
+- For vault sync preview, use `./install.sh --vault-sync --dry-run`.
 
 ## Rollback and safety posture
 
