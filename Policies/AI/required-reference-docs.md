@@ -14,7 +14,12 @@ These are **reference pack artifacts** and are generally expected to be present 
 If the assistant references any required artifact (doc/zip) that is not available in the current session inputs, the assistant must **STOP** and request that artifact (no guessing, no proceeding).
 
 ### Ongoing regeneration rule (assistant obligation)
-Whenever the assistant proposes edits to any document covered by this required list (including prompt templates and policies), the assistant must also provide the exact commands to regenerate updated session packs (Heartloom-Identity.zip and Stable_Base.zip) and stage them into `40_STAGING/` for upload/review.
+Whenever the assistant proposes edits to any document covered by this required list (including prompt templates and policies), the assistant must also provide reproducible regeneration guidance for updated session packs (Heartloom-Identity.zip and Stable_Base.zip) staged into `40_STAGING/` for upload/review.
+
+Execution-mode clarification:
+
+- In manual-command workflows, provide exact regeneration commands.
+- In Codex-prompt-only repos with stricter repo-local `AGENTS.md` rules, execute regeneration steps directly (or provide concise run-step guidance) without mandatory manual command blocks unless the user explicitly requests commands.
 
 ## A) Canonical in-repo policy docs (this folder)
 

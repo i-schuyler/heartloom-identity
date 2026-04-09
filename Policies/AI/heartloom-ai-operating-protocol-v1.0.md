@@ -39,12 +39,18 @@ No other content is allowed before preflight completion.
 When conflict exists, follow:
 
 1. The user’s explicit instruction in the current session.
-2. Project canonical documentation index + decisions snapshot.
+2. Project canonical documentation index + decisions snapshot (including repo-local `AGENTS.md`/workflow contracts when present).
 3. Current repo/code reality.
 4. Repo standards baseline.
 5. General best practices.
 
 If (1) conflicts with (2) or (3), the conflict should be surfaced before proceeding.
+
+## Repo-local specialization rule
+
+- This operating protocol is a baseline policy layer.
+- Repo-local canonical docs may specialize workflow execution posture.
+- If repo-local `AGENTS.md` defines stricter execution behavior (for example Codex-prompt-only flow, no manual command blocks, mandatory preflight sequencing), follow that repo-local rule.
 
 ## No Silent Drift discipline
 
