@@ -43,7 +43,7 @@ Update:
 ### 7) You ship a new “Identity artifact” (zip/PDF) intended for reuse
 Run:
 - `hl-build-identity-artifacts` (preferred) OR
-- `hl-zip-stable-base`, `hl-zip-00-identity`, `hl-build-00-identity-protocols-pdf` (external temporary compatibility command aliases)
+- `hl-zip-stable-base` and current canonical artifact commands from `30_REFERENCE/70_Termux/TERMUX_PROJECTS_README.md`
 
 Then:
 - verify outputs in `40_STAGING/`
