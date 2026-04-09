@@ -200,7 +200,7 @@ Included classes:
 - Identity alignment + navigation docs (source-alignment/eco-map/review/distinctions/source-input bridge)
 - Selected Heartloom AI policy canon
 - Consumer/bundle semantics docs
-- Export-safe navigation metadata manifest
+- Export-safe navigation docs + lightweight machine-readable companion index + generated metadata manifest
 
 Excluded classes:
 - Working Pack artifacts (logs, staging, local outputs)

@@ -50,6 +50,8 @@ This contract covers:
 
 The ChatGPT-project `Heartloom-Identity` zip is a **Reference Pack** downstream artifact for ChatGPT project use. It provides a stable snapshot of consumer-facing canonical docs without including maintainership-only or installer-internal materials.
 
+The pack also includes a lightweight machine-readable companion index to improve first-contact routing and cross-chat continuity without replacing pack markdown docs.
+
 ## Export contents (explicit include list)
 
 The ChatGPT Reference Pack includes only the docs listed in the export manifest and export-safe navigation.
@@ -61,6 +63,7 @@ Included files (explicit):
 - `Exports/chatgpt-reference-pack/README.md`
 - `Exports/chatgpt-reference-pack/INDEX.md`
 - `Exports/chatgpt-reference-pack/READING_ORDER.md`
+- `Exports/chatgpt-reference-pack/COMPANION_INDEX.json`
 - `ChatGPT_Reference_Pack_Manifest.md` (generated at export time and included at zip root)
 
 ### B) Consumer + bundle semantics
