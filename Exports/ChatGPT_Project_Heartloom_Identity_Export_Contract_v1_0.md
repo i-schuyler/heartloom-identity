@@ -70,7 +70,15 @@ Included files (explicit):
 - `Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md`
 - `Reference/First_Bundle_Candidate_Selection_v1_0.md`
 
-### C) Heartloom AI policy canon (selected)
+### C) Identity alignment + navigation
+
+- `Contracts/Source_Alignment_Contract_v1_0.md`
+- `Maps/Repo_Ecosystem_Map_v1_0.md`
+- `Checklists/Alignment_Review_Checklist_v1_0.md`
+- `Reference/Distinctions_Library_v1_0.md`
+- `Reference/Reference_Architectures_Source_Inputs_v1_0.md`
+
+### D) Heartloom AI policy canon (selected)
 
 - `Policies/AI/heartloom-ai-policy-index-v1.0.md`
 - `Policies/AI/required-reference-docs.md`
@@ -82,7 +90,7 @@ Included files (explicit):
 - `Policies/AI/global-memories-refactored-set-v2.0.md`
 - `Policies/AI/authority-boundary-map-v1.0.md`
 
-### D) Core identity docs commonly used as downstream authority references
+### E) Core identity docs commonly used as downstream authority references
 
 - `Policies/Heartloom_AI_Memory_Constitution.md`
 - `Reference/Definitions_Glossary_v1_0.md`

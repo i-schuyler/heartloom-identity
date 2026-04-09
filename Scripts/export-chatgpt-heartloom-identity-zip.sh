@@ -197,6 +197,7 @@ Export contract: Exports/ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0
 Included classes:
 - Core identity + governance docs
 - Pack-contained navigation docs (README/INDEX/READING_ORDER)
+- Identity alignment + navigation docs (source-alignment/eco-map/review/distinctions/source-input bridge)
 - Selected Heartloom AI policy canon
 - Consumer/bundle semantics docs
 - Export-safe navigation metadata manifest
