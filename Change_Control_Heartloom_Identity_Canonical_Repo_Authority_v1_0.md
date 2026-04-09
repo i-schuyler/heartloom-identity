@@ -1,12 +1,12 @@
-# Change-Control: 00_Identity Canonical Repo Authority Proposal (v1.0)
+# Change-Control: Heartloom Identity Canonical Repo Authority (v1.0)
 
 Status: **AUTHORITY TRANSITION COMPLETED (installer validated; repo-canonical active)**  
 Type: Change-Control / authority transition record  
-Scope: `00_Identity` documentation authority and install flow boundaries
+Scope: `Heartloom Identity` documentation authority and install flow boundaries, including temporary legacy alias posture
 
 ## Purpose
 
-Record the authority transition outcome where this dedicated GitHub repository is now the canonical authoring source for `00_Identity`.
+Record the authority transition outcome where this dedicated GitHub repository is the canonical authoring source for `Heartloom Identity`.
 
 This document now records a completed transition decision based on validated installer evidence and transition-gate satisfaction.
 
@@ -14,15 +14,17 @@ Filename is retained for continuity with prior slices and references.
 
 ## Current state (implemented today)
 
-- This repo is the canonical authoring source for `00_Identity` content (repo root and `Heartloom-AI-Policies/`).
+- This repo is the canonical authoring source for `Heartloom Identity` content (repo root and `Heartloom-AI-Policies/`).
 - The currently installed/consumed local copy remains in HeartloomVault at:
+  - `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/`
+- Temporary legacy compatibility alias remains available for migration:
   - `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`
 - Vault copy is the installer-managed installed/consumed downstream copy.
 - Installer script exists at repo root (`install.sh`) and applies the documented sync-copy upsert contract into the vault target.
 
 ## Transition completion evidence (validated)
 
-- Live install succeeded against `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`.
+- Live install succeeded against `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/`.
 - Post-install `git status` remained clean.
 - Installed vault tree contained expected in-scope files.
 - Spot checks confirmed key files at expected destination paths.
@@ -38,8 +40,9 @@ Filename is retained for continuity with prior slices and references.
 
 ### Current authority state
 
-- Canonical authoring authority for `00_Identity` is now this GitHub repo.
-- Vault `00_Identity` is the installed/consumed downstream copy.
+- Canonical authoring authority for `Heartloom Identity` is this GitHub repo.
+- Vault `Heartloom-Identity` is the installed/consumed downstream copy.
+- Legacy `00_Identity` exists only as temporary technical compatibility alias.
 - Transition validation gate document records READY satisfaction and completion evidence:
   - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
 
@@ -61,7 +64,9 @@ Installer behavior contract reference:
 
 ## Vault install target
 
-- Unchanged target path:
+- Canonical target path:
+  - `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/`
+- Temporary compatibility alias path:
   - `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`
 
 ## Canon boundaries: in-repo vs in-vault
@@ -97,7 +102,7 @@ Installer behavior contract reference:
 - No `termux-utils` changes.
 - No CI changes.
 - No release automation changes.
-- No vault path changes.
+- No unreviewed vault path changes beyond canonical `Heartloom-Identity` and temporary legacy alias support.
 - No session-pack regeneration automation implementation.
 
 ## Durable decision record (completion state)
@@ -110,4 +115,4 @@ Installer behavior contract reference:
   - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
 - Repo-canonical authority transition is now recorded as complete in this document.
 
-Change-Control_00_Identity_Canonical_Repo_Authority_Proposal_v1_0.md EOF
+Change_Control_Heartloom_Identity_Canonical_Repo_Authority_v1_0.md EOF

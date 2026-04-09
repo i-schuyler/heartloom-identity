@@ -2,11 +2,13 @@
 
 Status: **IMPLEMENTED CONTRACT (installer available; authority transition completed)**  
 Type: Installer contract for repo-root `install.sh`  
-Target: `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`
+Target: `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/`
 
 ## Purpose
 
-Define explicit behavior for repo-root `install.sh` that installs canonical `00_Identity` docs from this repository into the vault target path.
+Define explicit behavior for repo-root `install.sh` that installs canonical `Heartloom Identity` docs from this repository into the vault target path.
+
+Phase 1 also defines a short-lived technical compatibility alias for legacy consumers at `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`.
 
 This document is normative for implementation and verification of installer behavior.
 
@@ -26,13 +28,19 @@ Only these source roots are in install scope:
 
 ### Destination roots (vault)
 
-- `./*.md` in repo maps to `/storage/emulated/0/Documents/HeartloomVault/00_Identity/*.md`
-- `./Heartloom-AI-Policies/*.md` maps to `/storage/emulated/0/Documents/HeartloomVault/00_Identity/Heartloom-AI-Policies/*.md`
+- `./*.md` in repo maps to `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/*.md`
+- `./Heartloom-AI-Policies/*.md` maps to `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/Heartloom-AI-Policies/*.md`
+
+Legacy compatibility alias mapping (temporary):
+
+- When legacy alias sync is active, the same in-scope files are also synced to `/storage/emulated/0/Documents/HeartloomVault/00_Identity/` using the same path-preserving rules.
 
 ### Path mapping rule
 
 - Mapping is path-preserving within those roots.
-- No file may be installed outside `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`.
+- Canonical sync writes are constrained to `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/`.
+- Temporary alias sync writes (when enabled) are constrained to `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`.
+- No file may be installed outside those bounded roots.
 
 ## Install semantics
 
@@ -52,7 +60,14 @@ Only these source roots are in install scope:
 ### Missing destination paths
 
 - Installer must create required destination directories when absent.
-- Creation is limited to paths under `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`.
+- Creation is limited to paths under `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/`.
+
+### Legacy alias sync posture (temporary)
+
+- Default mode is `auto`: sync legacy alias only when `/storage/emulated/0/Documents/HeartloomVault/00_Identity/` already exists.
+- `--legacy-alias` forces legacy alias sync and creates the alias path if needed.
+- `--no-legacy-alias` disables legacy alias sync.
+- Legacy alias sync is transitional compatibility only and must be removed in a later deprecation slice.
 
 ## Exclusions
 
@@ -100,7 +115,7 @@ Excluded from install scope:
 ## Explicit non-goals (implementation boundary)
 
 - No additional authority-state changes triggered by installer execution alone.
-- No vault path changes.
+- No additional vault path changes beyond canonical `Heartloom-Identity` + temporary legacy alias support.
 - No session-pack regeneration implementation.
 - No CI/release changes.
 

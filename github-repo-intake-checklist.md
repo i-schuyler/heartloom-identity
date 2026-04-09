@@ -1,5 +1,5 @@
 # GitHub Repo Intake Checklist
-Location: `00_Identity/`
+Location: `Heartloom-Identity/`
 
 ## Purpose
 This checklist is completed before creating a new GitHub repository (or when adopting an existing repo). It prevents drift and forces explicit decisions on governance, secrets, CI spend, and safety boundaries.

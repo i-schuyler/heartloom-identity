@@ -94,7 +94,7 @@ For file-heavy work, prefer downloadable artifacts (md/zip/scripts) over long in
 
 ## Appendix A — Legacy operating protocol merged (verbatim snapshot)
 
-> Source: `00_Identity/Heartloom_AI_Operating_Protocol.md` (pre-merge). Included to ensure no loss.
+> Source: `Heartloom-Identity/Heartloom_AI_Operating_Protocol.md` (pre-merge). Included to ensure no loss.
 
 # Heartloom AI Operating Protocol
 *Canonical operating manual for collaboration inside HeartloomVault and related GitHub projects.*

@@ -32,7 +32,7 @@ Canonical downstream identity-layer repository for Heartloom repo inheritance, w
 ## Authority note
 The dedicated Change-Control docs slice is documented in:
 
-- `Change-Control_00_Identity_Canonical_Repo_Authority_Proposal_v1_0.md`
+- `Change_Control_Heartloom_Identity_Canonical_Repo_Authority_v1_0.md`
 - `Change_Control_Heartloom_Identity_Rename_v1_0.md`
 - `Install_Contract_heartloom_identity_repo_sync_v1_0.md`
 - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
@@ -40,9 +40,9 @@ The dedicated Change-Control docs slice is documented in:
 
 ## Current authority status
 
-- Repo-canonical `00_Identity` authority transition is **completed**.
-- Vault `00_Identity` is the installer-managed installed/consumed downstream copy.
-- Canonical rename change-control from `00_Identity` to `Heartloom Identity` is defined; implementation remains pending.
+- Repo-canonical `Heartloom Identity` authority transition is **completed**.
+- Vault `Heartloom-Identity` is the installer-managed installed/consumed downstream copy.
+- Rename phase 1 is implemented; legacy `00_Identity` remains only as a temporary technical compatibility alias.
 
 ## Installer
 
@@ -70,8 +70,8 @@ The dedicated Change-Control docs slice is documented in:
 
 ## ChatGPT export artifact
 
-- Canonical export contract: `ChatGPT_Project_00_Identity_Export_Contract_v1_0.md`
-- Export script: `scripts/export-chatgpt-00-identity-zip.sh`
+- Canonical export contract: `ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0.md`
+- Export script: `scripts/export-chatgpt-heartloom-identity-zip.sh`
 - Export-safe navigation: `exports/chatgpt-reference-pack/README.md`
 - Default output path: `/storage/emulated/0/Documents/HeartloomVault/40_STAGING/`
 - Default log path: `/storage/emulated/0/Documents/HeartloomVault/30_REFERENCE/termux-outputs/log-dump/<YYYY-MM-DD>/`

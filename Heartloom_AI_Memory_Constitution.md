@@ -15,9 +15,9 @@ This document mirrors the assistant’s global collaboration rules in a vault-ow
 
 The following documents are the canonical sources of truth:
 
-- Global memory set (compact): `00_Identity/Heartloom-AI-Policies/global-memories-refactored-set-v2.0.md`
-- Required reference list: `00_Identity/Heartloom-AI-Policies/required-reference-docs.md`
-- Policy pack index: `00_Identity/Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md`
+- Global memory set (compact): `Heartloom-Identity/Heartloom-AI-Policies/global-memories-refactored-set-v2.0.md`
+- Required reference list: `Heartloom-Identity/Heartloom-AI-Policies/required-reference-docs.md`
+- Policy pack index: `Heartloom-Identity/Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md`
 
 ## 3) Required reference rule (hard-stop)
 

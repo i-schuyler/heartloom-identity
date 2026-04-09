@@ -1,12 +1,12 @@
-# ChatGPT Project 00_Identity Export Contract (v1.0)
+# ChatGPT Project Heartloom Identity Export Contract (v1.0)
 
 Status: **CANONICAL EXPORT CONTRACT DEFINED (export flow implemented; bundle publishing remains future)**  
 Type: Downstream export artifact contract (ChatGPT-project Reference Pack)  
-Scope: Defines the exported `00_Identity` Reference Pack zip artifact used by the ChatGPT project
+Scope: Defines the exported `Heartloom-Identity` Reference Pack zip artifact used by the ChatGPT project
 
 ## Purpose
 
-Define a canonical, repeatable export contract for the ChatGPT-project `00_Identity` Reference Pack zip artifact, sourced from this repo’s canonical `00_Identity` docs.
+Define a canonical, repeatable export contract for the ChatGPT-project `Heartloom-Identity` Reference Pack zip artifact, sourced from this repo’s canonical `Heartloom Identity` docs.
 
 This contract defines **what is exported** and **how it is refreshed**, without changing bundle publishing, installer semantics, or repo authority.
 
@@ -14,7 +14,7 @@ This contract defines **what is exported** and **how it is refreshed**, without 
 
 This contract covers:
 
-- The purpose and contents of the ChatGPT-project `00_Identity` zip artifact.
+- The purpose and contents of the ChatGPT-project `Heartloom-Identity` zip artifact.
 - Source-of-truth expectations (repo-canonical source).
 - Inclusion/exclusion boundaries for the export.
 - Naming, version/date posture, and staging location.
@@ -32,8 +32,8 @@ This contract covers:
 
 ## Evidence Block
 
-- `heartloom-identity` is now the canonical authoring source for `00_Identity`.
-- The ChatGPT project currently uses a posted `00_Identity` zip artifact that is stale relative to repo state.
+- `heartloom-identity` is now the canonical authoring source for `Heartloom Identity`.
+- The ChatGPT project currently uses a posted `Heartloom-Identity` zip artifact that is stale relative to repo state.
 - The repo already distinguishes canonical source, installed copies, bundle semantics, and consumer integration.
 - The next downstream order is:
   1) refresh the ChatGPT-project identity zip artifact
@@ -42,13 +42,13 @@ This contract covers:
 ## Source of truth and authority
 
 - **Source of truth:** repo-canonical `heartloom-identity` content (this repo).
-- **Installed copy (downstream):** vault `00_Identity` installed via `./install.sh`.
+- **Installed copy (downstream):** vault `Heartloom-Identity` installed via `./install.sh`.
 - **Exported ChatGPT artifact:** a downstream, read-only Reference Pack zip produced from repo-canonical state.
 - **Future bundles/releases:** separate future distribution model, not implied by this export.
 
 ## Exported artifact purpose
 
-The ChatGPT-project `00_Identity` zip is a **Reference Pack** downstream artifact for ChatGPT project use. It provides a stable snapshot of consumer-facing canonical docs without including maintainership-only or installer-internal materials.
+The ChatGPT-project `Heartloom-Identity` zip is a **Reference Pack** downstream artifact for ChatGPT project use. It provides a stable snapshot of consumer-facing canonical docs without including maintainership-only or installer-internal materials.
 
 ## Export contents (explicit include list)
 
@@ -106,14 +106,14 @@ Excluded by default unless elevated in a future canonical slice:
 
 Artifact name pattern:
 
-- `00_Identity-ChatGPT-YYYY-MM-DD.zip`
+- `Heartloom-Identity-ChatGPT-YYYY-MM-DD.zip`
 
 Date is the primary postfix. If a future naming change is needed (for example adding a short commit SHA), update this contract explicitly in the same slice.
 
 ## Staging and generation location
 
-- **Script:** `scripts/export-chatgpt-00-identity-zip.sh`
-- **Manifest:** `scripts/chatgpt-00-identity-export.manifest`
+- **Script:** `scripts/export-chatgpt-heartloom-identity-zip.sh`
+- **Manifest:** `scripts/chatgpt-heartloom-identity-export.manifest`
 - **Staging directory (vault):** `/storage/emulated/0/Documents/HeartloomVault/40_STAGING/`
 - **Logs directory (vault):** `/storage/emulated/0/Documents/HeartloomVault/30_REFERENCE/termux-outputs/log-dump/<YYYY-MM-DD>/`
 
@@ -147,4 +147,4 @@ This export is **not** the same as a future published bundle/release. It is a do
 - STOP instead of touching termux-utils in this slice.
 - STOP if the export path cannot be chosen without conflicting with existing installer/export conventions.
 
-ChatGPT_Project_00_Identity_Export_Contract_v1_0.md EOF
+ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0.md EOF

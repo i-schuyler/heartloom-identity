@@ -12,7 +12,7 @@ This document governs integration behavior and proposal flow. It does **not** im
 
 ## State distinction (required)
 
-- **Implemented now (near-term):** consumer repos consume installed local snapshots of `00_Identity` docs.
+- **Implemented now (near-term):** consumer repos consume installed local snapshots of `Heartloom Identity` docs.
 - **Implemented now (source):** this repo is the maintained upstream source for docs and installer behavior.
 - **Implemented now (authority):** practical authority transition completion is recorded via:
   - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
@@ -22,7 +22,7 @@ This document governs integration behavior and proposal flow. It does **not** im
 
 Consumer repos should use a local installed copy/snapshot model:
 
-- Consume from local vault-installed `00_Identity` copy maintained by installer flow.
+- Consume from local vault-installed `Heartloom Identity` copy maintained by installer flow.
 - Treat consumed docs as a pinned snapshot for that consumer repo’s working period.
 - Record snapshot provenance in consumer-repo docs (at minimum: source repo, commit/tag or date stamp, and install date).
 

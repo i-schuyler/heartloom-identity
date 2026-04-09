@@ -1,4 +1,4 @@
-# ChatGPT Reference Pack Index (00_Identity)
+# ChatGPT Reference Pack Index (Heartloom Identity)
 
 This index lists only the documents included in this Reference Pack export.
 

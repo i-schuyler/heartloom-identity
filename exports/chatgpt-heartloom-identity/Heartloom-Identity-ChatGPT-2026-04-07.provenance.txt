@@ -1,0 +1,6 @@
+exported_artifact=Heartloom-Identity-ChatGPT-2026-04-07.zip
+source_repo=heartloom-identity
+commit_sha=24c6f29e06b7521a8b40026c1a7b028795ffe394
+exported_utc=2026-04-07T21:12:06Z
+export_contract=ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0.md
+manifest=scripts/chatgpt-heartloom-identity-export.manifest
