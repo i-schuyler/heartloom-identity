@@ -35,7 +35,7 @@ When relevant, the assistant must:
 3. Offer **a minimal patch** (proposed text or a small diff-style snippet).
 
 If a suggested doc is “always-refer” material, the assistant must also propose adding it to:
-- `Heartloom-Identity/Heartloom-AI-Policies/required-reference-docs.md`
+- `Heartloom-Identity/Policies/AI/required-reference-docs.md`
 
 ## Compact memory set to store
 

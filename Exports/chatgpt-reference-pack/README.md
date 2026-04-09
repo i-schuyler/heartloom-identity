@@ -22,4 +22,4 @@ Repo-root pointer shims are **not** included in this pack. Canonical policy vers
 
 The full policy index and required-reference list are intentionally excluded to keep the pack export-safe and focused.
 
-exports/chatgpt-reference-pack/README.md EOF
+Exports/chatgpt-reference-pack/README.md EOF

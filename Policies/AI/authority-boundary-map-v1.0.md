@@ -102,7 +102,7 @@ Recommendation:
 
 ### 4.3 Practical implementation (recommended)
 
-- `Heartloom-Identity/Heartloom-AI-Policies/required-reference-docs.md` lists:
+- `Heartloom-Identity/Policies/AI/required-reference-docs.md` lists:
   - **Always-refer** stable docs (base pack)
   - **Often-refer** project-local docs (overlay), with placeholders like:
     - “Project Files: File Tree”

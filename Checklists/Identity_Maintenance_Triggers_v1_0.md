@@ -9,29 +9,29 @@ This checklist defines “when you must update which Identity docs/tools” to p
 
 ### 1) Canonical paths change (vault, staging, logs, drop-folders)
 Update:
-- `Heartloom-Identity/INDEX.md` (navigation + canonical paths)
-- `Heartloom-Identity/Heartloom-AI-Policies/termux-and-shell-policy-v1.0.md`
+- [`INDEX.md`](../INDEX.md) (navigation + canonical paths)
+- [`Policies/AI/termux-and-shell-policy-v1.0.md`](../Policies/AI/termux-and-shell-policy-v1.0.md)
 - Any Termux scripts that embed paths (`~/bin/hl-*`)
 - Stable Base pack (if it includes the affected reference)
 
 ### 2) New “always-refer” doc is created
 Update:
-- `Heartloom-Identity/Heartloom-AI-Policies/required-reference-docs.md`
+- [`Policies/AI/required-reference-docs.md`](../Policies/AI/required-reference-docs.md)
 - Stable Base pack list (if it’s a stable cross-project reference)
 
-### 3) New policy doc (v1.x) is added under Heartloom-AI-Policies
+### 3) New policy doc (v1.x) is added under `Policies/AI/`
 Update:
-- `Heartloom-Identity/Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md`
-- `Heartloom-Identity/INDEX.md` if it changes “Start here” ordering
+- [`Policies/AI/heartloom-ai-policy-index-v1.0.md`](../Policies/AI/heartloom-ai-policy-index-v1.0.md)
+- [`INDEX.md`](../INDEX.md) if it changes “Start here” ordering
 
 ### 4) Prompt template semantics change (“you/we”, hard stops, artifact contract)
 Update:
 - `Heartloom-Identity/PROMPT - Template.md`
-- `Heartloom-Identity/Heartloom-AI-Policies/authority-boundary-map-v1.0.md` (if semantics are global)
+- [`Policies/AI/authority-boundary-map-v1.0.md`](../Policies/AI/authority-boundary-map-v1.0.md) (if semantics are global)
 
 ### 5) GitHub/Codex workflow changes (PR-first, CI loop, branch policy)
 Update:
-- `Heartloom-Identity/Heartloom-AI-Policies/github-and-codex-pr-first-policy-v1.0.md`
+- [`Policies/AI/github-and-codex-pr-first-policy-v1.0.md`](../Policies/AI/github-and-codex-pr-first-policy-v1.0.md)
 - Any “repo intake” or “governance” docs that restate the workflow
 
 ### 6) Termux automation script added/changed

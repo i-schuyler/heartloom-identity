@@ -8,42 +8,42 @@ This manifest defines the intended **reading order** for the final Protocols-onl
 
 ## A) Start here (orientation)
 
-1. `Heartloom-Identity/README.md`
-2. `Heartloom-Identity/INDEX.md`
+1. [`README.md`](../README.md)
+2. [`INDEX.md`](../INDEX.md)
 
 ---
 
 ## B) Core operating protocol (how we work)
 
-3. `Heartloom-Identity/Policies/Heartloom_AI_Operating_Protocol.md`
-4. `Heartloom-Identity/Reference/Definitions_Glossary_v1_0.md`
-5. `Heartloom-Identity/Reference/House_Defaults_v1_0.md`
-6. `Heartloom-Identity/Reference/Tools_Shortlist_v1_0.md`
+3. [`Policies/Heartloom_AI_Operating_Protocol.md`](../Policies/Heartloom_AI_Operating_Protocol.md)
+4. [`Reference/Definitions_Glossary_v1_0.md`](../Reference/Definitions_Glossary_v1_0.md)
+5. [`Reference/House_Defaults_v1_0.md`](../Reference/House_Defaults_v1_0.md)
+6. [`Reference/Tools_Shortlist_v1_0.md`](../Reference/Tools_Shortlist_v1_0.md)
 
 ---
 
 ## C) Governance + repo intake (cross-project)
 
-7. `Heartloom-Identity/Policies/github-governance-policy.md`
-8. `Heartloom-Identity/Checklists/github-repo-intake-checklist.md`
-9. `Heartloom-Identity/Policies/Repo_Standards_Baseline.md`
-10. `Heartloom-Identity/Reference/Codex_CLI_Termux_Setup_v1_0.md`
+7. [`Policies/github-governance-policy.md`](../Policies/github-governance-policy.md)
+8. [`Checklists/github-repo-intake-checklist.md`](../Checklists/github-repo-intake-checklist.md)
+9. [`Policies/Repo_Standards_Baseline.md`](../Policies/Repo_Standards_Baseline.md)
+10. [`Reference/Codex_CLI_Termux_Setup_v1_0.md`](../Reference/Codex_CLI_Termux_Setup_v1_0.md)
 
 ---
 
-## D) Heartloom-AI Policies (canonical enforcement layer)
+## D) AI policies (canonical enforcement layer)
 
-11. `Heartloom-Identity/Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md`
-12. `Heartloom-Identity/Heartloom-AI-Policies/authority-boundary-map-v1.0.md`
-13. `Heartloom-Identity/Heartloom-AI-Policies/required-reference-docs.md`
-14. `Heartloom-Identity/Heartloom-AI-Policies/heartloom-ai-operating-protocol-v1.0.md`
-15. `Heartloom-Identity/Heartloom-AI-Policies/termux-and-shell-policy-v1.0.md`
-16. `Heartloom-Identity/Heartloom-AI-Policies/github-and-codex-pr-first-policy-v1.0.md`
-17. `Heartloom-Identity/Heartloom-AI-Policies/zip-inspection-and-artifact-contract-v1.0.md`
-18. `Heartloom-Identity/Heartloom-AI-Policies/repo-standards-baseline-v1.0.md`
-19. `Heartloom-Identity/Policies/Heartloom_AI_Memory_Constitution.md`
-20. `Heartloom-Identity/Heartloom-AI-Policies/global-memories-refactored-set-v2.0.md`
-21. `Heartloom-Identity/Heartloom-AI-Policies/memory-migration-map-2026-02-02-to-v1.0.md`
+11. [`Policies/AI/heartloom-ai-policy-index-v1.0.md`](../Policies/AI/heartloom-ai-policy-index-v1.0.md)
+12. [`Policies/AI/authority-boundary-map-v1.0.md`](../Policies/AI/authority-boundary-map-v1.0.md)
+13. [`Policies/AI/required-reference-docs.md`](../Policies/AI/required-reference-docs.md)
+14. [`Policies/AI/heartloom-ai-operating-protocol-v1.0.md`](../Policies/AI/heartloom-ai-operating-protocol-v1.0.md)
+15. [`Policies/AI/termux-and-shell-policy-v1.0.md`](../Policies/AI/termux-and-shell-policy-v1.0.md)
+16. [`Policies/AI/github-and-codex-pr-first-policy-v1.0.md`](../Policies/AI/github-and-codex-pr-first-policy-v1.0.md)
+17. [`Policies/AI/zip-inspection-and-artifact-contract-v1.0.md`](../Policies/AI/zip-inspection-and-artifact-contract-v1.0.md)
+18. [`Policies/AI/repo-standards-baseline-v1.0.md`](../Policies/AI/repo-standards-baseline-v1.0.md)
+19. [`Policies/Heartloom_AI_Memory_Constitution.md`](../Policies/Heartloom_AI_Memory_Constitution.md)
+20. [`Policies/AI/global-memories-refactored-set-v2.0.md`](../Policies/AI/global-memories-refactored-set-v2.0.md)
+21. [`Policies/AI/memory-migration-map-2026-02-02-to-v1.0.md`](../Policies/AI/memory-migration-map-2026-02-02-to-v1.0.md)
 
 ---
 

@@ -70,7 +70,7 @@ Do not hardcode a fixed count in policy. Validate by method:
 
 - Compute expected scope count from current repo content using contract rules:
   - repo-root markdown files only (`./*.md`, excluding dotfiles)
-  - `Heartloom-AI-Policies/*.md` only (excluding dotfiles)
+  - `Policies/AI/*.md` only (excluding dotfiles)
 - Compare computed expected count to installer-reported `scanned=` count.
 - Any mismatch is **NOT READY** until investigated and resolved.
 
@@ -105,7 +105,7 @@ Live install validation is required after dry-run passes.
 Spot-checks are required for both source roots.
 
 - Root scope: verify selected repo-root markdown files land at vault root with same relative names.
-- Policy scope: verify selected `Heartloom-AI-Policies/*.md` files land in matching vault subpath.
+- Policy scope: verify selected `Policies/AI/*.md` files land in matching vault subpath.
 - Use representative changed and unchanged files where available.
 - Record checked filenames and outcomes in transition notes.
 

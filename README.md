@@ -14,7 +14,7 @@ Canonical downstream identity-layer repository for Heartloom repo inheritance, w
 
 - If you want Heartloom’s upstream meaning, law, and orientation, start with `heartloom-source`.
 - If you want identity-layer translation and operational structure (inheritance/workflow/packs/exports/ecosystem), continue here in `heartloom-identity`.
-- Start in this order: `Contracts/Source_Alignment_Contract_v1_0.md` → `Maps/Repo_Ecosystem_Map_v1_0.md` → `INDEX.md`.
+- Start in this order: [`Contracts/Source_Alignment_Contract_v1_0.md`](Contracts/Source_Alignment_Contract_v1_0.md) → [`Maps/Repo_Ecosystem_Map_v1_0.md`](Maps/Repo_Ecosystem_Map_v1_0.md) → [`INDEX.md`](INDEX.md).
 
 ## Core upstream references
 
@@ -24,10 +24,10 @@ Canonical downstream identity-layer repository for Heartloom repo inheritance, w
 
 ## Ecosystem navigation
 
-- Canonical ecosystem map: `Maps/Repo_Ecosystem_Map_v1_0.md`
-- Canonical source-alignment contract: `Contracts/Source_Alignment_Contract_v1_0.md`
-- Canonical alignment review checklist: `Checklists/Alignment_Review_Checklist_v1_0.md`
-- Canonical distinctions library: `Reference/Distinctions_Library_v1_0.md`
+- Canonical ecosystem map: [`Maps/Repo_Ecosystem_Map_v1_0.md`](Maps/Repo_Ecosystem_Map_v1_0.md)
+- Canonical source-alignment contract: [`Contracts/Source_Alignment_Contract_v1_0.md`](Contracts/Source_Alignment_Contract_v1_0.md)
+- Canonical alignment review checklist: [`Checklists/Alignment_Review_Checklist_v1_0.md`](Checklists/Alignment_Review_Checklist_v1_0.md)
+- Canonical distinctions library: [`Reference/Distinctions_Library_v1_0.md`](Reference/Distinctions_Library_v1_0.md)
 
 ## Documentation layout
 
@@ -38,22 +38,24 @@ Canonical downstream identity-layer repository for Heartloom repo inheritance, w
 - `Policies/` — governance/policy docs and policy-pointer shims.
 - `Change_Control/` — authority/rename transition records and validation evidence.
 - `Exports/` — export-specific contracts.
+- `Scripts/` — operational/export automation scripts.
+- `Tooling/` — source-controlled tooling/runtime config assets.
 
 ## Authority note
 The dedicated Change-Control docs slice is documented in:
 
-- `Change_Control/Change_Control_Canonical_Repo_Authority_v1_0.md`
-- `Change_Control/Change_Control_Rename_v1_0.md`
-- `Contracts/Install_Contract_Repo_Sync_v1_0.md`
-- `Checklists/Authority_Transition_Gate_Installer_Validation_v1_0.md`
-- `Reference/Consumer_Integration_Model_v1_0.md`
+- [`Change_Control/Change_Control_Canonical_Repo_Authority_v1_0.md`](Change_Control/Change_Control_Canonical_Repo_Authority_v1_0.md)
+- [`Change_Control/Change_Control_Rename_v1_0.md`](Change_Control/Change_Control_Rename_v1_0.md)
+- [`Contracts/Install_Contract_Repo_Sync_v1_0.md`](Contracts/Install_Contract_Repo_Sync_v1_0.md)
+- [`Checklists/Authority_Transition_Gate_Installer_Validation_v1_0.md`](Checklists/Authority_Transition_Gate_Installer_Validation_v1_0.md)
+- [`Reference/Consumer_Integration_Model_v1_0.md`](Reference/Consumer_Integration_Model_v1_0.md)
 
 ## Current authority status
 
 - Repo-canonical `Heartloom Identity` authority transition is **completed**.
 - Vault `Heartloom-Identity` is the installer-managed installed/consumed downstream copy.
 - Active installer/export legacy compatibility bridges are retired; only minimal historical rename record remains.
-- Current migration validation/audit record: `Change_Control/Heartloom_Identity_Migration_Validation_v1_0.md`.
+- Current migration validation/audit record: [`Change_Control/Heartloom_Identity_Migration_Validation_v1_0.md`](Change_Control/Heartloom_Identity_Migration_Validation_v1_0.md).
 
 ## Installer
 
@@ -66,42 +68,42 @@ The dedicated Change-Control docs slice is documented in:
 ## Authority transition gate
 
 - Practical authority transition gate is satisfied and recorded.
-- Canonical gate checklist: `Checklists/Authority_Transition_Gate_Installer_Validation_v1_0.md`
+- Canonical gate checklist: [`Checklists/Authority_Transition_Gate_Installer_Validation_v1_0.md`](Checklists/Authority_Transition_Gate_Installer_Validation_v1_0.md)
 
 ## Consumer integration model
 
-- Canonical consumer model doc: `Reference/Consumer_Integration_Model_v1_0.md`
-- Canonical bundle/versioning semantics doc: `Reference/Bundle_Versioning_Semantics_v1_0.md`
-- Canonical bundle manifest/release-prep semantics doc: `Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md`
-- Canonical first bundle candidate scope doc: `Reference/First_Bundle_Candidate_Selection_v1_0.md`
-- Canonical pack architecture doc: `Maps/Identity_Pack_Architecture_v1_0.md`
-- Canonical Stable Base / Working Pack contract: `Contracts/Stable_Base_Working_Pack_Contract_v1_0.md`
+- Canonical consumer model doc: [`Reference/Consumer_Integration_Model_v1_0.md`](Reference/Consumer_Integration_Model_v1_0.md)
+- Canonical bundle/versioning semantics doc: [`Reference/Bundle_Versioning_Semantics_v1_0.md`](Reference/Bundle_Versioning_Semantics_v1_0.md)
+- Canonical bundle manifest/release-prep semantics doc: [`Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md`](Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md)
+- Canonical first bundle candidate scope doc: [`Reference/First_Bundle_Candidate_Selection_v1_0.md`](Reference/First_Bundle_Candidate_Selection_v1_0.md)
+- Canonical pack architecture doc: [`Maps/Identity_Pack_Architecture_v1_0.md`](Maps/Identity_Pack_Architecture_v1_0.md)
+- Canonical Stable Base / Working Pack contract: [`Contracts/Stable_Base_Working_Pack_Contract_v1_0.md`](Contracts/Stable_Base_Working_Pack_Contract_v1_0.md)
 - Near-term model: local installed snapshot consumption.
 - Long-term model: versioned release artifact / packaged bundle distribution (proposed, not implemented).
 
 ## ChatGPT export artifact
 
-- Canonical export contract: `Exports/ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0.md`
-- Export script: `scripts/export-chatgpt-heartloom-identity-zip.sh`
-- Export-safe navigation: `exports/chatgpt-reference-pack/README.md`
+- Canonical export contract: [`Exports/ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0.md`](Exports/ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0.md)
+- Export script: [`Scripts/export-chatgpt-heartloom-identity-zip.sh`](Scripts/export-chatgpt-heartloom-identity-zip.sh)
+- Export-safe navigation: [`Exports/chatgpt-reference-pack/README.md`](Exports/chatgpt-reference-pack/README.md)
 - Default output path: `/storage/emulated/0/Documents/HeartloomVault/40_STAGING/`
 - Default log path: `/storage/emulated/0/Documents/HeartloomVault/30_REFERENCE/termux-outputs/log-dump/<YYYY-MM-DD>/`
 
 ## CI and auto-merge policy
 
-- Canonical policy doc: `Policies/CI_Auto_Merge_Policy_v1_0.md`
+- Canonical policy doc: [`Policies/CI_Auto_Merge_Policy_v1_0.md`](Policies/CI_Auto_Merge_Policy_v1_0.md)
 - Lightweight CI workflow is implemented at `.github/workflows/ci.yml`.
 - GitHub settings rollout remains a separate implementation/admin step.
 
 ## Codex global source/install contract
 
-- Canonical contract doc: `Contracts/Codex_Global_Source_Install_Contract_v1_0.md`
-- Global Codex sources live under `tooling/codex-global/`.
+- Canonical contract doc: [`Contracts/Codex_Global_Source_Install_Contract_v1_0.md`](Contracts/Codex_Global_Source_Install_Contract_v1_0.md)
+- Global Codex sources live under `Tooling/codex-global/`.
 - Explicit opt-in install mode: `./install.sh --codex-global` installs into `~/.codex/`.
 
 ## Codex execution profiles contract
 
-- Canonical contract doc: `Contracts/Codex_Execution_Profiles_Contract_v1_0.md`
+- Canonical contract doc: [`Contracts/Codex_Execution_Profiles_Contract_v1_0.md`](Contracts/Codex_Execution_Profiles_Contract_v1_0.md)
 - Contract defines safe default and GitHub/PR execution profiles, clarifies config vs instruction layers, and preserves future implementation boundaries.
 
 ## Codex workflow (repo-specific)
@@ -109,7 +111,7 @@ The dedicated Change-Control docs slice is documented in:
 - This repo uses a Codex-prompt-only flow: assistants should not provide manual branch checkout/push/PR/cleanup command blocks for this repo.
 - Codex should attempt per-PR auto-merge enablement when supported and report the exact reason if it cannot be enabled.
 - Safe stale-branch cleanup is expected at the start of Codex runs (local-only; remote cleanup relies on GitHub settings after merge).
-- Canonical output contract for identity-layer slices: `Contracts/Identity_Layer_Output_Contract_v1_0.md`
+- Canonical output contract for identity-layer slices: [`Contracts/Identity_Layer_Output_Contract_v1_0.md`](Contracts/Identity_Layer_Output_Contract_v1_0.md)
 
 ## Codex push/PR smoke test note
 

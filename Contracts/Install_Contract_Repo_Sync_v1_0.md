@@ -24,12 +24,12 @@ This document is normative for implementation and verification of installer beha
 Only these source roots are in install scope:
 
 - `./*.md` (repo-root markdown documents)
-- `./Heartloom-AI-Policies/*.md`
+- `./Policies/AI/*.md`
 
 ### Destination roots (vault)
 
 - `./*.md` in repo maps to `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/*.md`
-- `./Heartloom-AI-Policies/*.md` maps to `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/Heartloom-AI-Policies/*.md`
+- `./Policies/AI/*.md` maps to `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/Policies/AI/*.md`
 
 ### Path mapping rule
 

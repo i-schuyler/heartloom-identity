@@ -57,8 +57,8 @@ included_paths_or_categories:
   - Reference/Consumer_Integration_Model_v1_0.md
   - Reference/Bundle_Versioning_Semantics_v1_0.md
   - Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md
-  - Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md
-  - Heartloom-AI-Policies/required-reference-docs.md
+  - Policies/AI/heartloom-ai-policy-index-v1.0.md
+  - Policies/AI/required-reference-docs.md
 exclusions:
   - .git/
   - dotfiles
@@ -112,7 +112,7 @@ Unless explicitly elevated in future canon, publishable consumer bundle artifact
 - `.git/` internals.
 - Dotfiles/local environment files.
 - `install.sh` and installer implementation mechanics.
-- `tooling/codex-global/` and other future `~/.codex` runtime-source/operator tooling files.
+- `Tooling/codex-global/` and other future `~/.codex` runtime-source/operator tooling files.
 - Change-control transition/gate validation records.
 - Installer contract internals and maintenance/migration/tooling records.
 - Non-markdown files unless explicitly required for downstream consumption.

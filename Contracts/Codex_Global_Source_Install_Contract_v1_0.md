@@ -13,19 +13,19 @@ This document defines contract semantics and the implemented installer mode for 
 ## Implemented vs future state (required clarity)
 
 - **Implemented now:** `heartloom-identity` is canonical for identity/policy docs and current vault installer behavior.
-- **Implemented now:** global Codex source files live under `tooling/codex-global/`.
+- **Implemented now:** global Codex source files live under `Tooling/codex-global/`.
 - **Implemented now:** explicit installer mode installs global files into `~/.codex/`.
 
 ## Canonical source location inside this repo
 
 Reserved source area for future global Codex runtime files:
 
-- `tooling/codex-global/`
+- `Tooling/codex-global/`
 
 Expected source files:
 
-- `tooling/codex-global/AGENTS.md`
-- `tooling/codex-global/config.toml`
+- `Tooling/codex-global/AGENTS.md`
+- `Tooling/codex-global/config.toml`
 
 This source area is intentionally separate from consumer-facing canon docs.
 
@@ -33,8 +33,8 @@ This source area is intentionally separate from consumer-facing canon docs.
 
 Mapping:
 
-- `tooling/codex-global/AGENTS.md` -> `~/.codex/AGENTS.md`
-- `tooling/codex-global/config.toml` -> `~/.codex/config.toml`
+- `Tooling/codex-global/AGENTS.md` -> `~/.codex/AGENTS.md`
+- `Tooling/codex-global/config.toml` -> `~/.codex/config.toml`
 
 If additional global files are added later, each must be explicitly documented with source->target mapping in a contract update slice.
 
@@ -60,7 +60,7 @@ If additional global files are added later, each must be explicitly documented w
 
 Global Codex runtime source files are excluded from consumer bundles by default:
 
-- Exclude `tooling/codex-global/` from bundle candidates unless a future canonical slice explicitly includes a justified subset.
+- Exclude `Tooling/codex-global/` from bundle candidates unless a future canonical slice explicitly includes a justified subset.
 - Treat Codex-global runtime files as operator/tooling artifacts, not downstream consumer canon by default.
 
 This preserves a clear boundary between consumer-facing identity docs and maintainer/operator runtime tooling.

@@ -58,7 +58,7 @@ These are working-pack inputs that may be sensitive or environment-specific. The
 For any active repo/project, these are required when doing implementation work:
 
 - Project Canonical Documentation Index
-- Heartloom-AI-Policies/authority-boundary-map-v1.0.md
+- Policies/AI/authority-boundary-map-v1.0.md
 - Project Decisions Snapshot (append-only)
 - Project Drift Ledger (if present / required)
 - Project Assumptions Registry (hardware/security projects)
@@ -69,9 +69,9 @@ If any of these are missing, the assistant should hard-pause and request the rel
 
 These are the “always-refer” docs that apply to every project/session.
 
-- `Heartloom-Identity/Heartloom-AI-Policies/authority-boundary-map-v1.0.md`
-- `Heartloom-Identity/Heartloom-AI-Policies/required-reference-docs.md`
-- `Heartloom-Identity/Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md`
+- `Heartloom-Identity/Policies/AI/authority-boundary-map-v1.0.md`
+- `Heartloom-Identity/Policies/AI/required-reference-docs.md`
+- `Heartloom-Identity/Policies/AI/heartloom-ai-policy-index-v1.0.md`
 
 - `30_REFERENCE/GitHub_SSH_Key_Locations_Map_AUTHORITATIVE.md`
 - `30_REFERENCE/vaultmeta/VaultMeta - File Tree.md`

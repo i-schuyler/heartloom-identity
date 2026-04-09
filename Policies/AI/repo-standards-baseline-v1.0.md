@@ -38,7 +38,7 @@ Recommended folders (as applicable):
 
 - `src/` — production code
 - `data/` — embedded runtime assets (when applicable)
-- `scripts/` — developer automation scripts
+- `Scripts/` — developer automation scripts
 - `tools/` — one-off utilities not shipped to devices
 - `tests/` — unit/integration tests (when present/allowed)
 
@@ -123,7 +123,7 @@ docs/ is the authoritative documentation hub and should contain, as applicable:
 - Embedded runtime assets (e.g., SPA files served from flash).
 - External asset dependencies are avoided unless canon explicitly allows them.
 
-### scripts/ (developer automation)
+### Scripts/ (developer automation)
 - Build helpers, lint, packaging, release helpers.
 
 ### tools/ (non-shipping utilities)
