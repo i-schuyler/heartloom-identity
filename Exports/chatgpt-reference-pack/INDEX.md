@@ -15,13 +15,13 @@ This index lists only the documents included in this Reference Pack export.
 
 ## Heartloom AI policy canon (selected)
 
-- `Heartloom-AI-Policies/heartloom-ai-operating-protocol-v1.0.md`
-- `Heartloom-AI-Policies/termux-and-shell-policy-v1.0.md`
-- `Heartloom-AI-Policies/github-and-codex-pr-first-policy-v1.0.md`
-- `Heartloom-AI-Policies/repo-standards-baseline-v1.0.md`
-- `Heartloom-AI-Policies/zip-inspection-and-artifact-contract-v1.0.md`
-- `Heartloom-AI-Policies/global-memories-refactored-set-v2.0.md`
-- `Heartloom-AI-Policies/authority-boundary-map-v1.0.md`
+- `Policies/AI/heartloom-ai-operating-protocol-v1.0.md`
+- `Policies/AI/termux-and-shell-policy-v1.0.md`
+- `Policies/AI/github-and-codex-pr-first-policy-v1.0.md`
+- `Policies/AI/repo-standards-baseline-v1.0.md`
+- `Policies/AI/zip-inspection-and-artifact-contract-v1.0.md`
+- `Policies/AI/global-memories-refactored-set-v2.0.md`
+- `Policies/AI/authority-boundary-map-v1.0.md`
 
 ## Consumer + bundle semantics
 
@@ -30,4 +30,4 @@ This index lists only the documents included in this Reference Pack export.
 - `Reference/Bundle_Manifest_Release_Prep_Semantics_v1_0.md`
 - `Reference/First_Bundle_Candidate_Selection_v1_0.md`
 
-exports/chatgpt-reference-pack/INDEX.md EOF
+Exports/chatgpt-reference-pack/INDEX.md EOF

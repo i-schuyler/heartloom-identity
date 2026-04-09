@@ -67,7 +67,7 @@ This shortlist is not exhaustive. It should remain small and high-leverage.
 
 ### Build/runtime toolchains (as needed by project)
 - **Python** — scripting, automation, reports.
-- **Node.js** — tooling/UIs only when required by project canon.
+- **Node.js** — Tooling/UIs only when required by project canon.
 - **PlatformIO / ESP-IDF** — embedded firmware workflows when applicable.
 
 ### Secret scanning (CI-friendly)

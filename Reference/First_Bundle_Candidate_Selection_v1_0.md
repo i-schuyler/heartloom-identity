@@ -52,15 +52,15 @@ The v0 candidate is optimized for:
 
 ### C) Heartloom AI policy canon needed for active downstream use
 
-- `Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md`
-- `Heartloom-AI-Policies/required-reference-docs.md`
-- `Heartloom-AI-Policies/authority-boundary-map-v1.0.md`
-- `Heartloom-AI-Policies/heartloom-ai-operating-protocol-v1.0.md`
-- `Heartloom-AI-Policies/termux-and-shell-policy-v1.0.md`
-- `Heartloom-AI-Policies/github-and-codex-pr-first-policy-v1.0.md`
-- `Heartloom-AI-Policies/repo-standards-baseline-v1.0.md`
-- `Heartloom-AI-Policies/zip-inspection-and-artifact-contract-v1.0.md`
-- `Heartloom-AI-Policies/global-memories-refactored-set-v2.0.md`
+- `Policies/AI/heartloom-ai-policy-index-v1.0.md`
+- `Policies/AI/required-reference-docs.md`
+- `Policies/AI/authority-boundary-map-v1.0.md`
+- `Policies/AI/heartloom-ai-operating-protocol-v1.0.md`
+- `Policies/AI/termux-and-shell-policy-v1.0.md`
+- `Policies/AI/github-and-codex-pr-first-policy-v1.0.md`
+- `Policies/AI/repo-standards-baseline-v1.0.md`
+- `Policies/AI/zip-inspection-and-artifact-contract-v1.0.md`
+- `Policies/AI/global-memories-refactored-set-v2.0.md`
 
 **Why included:** These are the consumer-facing policy references most directly tied to prompt-template and required-reference style downstream consumption.
 
@@ -86,7 +86,7 @@ The v0 candidate is optimized for:
 
 **Why excluded:** These are maintainership/transition/installer internals and are not required by default for downstream canonical consumption.
 
-### B) Maintenance/tooling/ops convenience docs not needed for baseline canon following
+### B) Maintenance/Tooling/ops convenience docs not needed for baseline canon following
 
 - `Checklists/Identity_Maintenance_Triggers_v1_0.md`
 - `Reference/Codex_CLI_Termux_Setup_v1_0.md`
@@ -98,7 +98,7 @@ The v0 candidate is optimized for:
 
 ### C) Migration/history/internal transition records
 
-- `Heartloom-AI-Policies/memory-migration-map-2026-02-02-to-v1.0.md`
+- `Policies/AI/memory-migration-map-2026-02-02-to-v1.0.md`
 
 **Why excluded:** Historical migration mapping is not needed for routine downstream canon-following.
 
@@ -106,7 +106,7 @@ The v0 candidate is optimized for:
 
 - `.git/`
 - Dotfiles/local environment files
-- `tooling/codex-global/` and other future `~/.codex` runtime-source files
+- `Tooling/codex-global/` and other future `~/.codex` runtime-source files
 - Non-markdown files unless explicitly required in a future slice
 
 **Why excluded:** Not consumer-facing canonical content.

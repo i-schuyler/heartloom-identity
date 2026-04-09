@@ -3,7 +3,7 @@ set -euo pipefail
 
 usage() {
   cat <<'USAGE'
-Usage: scripts/export-chatgpt-heartloom-identity-zip.sh [options]
+Usage: Scripts/export-chatgpt-heartloom-identity-zip.sh [options]
 
 Options:
   --output-dir DIR    Final staging/output directory (default: vault 40_STAGING).
@@ -93,7 +93,7 @@ if [[ -z "${repo_root}" || ! -d "${repo_root}" ]]; then
   repo_root="$(prompt_path "repo root" "${repo_root}")"
 fi
 
-manifest_path="${repo_root}/scripts/chatgpt-heartloom-identity-export.manifest"
+manifest_path="${repo_root}/Scripts/chatgpt-heartloom-identity-export.manifest"
 
 if [[ ! -d "${vault_path}" ]]; then
   vault_path="$(prompt_path "vault root" "${vault_path}")"
@@ -209,7 +209,7 @@ Excluded classes:
 
 Known intentional omissions:
 - Repo README/INDEX
-- Heartloom-AI-Policies/required-reference-docs.md
+- Policies/AI/required-reference-docs.md
 - Legacy pointer shims (Policies/Heartloom_AI_Operating_Protocol.md, Policies/Repo_Standards_Baseline.md)
 EOF
 
@@ -226,7 +226,7 @@ source_repo=heartloom-identity
 commit_sha=${commit_sha}
 exported_utc=${generated_utc}
 export_contract=Exports/ChatGPT_Project_Heartloom_Identity_Export_Contract_v1_0.md
-manifest=scripts/chatgpt-heartloom-identity-export.manifest
+manifest=Scripts/chatgpt-heartloom-identity-export.manifest
 EOF
 
 staged_zip_tmp="${output_dir}/.${zip_name}.tmp"

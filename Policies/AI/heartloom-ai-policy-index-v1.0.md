@@ -6,7 +6,7 @@
 ## Canonical storage location
 
 - Vault: `/storage/emulated/0/Documents/HeartloomVault/`
-- Folder: `Heartloom-Identity/Heartloom-AI-Policies/`
+- Folder: `Heartloom-Identity/Policies/AI/`
 
 ## Policy documents in this pack
 

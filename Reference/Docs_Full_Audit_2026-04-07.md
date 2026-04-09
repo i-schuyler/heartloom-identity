@@ -14,13 +14,13 @@ Overall documentation is coherent and well-structured, with strong canonical bou
 ## Conflicts / contradictions
 
 1) **Severity: high**
-- **Affected files:** `Heartloom-AI-Policies/github-and-codex-pr-first-policy-v1.0.md`, `AGENTS.md`
+- **Affected files:** `Policies/AI/github-and-codex-pr-first-policy-v1.0.md`, `AGENTS.md`
 - **Description:** Global PR-first policy instructs the assistant to provide manual branch/PR command blocks, while repo-specific AGENTS requires a Codex-prompt-only workflow with no manual command blocks.
 - **Why it matters:** Conflicting instructions can cause workflow drift and inconsistent operator expectations, especially in required-reference policy docs.
 - **Recommended fix:** Add an explicit repo-specific override note in the policy doc or a cross-reference in `AGENTS.md` clarifying that heartloom-identity uses Codex-prompt-only and supersedes manual command blocks.
 
 2) **Severity: medium**
-- **Affected files:** `Heartloom-AI-Policies/github-and-codex-pr-first-policy-v1.0.md`, `AGENTS.md`
+- **Affected files:** `Policies/AI/github-and-codex-pr-first-policy-v1.0.md`, `AGENTS.md`
 - **Description:** The policy defines a default slice loop without the newly-required PR preflight step that is now mandated in `AGENTS.md`.
 - **Why it matters:** Operators following the policy doc may skip PR preflight/merge handling, leading to redundant slices or missed merge-ready PRs.
 - **Recommended fix:** Add a short preflight note in the policy doc or link the repo-specific AGENTS rule as authoritative for this repo.
@@ -28,13 +28,13 @@ Overall documentation is coherent and well-structured, with strong canonical bou
 ## Ambiguities / drift risks
 
 1) **Severity: medium**
-- **Affected files:** `Heartloom-AI-Policies/required-reference-docs.md`
+- **Affected files:** `Policies/AI/required-reference-docs.md`
 - **Description:** The required project-level docs list includes “Project Decisions Snapshot” and “Project Drift Ledger,” but no matching files are present in this repo.
 - **Why it matters:** This creates a persistent compliance gap and ambiguity about whether those artifacts are required for heartloom-identity or intentionally absent.
 - **Recommended fix:** Either add minimal placeholder files or update the required-reference doc to explicitly note when a project does not yet maintain them.
 
 2) **Severity: low**
-- **Affected files:** `tooling/codex-global/AGENTS.md`, `AGENTS.md`
+- **Affected files:** `Tooling/codex-global/AGENTS.md`, `AGENTS.md`
 - **Description:** Global Codex defaults still mention manual command blocks and PR-first loop steps that are explicitly disallowed in this repo’s AGENTS.
 - **Why it matters:** If the global AGENTS are used for bootstrapping, they can conflict with repo-specific behavior unless the override is clearly called out.
 - **Recommended fix:** Add a brief compatibility note in the global AGENTS to defer to repo-local AGENTS when present.
@@ -61,12 +61,12 @@ Overall documentation is coherent and well-structured, with strong canonical bou
 - Resolve the conflict between repo-specific AGENTS and the global PR-first policy by adding an explicit override note in the policy doc or AGENTS.
 
 ### Medium priority
-- Clarify the status of project-level decision/drift artifacts required by `Heartloom-AI-Policies/required-reference-docs.md` (add placeholders or document absence).
+- Clarify the status of project-level decision/drift artifacts required by `Policies/AI/required-reference-docs.md` (add placeholders or document absence).
 - Update policy docs to acknowledge the new PR preflight step mandated by repo AGENTS.
 
 ### Low priority
 - Add an index entry for this audit report.
-- Add a compatibility note in `tooling/codex-global/AGENTS.md` to defer to repo-local AGENTS.
+- Add a compatibility note in `Tooling/codex-global/AGENTS.md` to defer to repo-local AGENTS.
 
 ## No-op / looks good findings
 

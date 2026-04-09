@@ -4,6 +4,6 @@ This file has been merged into the canonical policy pack to remove duplicated gu
 
 Canonical source (read this one):
 
-- `Heartloom-Identity/Heartloom-AI-Policies/heartloom-ai-operating-protocol-v1.0.md`
+- `Heartloom-Identity/Policies/AI/heartloom-ai-operating-protocol-v1.0.md`
 
 The full previous contents of this file were preserved verbatim as **Appendix A** inside the policy doc above.

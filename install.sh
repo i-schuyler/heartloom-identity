@@ -5,7 +5,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DEST_ROOT="/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity"
-CODEX_GLOBAL_SOURCE="$SCRIPT_DIR/tooling/codex-global"
+CODEX_GLOBAL_SOURCE="$SCRIPT_DIR/Tooling/codex-global"
 CODEX_GLOBAL_DEST="${HOME}/.codex"
 DRY_RUN=0
 MODE="vault"
@@ -19,7 +19,7 @@ Default (vault sync): installs in-scope markdown docs from this repo into:
 
 Codex-global mode:
   ./install.sh --codex-global
-  Installs tooling/codex-global/{AGENTS.md,config.toml} into ~/.codex/
+  Installs Tooling/codex-global/{AGENTS.md,config.toml} into ~/.codex/
 
 Options:
   --dry-run, -n   Show planned actions only (no filesystem writes)
@@ -154,7 +154,7 @@ sync_markdown_docs_to_root() {
   local summary_label="$2"
 
   run_mkdir "$destination_root"
-  run_mkdir "$destination_root/Heartloom-AI-Policies"
+  run_mkdir "$destination_root/Policies/AI"
 
   CREATED_COUNT=0
   UPDATED_COUNT=0
@@ -168,18 +168,18 @@ sync_markdown_docs_to_root() {
     copy_or_update "$source_file" "$destination_file" "$file_name"
   done < <(build_file_list "$SCRIPT_DIR" 1)
 
-  if [[ ! -d "$SCRIPT_DIR/Heartloom-AI-Policies" ]]; then
-    echo "[ABORT] Missing source directory: $SCRIPT_DIR/Heartloom-AI-Policies"
+  if [[ ! -d "$SCRIPT_DIR/Policies/AI" ]]; then
+    echo "[ABORT] Missing source directory: $SCRIPT_DIR/Policies/AI"
     exit 1
   fi
 
   while IFS= read -r -d '' source_file; do
     file_name="$(basename "$source_file")"
-    relative_path="Heartloom-AI-Policies/$file_name"
+    relative_path="Policies/AI/$file_name"
     destination_file="$destination_root/$relative_path"
     SCANNED_COUNT=$((SCANNED_COUNT + 1))
     copy_or_update "$source_file" "$destination_file" "$relative_path"
-  done < <(build_file_list "$SCRIPT_DIR/Heartloom-AI-Policies" 1)
+  done < <(build_file_list "$SCRIPT_DIR/Policies/AI" 1)
 
   echo
   echo "[SUMMARY][$summary_label] scanned=$SCANNED_COUNT created=$CREATED_COUNT updated=$UPDATED_COUNT skipped=$SKIPPED_COUNT"

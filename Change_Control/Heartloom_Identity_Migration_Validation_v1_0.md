@@ -11,7 +11,7 @@ Scope: Validate canonical `Heartloom Identity` / `Heartloom-Identity` usage and 
 - Runtime validation commands:
   - `./install.sh --help`
   - `./install.sh --dry-run`
-  - `./scripts/export-chatgpt-heartloom-identity-zip.sh --help`
+  - `./Scripts/export-chatgpt-heartloom-identity-zip.sh --help`
   - deprecated export wrapper `--help` (historical at validation time)
 - Supplemental alias-path exercise:
   - `./install.sh --dry-run --legacy-alias`
@@ -28,7 +28,7 @@ Scope: Validate canonical `Heartloom Identity` / `Heartloom-Identity` usage and 
 - `install.sh --help` passed and shows canonical destination `/Heartloom-Identity/` with explicit temporary alias options.
 - `install.sh --dry-run` passed and planned canonical sync behavior; alias sync was correctly skipped in auto mode when legacy path absent.
 - `install.sh --dry-run --legacy-alias` passed and exercised legacy alias sync path in dry-run mode.
-- `scripts/export-chatgpt-heartloom-identity-zip.sh --help` passed and presents canonical export behavior.
+- `Scripts/export-chatgpt-heartloom-identity-zip.sh --help` passed and presents canonical export behavior.
 - Deprecated export wrapper `--help` passed and routed to canonical script at validation time.
 - Search counts (excluding `Change_Control/Heartloom_Identity_Migration_Validation_v1_0.md`):
   - legacy alias token (underscore form): 32 hits
@@ -71,7 +71,7 @@ Legend:
 | deprecated export wrapper script (baseline entry) | historical record, okay to keep temporarily (baseline entry) | Captures pre-retirement deprecated wrapper behavior from the validation slice. | Yes (`--help` call exercised wrapper path). | Already removed in follow-up partial alias-retirement slice. |
 | external legacy command aliases (INDEX baseline entry) | temporary technical compatibility, still needed | Documents temporary command aliases used in phone-first tooling context. | No (aliases are external commands, not repo scripts). | External command aliases are removed/renamed and INDEX is updated in same change window. |
 | `Checklists/Identity_Maintenance_Triggers_v1_0.md:46` | temporary technical compatibility, still needed | Maintenance trigger tracks temporary command aliases for regeneration workflow. | No (documentation trigger only). | Trigger set is updated after alias command retirement in external tooling. |
-| `Heartloom-AI-Policies/required-reference-docs.md:80,82` | temporary technical compatibility, still needed | Stable Base required-artifact references included temporary alias naming at validation time. | No (repo-local policy reference only). | Stable Base list is revised to canonical-only references. |
+| `Policies/AI/required-reference-docs.md:80,82` | temporary technical compatibility, still needed | Stable Base required-artifact references included temporary alias naming at validation time. | No (repo-local policy reference only). | Stable Base list is revised to canonical-only references. |
 
 Post-retirement supersession note:
 - Baseline technical dependencies listed for installer behavior, installer contract semantics, and deprecated export wrapper were retired in the follow-up partial alias-retirement slice.

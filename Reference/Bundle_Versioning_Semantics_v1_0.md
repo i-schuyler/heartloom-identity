@@ -49,7 +49,7 @@ The bundle excludes repository-maintainer/internal materials unless explicitly e
 - `.git/` and other VCS internals.
 - Dotfiles and local environment/config convenience files.
 - `install.sh` and installer execution mechanics.
-- `tooling/codex-global/` and other `~/.codex` runtime-source/operator tooling files.
+- `Tooling/codex-global/` and other `~/.codex` runtime-source/operator tooling files.
 - Change-control transition records and gate-validation records.
 - Installer contract docs and maintenance/migration/tooling docs.
 - Non-markdown files unless explicitly required for downstream consumption.
@@ -64,8 +64,8 @@ Include documents that define downstream consumption behavior and canonical inte
 - `INDEX.md` (consumer discovery/navigation).
 - `Reference/Consumer_Integration_Model_v1_0.md` (integration/override governance).
 - `Reference/Bundle_Versioning_Semantics_v1_0.md` (this bundle/versioning contract).
-- `Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md` (policy entrypoint).
-- `Heartloom-AI-Policies/required-reference-docs.md` (required reference baseline).
+- `Policies/AI/heartloom-ai-policy-index-v1.0.md` (policy entrypoint).
+- `Policies/AI/required-reference-docs.md` (required reference baseline).
 
 This profile intentionally avoids internal transition/maintenance artifacts.
 

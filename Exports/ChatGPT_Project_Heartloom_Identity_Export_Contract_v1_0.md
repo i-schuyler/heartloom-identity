@@ -58,8 +58,8 @@ Included files (explicit):
 
 ### A) Export-safe navigation
 
-- `exports/chatgpt-reference-pack/README.md`
-- `exports/chatgpt-reference-pack/INDEX.md`
+- `Exports/chatgpt-reference-pack/README.md`
+- `Exports/chatgpt-reference-pack/INDEX.md`
 - `ChatGPT_Reference_Pack_Manifest.md` (generated at export time and included at zip root)
 
 ### B) Consumer + bundle semantics
@@ -71,13 +71,13 @@ Included files (explicit):
 
 ### C) Heartloom AI policy canon (selected)
 
-- `Heartloom-AI-Policies/heartloom-ai-operating-protocol-v1.0.md`
-- `Heartloom-AI-Policies/termux-and-shell-policy-v1.0.md`
-- `Heartloom-AI-Policies/github-and-codex-pr-first-policy-v1.0.md`
-- `Heartloom-AI-Policies/repo-standards-baseline-v1.0.md`
-- `Heartloom-AI-Policies/zip-inspection-and-artifact-contract-v1.0.md`
-- `Heartloom-AI-Policies/global-memories-refactored-set-v2.0.md`
-- `Heartloom-AI-Policies/authority-boundary-map-v1.0.md`
+- `Policies/AI/heartloom-ai-operating-protocol-v1.0.md`
+- `Policies/AI/termux-and-shell-policy-v1.0.md`
+- `Policies/AI/github-and-codex-pr-first-policy-v1.0.md`
+- `Policies/AI/repo-standards-baseline-v1.0.md`
+- `Policies/AI/zip-inspection-and-artifact-contract-v1.0.md`
+- `Policies/AI/global-memories-refactored-set-v2.0.md`
+- `Policies/AI/authority-boundary-map-v1.0.md`
 
 ### D) Core identity docs commonly used as downstream authority references
 
@@ -95,8 +95,8 @@ Excluded by default unless elevated in a future canonical slice:
 - Maintainership/transition/installer internals (`install.sh`, transition records, installer contracts).
 - Maintenance/ops convenience docs not required for downstream consumption.
 - Migration/history records (for example memory migration maps).
-- `Heartloom-AI-Policies/required-reference-docs.md` (references working-pack and local-only artifacts).
-- `Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md` (superseded by export-safe index in this pack).
+- `Policies/AI/required-reference-docs.md` (references working-pack and local-only artifacts).
+- `Policies/AI/heartloom-ai-policy-index-v1.0.md` (superseded by export-safe index in this pack).
 - Repo-level navigation not scoped to this Reference Pack (for example repo `README.md` / `INDEX.md`).
 - Pointer shims at repo root (canonical policy versions are included instead).
 - Dotfiles, `.git/`, and non-markdown files unless explicitly required.
@@ -112,8 +112,8 @@ Date is the primary postfix. If a future naming change is needed (for example ad
 
 ## Staging and generation location
 
-- **Script:** `scripts/export-chatgpt-heartloom-identity-zip.sh`
-- **Manifest:** `scripts/chatgpt-heartloom-identity-export.manifest`
+- **Script:** `Scripts/export-chatgpt-heartloom-identity-zip.sh`
+- **Manifest:** `Scripts/chatgpt-heartloom-identity-export.manifest`
 - **Staging directory (vault):** `/storage/emulated/0/Documents/HeartloomVault/40_STAGING/`
 - **Logs directory (vault):** `/storage/emulated/0/Documents/HeartloomVault/30_REFERENCE/termux-outputs/log-dump/<YYYY-MM-DD>/`
 

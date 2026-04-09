@@ -250,7 +250,7 @@ Unless canonical project docs specify otherwise, repos should follow this baseli
   - Release channels / stability promise
 - **/src/** contains production code in coherent modules; extend existing modules; avoid parallel stacks.
 - **/data/** contains embedded runtime assets when applicable (e.g., SPA assets served from flash).
-- **/scripts/** contains developer automation (build, lint, packaging, release helpers).
+- **/Scripts/** contains developer automation (build, lint, packaging, release helpers).
 - **/tools/** contains one-off utilities not meant to ship.
 - **/tests/** contains unit/integration tests when present/allowed.
 - Optional: /examples/, /ci/, /third_party/ (vendored deps with licenses), /assets/ (docs images).

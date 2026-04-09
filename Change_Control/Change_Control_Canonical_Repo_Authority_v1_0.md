@@ -14,7 +14,7 @@ Filename is retained for continuity with prior slices and references.
 
 ## Current state (implemented today)
 
-- This repo is the canonical authoring source for `Heartloom Identity` content (repo root and `Heartloom-AI-Policies/`).
+- This repo is the canonical authoring source for `Heartloom Identity` content (repo root and `Policies/AI/`).
 - The currently installed/consumed local copy remains in HeartloomVault at:
   - `/storage/emulated/0/Documents/HeartloomVault/Heartloom-Identity/`
 - Historical legacy compatibility alias path remains recorded for migration traceability.
@@ -106,9 +106,9 @@ Installer behavior contract reference:
 ## Durable decision record (completion state)
 
 - Clipboard-return rule canonization is now documented in:
-  - `Heartloom-AI-Policies/github-and-codex-pr-first-policy-v1.0.md`
+  - `Policies/AI/github-and-codex-pr-first-policy-v1.0.md`
 - Policy discoverability is documented in:
-  - `Heartloom-AI-Policies/heartloom-ai-policy-index-v1.0.md`
+  - `Policies/AI/heartloom-ai-policy-index-v1.0.md`
 - Authority transition gate satisfaction and evidence record is documented in:
   - `Checklists/Authority_Transition_Gate_Installer_Validation_v1_0.md`
 - Repo-canonical authority transition is now recorded as complete in this document.
