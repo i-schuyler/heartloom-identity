@@ -29,9 +29,6 @@ Canonical downstream identity-layer repository for Heartloom repo inheritance, w
 - Canonical alignment review checklist: `Alignment_Review_Checklist_heartloom_identity_v1_0.md`
 - Canonical distinctions library: `Distinctions_Library_heartloom_identity_v1_0.md`
 
-## Historical bootstrap context
-This repository began as a Git-tracked copy of the vault `00_Identity` folder and now operates as the canonical identity-layer translation/inheritance repo.
-
 ## Authority note
 The dedicated Change-Control docs slice is documented in:
 
@@ -40,13 +37,10 @@ The dedicated Change-Control docs slice is documented in:
 - `Authority_Transition_Gate_Installer_Validation_v1_0.md`
 - `Consumer_Integration_Model_heartloom_identity_v1_0.md`
 
-Current authority state: repo-canonical authoring transition is completed, while vault remains the installed/consumed downstream copy at `/storage/emulated/0/Documents/HeartloomVault/00_Identity/`.
-
 ## Current authority status
 
 - Repo-canonical `00_Identity` authority transition is **completed**.
 - Vault `00_Identity` is the installer-managed installed/consumed downstream copy.
-- Clipboard-return rule canonization is implemented in policy docs only.
 
 ## Installer
 

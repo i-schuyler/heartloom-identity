@@ -15,24 +15,11 @@ Define a small, repeatable distinctions vocabulary so humans and future agents c
 - Existing pack/export contracts already depend on distinctions between canonical source docs and downstream/generated artifacts.
 - Existing alignment checklist already asks for routing, translation-vs-redefinition checks, and drift detection.
 
-## V1 Extraction Pass (before naming)
+## V1 scope note
 
-### Recurring distinctions already present
-
-- Source layer vs identity layer.
-- Translation vs redefinition.
-- Upstream vs here vs downstream placement.
-- Reference Pack vs Working Pack.
-- Canonical source vs exported artifact.
-- Committed canonical docs vs generated local artifacts.
-
-### Ambiguous distinctions named now
-
-- **North-star alignment vs operational convenience** (frequently implied as “do what is easy” risk).
-
-### Near-duplicates collapsed in this v1
-
-- “Meaning vs implementation” and “law vs workflow” are collapsed into a single canonical distinction: **Source Meaning/Law/Orientation vs Identity Workflow/Implementation**.
+- Consolidates recurring distinctions already present across source and identity canon.
+- Explicitly names one previously ambiguous edge: **North-Star Alignment vs Operational Convenience**.
+- Collapses near-duplicate framing (“meaning vs implementation” and “law vs workflow”) under one canonical distinction.
 
 ## Canonical distinctions (v1)
 
