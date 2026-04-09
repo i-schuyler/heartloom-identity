@@ -43,7 +43,7 @@ If you want a short “start here” sequence:
 22. **[Policies/github-governance-policy.md](Policies/github-governance-policy.md)** + **[Checklists/github-repo-intake-checklist.md](Checklists/github-repo-intake-checklist.md)** — repo governance + intake workflow.
 23. **[Reference/Codex_CLI_Termux_Setup_v1_0.md](Reference/Codex_CLI_Termux_Setup_v1_0.md)** — Codex CLI setup and safe operation.
 24. **[Reference/House_Defaults_v1_0.md](Reference/House_Defaults_v1_0.md)** + **[Reference/Tools_Shortlist_v1_0.md](Reference/Tools_Shortlist_v1_0.md)** + **[Reference/Definitions_Glossary_v1_0.md](Reference/Definitions_Glossary_v1_0.md)** — defaults, tools, shared language.
-25. **[Reference/Docs_Full_Audit_2026-04-07.md](Reference/Docs_Full_Audit_2026-04-07.md)** — repo-wide documentation audit report (conflicts, drift risks, discoverability gaps).
+25. **[Reference/Docs_Full_Audit_2026-04-08.md](Reference/Docs_Full_Audit_2026-04-08.md)** — full repo documentation audit report (redundancy, conflicts, staleness, supersession, and cleanup priorities).
 26. **[Maps/Identity_Pack_Architecture_v1_0.md](Maps/Identity_Pack_Architecture_v1_0.md)** — Reference Pack vs Working Pack architecture and artifact boundary definitions.
 27. **[Exports/chatgpt-reference-pack/README.md](Exports/chatgpt-reference-pack/README.md)** + **[Exports/chatgpt-reference-pack/READING_ORDER.md](Exports/chatgpt-reference-pack/READING_ORDER.md)** — export-safe navigation + reading flow for the ChatGPT Reference Pack.
 28. **[Contracts/Identity_Layer_Output_Contract_v1_0.md](Contracts/Identity_Layer_Output_Contract_v1_0.md)** — canonical identity-layer output contract and workflow learnings.

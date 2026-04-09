@@ -2,7 +2,7 @@
 
 Status: **CANONICAL MAP DEFINED**  
 Type: Repo ecosystem navigation and layer map  
-Scope: Public doorway, upstream source layer, identity layer, and structural/operational downstream repos
+Scope: Public doorway, upstream source layer, identity layer, and current downstream repo anchors
 
 ## Purpose
 
@@ -12,47 +12,40 @@ Provide a fast, newcomer-readable map of where [`heartloom-identity`](https://gi
 
 - [`heartloom-source`](https://github.com/i-schuyler/heartloom-source) is the upstream source-text container for Heartloom meaning, law, and orientation.
 - [`heartloom-identity`](https://github.com/i-schuyler/heartloom-identity) is the downstream translation/inheritance layer for ecosystem shaping and implementation-facing structure.
-- Structural and operational consumer repos exist downstream and should be navigable from identity without duplicating source canon.
+- Current downstream structural repo anchor is [`heartloom-vaultmeta`](https://github.com/i-schuyler/heartloom-vaultmeta).
+- Downstream expansion remains open for future, explicit contract-defined additions.
 
 ## Public Doorway
 
-- GitHub owner/org doorway: [`i-schuyler`](https://github.com/i-schuyler)
+- **[`i-schuyler`](https://github.com/i-schuyler)** — GitHub owner/org doorway.
 
-## Key Repo Anchors
+## Key Repo Anchors (Click-Through)
 
-- Upstream source: [`heartloom-source`](https://github.com/i-schuyler/heartloom-source)
-- Identity translation layer: [`heartloom-identity`](https://github.com/i-schuyler/heartloom-identity)
-- Structural downstream repo: [`heartloom-vaultmeta`](https://github.com/i-schuyler/heartloom-vaultmeta)
-- Operational downstream repo: [`termux-utils`](https://github.com/i-schuyler/termux-utils)
+- **[`heartloom-source`](https://github.com/i-schuyler/heartloom-source)** — upstream source-text layer (meaning/law/orientation).
+- **[`heartloom-identity`](https://github.com/i-schuyler/heartloom-identity)** — downstream translation/inheritance layer (workflow/pack/export/ecosystem shaping).
+- **[`heartloom-vaultmeta`](https://github.com/i-schuyler/heartloom-vaultmeta)** — current structural downstream repo anchor.
 
-## Layered Ecosystem Map
+## Layered Ecosystem Map (Clickable)
 
-```text
-Public Doorway
-  └─ i-schuyler (GitHub account/org)
-      ├─ Upstream Source Layer
-      │   └─ heartloom-source
-      │       (closest available source texts;
-      │        meaning/law/orientation north-star)
-      │
-      ├─ Downstream Identity / Inheritance Layer
-      │   └─ heartloom-identity
-      │       (translation into repo/ecosystem/workflow/
-      │        pack/export/consumer structures)
-      │
-      └─ Structural / Operational Downstream Repos
-          ├─ heartloom-vaultmeta
-          └─ termux-utils
+- **Public Doorway**
+  - └─ **[`i-schuyler`](https://github.com/i-schuyler)**
+    - ├─ **Upstream Source Layer**
+      - └─ **[`heartloom-source`](https://github.com/i-schuyler/heartloom-source)**
+    - ├─ **Downstream Identity / Inheritance Layer**
+      - └─ **[`heartloom-identity`](https://github.com/i-schuyler/heartloom-identity)**
+    - └─ **Structural / Operational Downstream Repos (current)**
+      - └─ **[`heartloom-vaultmeta`](https://github.com/i-schuyler/heartloom-vaultmeta)**
 
 Non-repo ecosystem elements flowing from identity layer:
-  - Reference Pack (consumer-facing stable artifact view)
-  - Working Pack (maintainer-facing mutable execution layer)
-```
+
+- Reference Pack (consumer-facing stable artifact view)
+- Working Pack (maintainer-facing mutable execution layer)
 
 ## Quick Navigation
 
-- If you need source meaning/law/orientation, start in `heartloom-source`.
-- If you need inheritance/workflow/pack/export/ecosystem shaping, start in `heartloom-identity`.
-- If you need consumer/operational implementation, navigate to downstream repos.
+- If you need source meaning/law/orientation, start in [`heartloom-source`](https://github.com/i-schuyler/heartloom-source).
+- If you need inheritance/workflow/pack/export/ecosystem shaping, start in [`heartloom-identity`](https://github.com/i-schuyler/heartloom-identity).
+- If you need current structural downstream implementation context, navigate to [`heartloom-vaultmeta`](https://github.com/i-schuyler/heartloom-vaultmeta).
+- If you need additional downstream repos, treat expansion as future and add via explicit contract/map update.
 
 Maps/Repo_Ecosystem_Map_v1_0.md EOF
